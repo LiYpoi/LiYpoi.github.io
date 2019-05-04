@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>建站历史-2</title>
+      <link href="/LiYpoi.github.io/2019/05/04/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2-2/"/>
+      <url>/LiYpoi.github.io/2019/05/04/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2-2/</url>
+      
+        <content type="html"><![CDATA[<p>解决了文章无法显示标签和分类，问题出在Markdown文本中<code>tags:</code>，再一次被中英文符号坑了。</p><p>解决文章摘要问题。</p><p>去除了页面右侧看板娘，去除了页面左侧网易云音乐。</p><p>添加了站内到访数和页面访问量。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 建站历史 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>读书笔记</title>
       <link href="/LiYpoi.github.io/2019/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
       <url>/LiYpoi.github.io/2019/05/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
