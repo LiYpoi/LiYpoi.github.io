@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>随笔</title>
+      <link href="/LiYpoi.github.io/2019/05/17/%E9%9A%8F%E7%AC%94/"/>
+      <url>/LiYpoi.github.io/2019/05/17/%E9%9A%8F%E7%AC%94/</url>
+      
+        <content type="html"><![CDATA[<p>发现写的文章内容过长时会无法正常显示，目前这个问题还没能解决，加<code>&lt;!--more--&gt;</code>会无法显示出“阅读全文”。或许应该换一个主题了，等假期试试能不能自己做一个。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript基本语法</title>
       <link href="/LiYpoi.github.io/2019/05/13/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
       <url>/LiYpoi.github.io/2019/05/13/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
