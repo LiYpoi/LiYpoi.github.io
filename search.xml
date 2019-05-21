@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>js2</title>
+      <link href="/LiYpoi.github.io/2019/05/21/js2/"/>
+      <url>/LiYpoi.github.io/2019/05/21/js2/</url>
+      
+        <content type="html"><![CDATA[<h4 id="JS的引入"><a href="#JS的引入" class="headerlink" title="JS的引入"></a>JS的引入</h4><p>1.将JS代码嵌入在元素”事件”中</p><p>虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。</p><p>2.将JS代码嵌入在<script>标签中</p><p>3.将JS代码写在外部脚本文件中</p><a id="more"></a><p>写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。</p><p>当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一</p><p>个新的script标签用于编写内部代码。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以将js代码写在超链接的href属性中，这样当点击超链接时，会执行js代码。</span><br><span class="line">&lt;a href=<span class="string">"javascript:alert('让你点你就点')"</span>&gt;你也点我一下&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href="javascript:"&gt;你也点我一下&lt;/</span>a&gt;&lt;!--点击后无响应--&gt;</span><br></pre></td></tr></table></figure><h4 id="JS中添加注释"><a href="#JS中添加注释" class="headerlink" title="JS中添加注释"></a>JS中添加注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.js中严格区分大小写</span><br><span class="line">2.js中每一条语句以分号（;）结尾</span><br><span class="line">不写分号也可以，浏览器会自动添加，但是会消耗一些系统，而且有些时候会加错分号，所以开发中分号必须写（英文）</span><br><span class="line">3.js中会忽略多个空格和换行，所以我们可以利用空格和换行对代码进行格式化</span><br><span class="line">4./*js文件中注释，多行注释，注释中的内容不会被执行，但是可以在源代码中查看*/</span><br><span class="line">  //单行注释</span><br></pre></td></tr></table></figure><h4 id="JS变量"><a href="#JS变量" class="headerlink" title="JS变量"></a>JS变量</h4><p><strong>声明变量</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> a; <span class="comment">/*声明和赋值可以同时,在js中使用var关键字来声明一个变量*/</span></span><br><span class="line">        a= <span class="number">123</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(a);</span><br><span class="line">        <span class="keyword">var</span> b=<span class="number">1345</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p><strong>标识符</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-在JS中所有可以由我们自主命名的都可以成为标识符</span><br><span class="line">-例如：变量名、函数名、属性名都属于标识符</span><br><span class="line">-命名标识符时需要遵循一下原则</span><br><span class="line"><span class="number">1.</span>标识符中可以含有字母、数字、_、$</span><br><span class="line"><span class="number">2.</span>标识符不能以数字开头</span><br><span class="line"><span class="number">3.</span>标识符不能是ES中的关键字和保留字</span><br><span class="line"><span class="number">4.</span>标识符一般都采用驼峰命名法</span><br><span class="line">-首字母小写，每个单词的开头字母大写，其余字母小写</span><br><span class="line">例如：helloWorld xxxYyyZzz</span><br><span class="line">-JS底层保存标识符实际上是采用Unicode编码，所以理论上讲所有utf<span class="number">-8</span>中含有的内容都可以作为标识符（汉字）</span><br></pre></td></tr></table></figure><h4 id="三个关键输出语句"><a href="#三个关键输出语句" class="headerlink" title="三个关键输出语句"></a>三个关键输出语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        alert(<span class="string">"哥，你真帅啊"</span>);<span class="comment">/*在浏览器窗口弹出一个警告框*/</span></span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"看我出不出来"</span>);<span class="comment">/*文档显示，向body中输出一个内容*/</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你猜我在哪出来呢"</span>);<span class="comment">/*向控制台输出一个内容*/</span></span><br><span class="line">        <span class="comment">/*从上到下依次执行*/</span></span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></script></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>随笔</title>
       <link href="/LiYpoi.github.io/2019/05/17/%E9%9A%8F%E7%AC%94/"/>
       <url>/LiYpoi.github.io/2019/05/17/%E9%9A%8F%E7%AC%94/</url>
@@ -21,56 +46,6 @@
         <tags>
             
             <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JavaScript基本语法</title>
-      <link href="/LiYpoi.github.io/2019/05/13/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-      <url>/LiYpoi.github.io/2019/05/13/JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h4 id="三个关键输出语句"><a href="#三个关键输出语句" class="headerlink" title="三个关键输出语句"></a>三个关键输出语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        alert(<span class="string">"哥，你真帅啊"</span>);<span class="comment">/*在浏览器窗口弹出一个警告框*/</span></span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"看我出不出来"</span>);<span class="comment">/*文档显示，向body中输出一个内容*/</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你猜我在哪出来呢"</span>);<span class="comment">/*向控制台输出一个内容*/</span></span><br><span class="line">        <span class="comment">/*从上到下依次执行*/</span></span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="JS的引入"><a href="#JS的引入" class="headerlink" title="JS的引入"></a>JS的引入</h4><p>1.将JS代码嵌入在元素”事件”中</p><p>虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。</p><p>2.将JS代码嵌入在<script>标签中</p><p>3.将JS代码写在外部脚本文件中(*.js)</p><p>写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。</p><p>当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一</p><p>个新的script标签用于编写内部代码。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以将js代码写在超链接的href属性中，这样当点击超链接时，会执行js代码。</span><br><span class="line">&lt;a href=<span class="string">"javascript:alert('让你点你就点')"</span>&gt;你也点我一下&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href="javascript:"&gt;你也点我一下&lt;/</span>a&gt;&lt;!--点击后无响应--&gt;</span><br></pre></td></tr></table></figure><h4 id="JS中添加注释"><a href="#JS中添加注释" class="headerlink" title="JS中添加注释"></a>JS中添加注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.js中严格区分大小写</span><br><span class="line">2.js中每一条语句以分号（;）结尾</span><br><span class="line">不写分号也可以，浏览器会自动添加，但是会消耗一些系统，而且有些时候会加错分号，所以开发中分号必须写（英文）</span><br><span class="line">3.js中会忽略多个空格和换行，所以我们可以利用空格和换行对代码进行格式化</span><br><span class="line">4./*js文件中注释，多行注释，注释中的内容不会被执行，但是可以在源代码中查看*/</span><br><span class="line">  //单行注释</span><br></pre></td></tr></table></figure><h4 id="JS变量"><a href="#JS变量" class="headerlink" title="JS变量"></a>JS变量</h4><p><strong>声明变量</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> a; <span class="comment">/*声明和赋值可以同时,在js中使用var关键字来声明一个变量*/</span></span><br><span class="line">        a= <span class="number">123</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(a);</span><br><span class="line">        <span class="keyword">var</span> b=<span class="number">1345</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p><strong>标识符</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-在JS中所有可以由我们自主命名的都可以成为标识符</span><br><span class="line">-例如：变量名、函数名、属性名都属于标识符</span><br><span class="line">-命名标识符时需要遵循一下原则</span><br><span class="line"><span class="number">1.</span>标识符中可以含有字母、数字、_、$</span><br><span class="line"><span class="number">2.</span>标识符不能以数字开头</span><br><span class="line"><span class="number">3.</span>标识符不能是ES中的关键字和保留字</span><br><span class="line"><span class="number">4.</span>标识符一般都采用驼峰命名法</span><br><span class="line">-首字母小写，每个单词的开头字母大写，其余字母小写</span><br><span class="line">例如：helloWorld xxxYyyZzz</span><br><span class="line">-JS底层保存标识符实际上是采用Unicode编码，所以理论上讲所有utf<span class="number">-8</span>中含有的内容都可以作为标识符（汉字）</span><br></pre></td></tr></table></figure></script></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Study </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Javascript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JavaScript基本语法</title>
-      <link href="/LiYpoi.github.io/2019/05/13/Javascript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-      <url>/LiYpoi.github.io/2019/05/13/Javascript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h4 id="JS的引入"><a href="#JS的引入" class="headerlink" title="JS的引入"></a>JS的引入</h4><p>1.将JS代码嵌入在元素”事件”中</p><p>虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。</p><p>2.将JS代码嵌入在<script>标签中</p><p>3.将JS代码写在外部脚本文件中</p><a id="more"></a><p>写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。</p><p>当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一</p><p>个新的script标签用于编写内部代码。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以将js代码写在超链接的href属性中，这样当点击超链接时，会执行js代码。</span><br><span class="line">&lt;a href=<span class="string">"javascript:alert('让你点你就点')"</span>&gt;你也点我一下&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href="javascript:"&gt;你也点我一下&lt;/</span>a&gt;&lt;!--点击后无响应--&gt;</span><br></pre></td></tr></table></figure><h4 id="JS中添加注释"><a href="#JS中添加注释" class="headerlink" title="JS中添加注释"></a>JS中添加注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.js中严格区分大小写</span><br><span class="line">2.js中每一条语句以分号（;）结尾</span><br><span class="line">不写分号也可以，浏览器会自动添加，但是会消耗一些系统，而且有些时候会加错分号，所以开发中分号必须写（英文）</span><br><span class="line">3.js中会忽略多个空格和换行，所以我们可以利用空格和换行对代码进行格式化</span><br><span class="line">4./*js文件中注释，多行注释，注释中的内容不会被执行，但是可以在源代码中查看*/</span><br><span class="line">  //单行注释</span><br></pre></td></tr></table></figure><h4 id="JS变量"><a href="#JS变量" class="headerlink" title="JS变量"></a>JS变量</h4><p><strong>声明变量</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> a; <span class="comment">/*声明和赋值可以同时,在js中使用var关键字来声明一个变量*/</span></span><br><span class="line">        a= <span class="number">123</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(a);</span><br><span class="line">        <span class="keyword">var</span> b=<span class="number">1345</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p><strong>标识符</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-在JS中所有可以由我们自主命名的都可以成为标识符</span><br><span class="line">-例如：变量名、函数名、属性名都属于标识符</span><br><span class="line">-命名标识符时需要遵循一下原则</span><br><span class="line"><span class="number">1.</span>标识符中可以含有字母、数字、_、$</span><br><span class="line"><span class="number">2.</span>标识符不能以数字开头</span><br><span class="line"><span class="number">3.</span>标识符不能是ES中的关键字和保留字</span><br><span class="line"><span class="number">4.</span>标识符一般都采用驼峰命名法</span><br><span class="line">-首字母小写，每个单词的开头字母大写，其余字母小写</span><br><span class="line">例如：helloWorld xxxYyyZzz</span><br><span class="line">-JS底层保存标识符实际上是采用Unicode编码，所以理论上讲所有utf<span class="number">-8</span>中含有的内容都可以作为标识符（汉字）</span><br></pre></td></tr></table></figure><h4 id="三个关键输出语句"><a href="#三个关键输出语句" class="headerlink" title="三个关键输出语句"></a>三个关键输出语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        alert(<span class="string">"哥，你真帅啊"</span>);<span class="comment">/*在浏览器窗口弹出一个警告框*/</span></span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"看我出不出来"</span>);<span class="comment">/*文档显示，向body中输出一个内容*/</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你猜我在哪出来呢"</span>);<span class="comment">/*向控制台输出一个内容*/</span></span><br><span class="line">        <span class="comment">/*从上到下依次执行*/</span></span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></script></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Study </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Javascript </tag>
             
         </tags>
       
@@ -104,11 +79,11 @@
     
     
     <entry>
-      <title>读书笔记-《黑客与画家》-3</title>
-      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/"/>
-      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/</url>
+      <title>读书笔记-《黑客与画家》-2</title>
+      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/"/>
+      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/</url>
       
-        <content type="html"><![CDATA[<h2 id="不能说的话"><a href="#不能说的话" class="headerlink" title="不能说的话"></a>不能说的话</h2><p>所谓“流行”本质上就是自己看不见自己的样子。否则就不会有流行了，对于那些被流行抓住的人，流行就不再是流行，而是应该要做的正确事情。只有保持一定的距离才能观察到人们观念的变化，发现流行（也就是人们自以为正确的事）到底是什么。</p><p>你如果想要清晰地思考，就必须远离人群。但走的越远，你的处境就会越困难，受到的阻力也会越大，应为你没有迎合社会习俗，而是一步步地与它背道而驰。小时候每个人都会鼓励你不断成长，但是很少有人鼓励你继续成长，变成一个怀疑和抵制社会错误潮流的人。如果自己就是潮水的一部分，怎么能看见潮流的方向？</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="黑客与画家"><a href="#黑客与画家" class="headerlink" title="黑客与画家"></a>黑客与画家</h2><p>如何去学习编程?正如画家学习绘画的方法主要是动手去画，黑客学习编程的方法也理应如此。大多数黑客不是通过大学课程学会编程的，他们从实践中学习。黑客通过实践学习编程这是一个标志，说明黑客与科学家的区别在于：科学家不会通过干活来学习科学，而是通过做实验和解题来学习，黑客出发点是原创，最终得到一个优美的</p><a id="more"></a><p>结果；而科学家的出发点是别人的优美的结果，最终得到原创性。</p><p>创作者另一个学习途径是通过范例。对画家来说，博物馆就是美术技巧的图书馆。同样的，黑客可以通过观看优秀的程序学会编程，不是看它们的执行结果，而是看它们的源代码。</p><p>在编程时，你不能盼望先有一个完美的规格设计，然后再动手编程，这样是不现实的。如果你预先承认规格设计是不完美的，在编程的时候，就可以根据需要当场修改规格，最总会有一个更好的结果。</p><p>伟大的画家对待自己每一份作品都一丝不苟，优秀的软件也要求对美的狂热追求，如果你查看优秀软件的内部，就会发现那些预料中没有人会看见的部分也是优美的。</p><p>黑客与画家一样，工作起来是有心理周期的，在工作时要去投入巨大的热情，其他不需要操心的琐碎事在厌倦的时候去做是一个不错的选择。</p><p>普通黑客与优秀黑客的所有区别之中，会不会“换位思考”可能是最总要的单个因素。判断一个人是否具备“换位思考”的能力有一个好方法，那就是看他怎么向没有技术背景的人解释技术问题。软件的部分功能就是解释自身，为了写出优秀的软件你必须假设用户对软件一无所知<del>他们不会看用户手册的</del>。程序是写给人看的，附带能在机器上运行。</p><h3 id="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作"><a href="#现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作" class="headerlink" title="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!"></a>现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!</h3>]]></content>
       
       
       <categories>
@@ -129,11 +104,11 @@
     
     
     <entry>
-      <title>读书笔记-《黑客与画家》-2</title>
-      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/"/>
-      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/</url>
+      <title>读书笔记-《黑客与画家》-3</title>
+      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/"/>
+      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/</url>
       
-        <content type="html"><![CDATA[<h2 id="黑客与画家"><a href="#黑客与画家" class="headerlink" title="黑客与画家"></a>黑客与画家</h2><p>如何去学习编程?正如画家学习绘画的方法主要是动手去画，黑客学习编程的方法也理应如此。大多数黑客不是通过大学课程学会编程的，他们从实践中学习。黑客通过实践学习编程这是一个标志，说明黑客与科学家的区别在于：科学家不会通过干活来学习科学，而是通过做实验和解题来学习，黑客出发点是原创，最终得到一个优美的</p><a id="more"></a><p>结果；而科学家的出发点是别人的优美的结果，最终得到原创性。</p><p>创作者另一个学习途径是通过范例。对画家来说，博物馆就是美术技巧的图书馆。同样的，黑客可以通过观看优秀的程序学会编程，不是看它们的执行结果，而是看它们的源代码。</p><p>在编程时，你不能盼望先有一个完美的规格设计，然后再动手编程，这样是不现实的。如果你预先承认规格设计是不完美的，在编程的时候，就可以根据需要当场修改规格，最总会有一个更好的结果。</p><p>伟大的画家对待自己每一份作品都一丝不苟，优秀的软件也要求对美的狂热追求，如果你查看优秀软件的内部，就会发现那些预料中没有人会看见的部分也是优美的。</p><p>黑客与画家一样，工作起来是有心理周期的，在工作时要去投入巨大的热情，其他不需要操心的琐碎事在厌倦的时候去做是一个不错的选择。</p><p>普通黑客与优秀黑客的所有区别之中，会不会“换位思考”可能是最总要的单个因素。判断一个人是否具备“换位思考”的能力有一个好方法，那就是看他怎么向没有技术背景的人解释技术问题。软件的部分功能就是解释自身，为了写出优秀的软件你必须假设用户对软件一无所知<del>他们不会看用户手册的</del>。程序是写给人看的，附带能在机器上运行。</p><h3 id="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作"><a href="#现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作" class="headerlink" title="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!"></a>现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="不能说的话"><a href="#不能说的话" class="headerlink" title="不能说的话"></a>不能说的话</h2><p>所谓“流行”本质上就是自己看不见自己的样子。否则就不会有流行了，对于那些被流行抓住的人，流行就不再是流行，而是应该要做的正确事情。只有保持一定的距离才能观察到人们观念的变化，发现流行（也就是人们自以为正确的事）到底是什么。</p><p>你如果想要清晰地思考，就必须远离人群。但走的越远，你的处境就会越困难，受到的阻力也会越大，应为你没有迎合社会习俗，而是一步步地与它背道而驰。小时候每个人都会鼓励你不断成长，但是很少有人鼓励你继续成长，变成一个怀疑和抵制社会错误潮流的人。如果自己就是潮水的一部分，怎么能看见潮流的方向？</p>]]></content>
       
       
       <categories>
