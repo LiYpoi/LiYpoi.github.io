@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Javascript,">
+  <meta name="keywords" content="Git,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="JS的引入1.将JS代码嵌入在元素”事件”中 虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。 2.将JS代码嵌入在标签中 3.将JS代码写在外部脚本文件中 写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。 当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一 个新的script标签用">
-<meta name="keywords" content="Javascript">
+<meta name="description" content="git的版本退回在对文件不断修改后，每一次的修改记录可以通过最近的commit进行恢复，然后重新修改提交，这一点就像我们玩RPG游戏一样，每通过一关都要SAVE一下，下一关的boss打不过时重新LOAD。 举个例子： 版本1：wrote a readme file 12Git is a version control system.Git is free software. 版本2：add dis">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript基础操作">
-<meta property="og:url" content="http://yoursite.com/2019/05/21/js2/index.html">
+<meta property="og:title" content="Git学习笔记-2">
+<meta property="og:url" content="http://yoursite.com/2019/05/22/git-2/index.html">
 <meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="JS的引入1.将JS代码嵌入在元素”事件”中 虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。 2.将JS代码嵌入在标签中 3.将JS代码写在外部脚本文件中 写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。 当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一 个新的script标签用">
+<meta property="og:description" content="git的版本退回在对文件不断修改后，每一次的修改记录可以通过最近的commit进行恢复，然后重新修改提交，这一点就像我们玩RPG游戏一样，每通过一关都要SAVE一下，下一关的boss打不过时重新LOAD。 举个例子： 版本1：wrote a readme file 12Git is a version control system.Git is free software. 版本2：add dis">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-21T15:26:57.462Z">
+<meta property="og:updated_time" content="2019-05-22T16:13:25.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript基础操作">
-<meta name="twitter:description" content="JS的引入1.将JS代码嵌入在元素”事件”中 虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。 2.将JS代码嵌入在标签中 3.将JS代码写在外部脚本文件中 写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。 当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一 个新的script标签用">
+<meta name="twitter:title" content="Git学习笔记-2">
+<meta name="twitter:description" content="git的版本退回在对文件不断修改后，每一次的修改记录可以通过最近的commit进行恢复，然后重新修改提交，这一点就像我们玩RPG游戏一样，每通过一关都要SAVE一下，下一关的boss打不过时重新LOAD。 举个例子： 版本1：wrote a readme file 12Git is a version control system.Git is free software. 版本2：add dis">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/21/js2/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/22/git-2/">
 
 
 
 
 
-  <title>Javascript基础操作 | Thinking&Coding</title>
+  <title>Git学习笔记-2 | Thinking&Coding</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/21/js2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/22/git-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Javascript基础操作</h1>
+          <h1 class="post-title" itemprop="name headline">Git学习笔记-2</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-21T21:23:44+08:00">
-                2019-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-22T23:27:22+08:00">
+                2019-05-22
               </time>
             
 
@@ -347,7 +347,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  740
+                  945
                 </span>
               
 
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -384,21 +384,41 @@
       
 
       
-        <h4 id="JS的引入"><a href="#JS的引入" class="headerlink" title="JS的引入"></a>JS的引入</h4><p>1.将JS代码嵌入在元素”事件”中</p>
-<p>虽然可以写在标签属性中，但是他们属于结构与行为耦合，不方便维护，不推荐使用。</p>
-<p>2.将JS代码嵌入在<script>标签中</p>
-<p>3.将JS代码写在外部脚本文件中</p>
-<p>写在外部文件中在不同的页面中可以同时引用，也可以利用浏览器的缓存机制，推荐使用。</p>
-<p>当script标签一旦用于引用外部文件，就不能再编写代码，即使编写了浏览器也会忽略,如果有需要可以再创建一</p>
-<p>个新的script标签用于编写内部代码。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以将js代码写在超链接的href属性中，这样当点击超链接时，会执行js代码。</span><br><span class="line">&lt;a href=<span class="string">"javascript:alert('让你点你就点')"</span>&gt;你也点我一下&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href="javascript:"&gt;你也点我一下&lt;/</span>a&gt;&lt;!--点击后无响应--&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="JS中添加注释"><a href="#JS中添加注释" class="headerlink" title="JS中添加注释"></a>JS中添加注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.js中严格区分大小写</span><br><span class="line">2.js中每一条语句以分号（;）结尾</span><br><span class="line">不写分号也可以，浏览器会自动添加，但是会消耗一些系统，而且有些时候会加错分号，所以开发中分号必须写（英文）</span><br><span class="line">3.js中会忽略多个空格和换行，所以我们可以利用空格和换行对代码进行格式化</span><br><span class="line">4./*js文件中注释，多行注释，注释中的内容不会被执行，但是可以在源代码中查看*/</span><br><span class="line">  //单行注释</span><br></pre></td></tr></table></figure>
-<h4 id="JS变量"><a href="#JS变量" class="headerlink" title="JS变量"></a>JS变量</h4><p><strong>声明变量</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> a; <span class="comment">/*声明和赋值可以同时,在js中使用var关键字来声明一个变量*/</span></span><br><span class="line">        a= <span class="number">123</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(a);</span><br><span class="line">        <span class="keyword">var</span> b=<span class="number">1345</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>标识符</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-在JS中所有可以由我们自主命名的都可以成为标识符</span><br><span class="line">-例如：变量名、函数名、属性名都属于标识符</span><br><span class="line">-命名标识符时需要遵循一下原则</span><br><span class="line"><span class="number">1.</span>标识符中可以含有字母、数字、_、$</span><br><span class="line"><span class="number">2.</span>标识符不能以数字开头</span><br><span class="line"><span class="number">3.</span>标识符不能是ES中的关键字和保留字</span><br><span class="line"><span class="number">4.</span>标识符一般都采用驼峰命名法</span><br><span class="line">-首字母小写，每个单词的开头字母大写，其余字母小写</span><br><span class="line">例如：helloWorld xxxYyyZzz</span><br><span class="line">-JS底层保存标识符实际上是采用Unicode编码，所以理论上讲所有utf<span class="number">-8</span>中含有的内容都可以作为标识符（汉字）</span><br></pre></td></tr></table></figure>
-<h4 id="三个关键输出语句"><a href="#三个关键输出语句" class="headerlink" title="三个关键输出语句"></a>三个关键输出语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        alert(<span class="string">"哥，你真帅啊"</span>);<span class="comment">/*在浏览器窗口弹出一个警告框*/</span></span><br><span class="line">        <span class="built_in">document</span>.write(<span class="string">"看我出不出来"</span>);<span class="comment">/*文档显示，向body中输出一个内容*/</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你猜我在哪出来呢"</span>);<span class="comment">/*向控制台输出一个内容*/</span></span><br><span class="line">        <span class="comment">/*从上到下依次执行*/</span></span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
-</script></p>
+        <h4 id="git的版本退回"><a href="#git的版本退回" class="headerlink" title="git的版本退回"></a>git的版本退回</h4><p>在对文件不断修改后，每一次的修改记录可以通过最近的<code>commit</code>进行恢复，然后重新修改提交，这一点就像我们玩RPG游戏一样，每通过一关都要SAVE一下，下一关的boss打不过时重新LOAD。</p>
+<p>举个例子：</p>
+<p>版本1：wrote a readme file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<p>版本2：add distributed</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<p>版本3：append GPL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br></pre></td></tr></table></figure>
+<p>在Git中，我们可以通过<code>git log</code>命令查看版本系统中的提交修改历史纪录。<code>git log</code>命令显示从最近到最远的提交日志，每提交一个新版本，实际上Git就会把它们自动串成一条时间线。如果使用可视化工具查看Git历史，就可以更清楚地看到提交历史的时间线.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master)</span><br><span class="line">Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">Date:   Fri May 18 21:06:15 2018 +0800</span><br><span class="line"></span><br><span class="line">    append GPL</span><br><span class="line"></span><br><span class="line">commit e475afc93c209a690c39c13a46716e8fa000c366</span><br><span class="line">Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">Date:   Fri May 18 21:03:36 2018 +0800</span><br><span class="line"></span><br><span class="line">    add distributed</span><br><span class="line"></span><br><span class="line">commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0</span><br><span class="line">Author: Michael Liao &lt;askxuefeng@gmail.com&gt;</span><br><span class="line">Date:   Fri May 18 20:59:18 2018 +0800</span><br><span class="line"></span><br><span class="line">    wrote a readme file</span><br></pre></td></tr></table></figure>
+<p>我们可以看到3次提交，最近的一次是<code>append GPL</code>，上一次是<code>add distributed</code>，最早的一次是<code>wrote a readme file</code>。</p>
+<p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=oneline</span><br><span class="line">1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master) append GPL</span><br><span class="line">e475afc93c209a690c39c13a46716e8fa000c366 add distributed</span><br><span class="line">eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file</span><br></pre></td></tr></table></figure>
+<p>看到的一大串类似<code>1094adb...</code>的是<code>commit id</code>（版本号）</p>
+<p><strong>版本返回</strong></p>
+<p>在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+<p>现在，我们要把当前版本回退到上一个版本，就可以使用<code>git reset</code>命令。</p>
+<p>再用<code>git log</code>查看现在版本库的状态，就会发现已经返回了，当想要再返回去时，只要上面的命令行窗口还没关闭，找到之前的<code>commit id</code>（版本号）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard commit id//commit id的名字不必写全</span><br><span class="line">HEAD is now at 83b0afe append GPL//之前的版本</span><br></pre></td></tr></table></figure>
+<p>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的<code>HEAD</code>指针，当你回退版本的时候，Git仅仅是把HEAD从指向<code>append GPL</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌────┐</span><br><span class="line">│HEAD│</span><br><span class="line">└────┘</span><br><span class="line">   │</span><br><span class="line">   └──&gt; ○ append GPL</span><br><span class="line">        │</span><br><span class="line">        ○ add distributed</span><br><span class="line">        │</span><br><span class="line">        ○ wrote a readme file</span><br></pre></td></tr></table></figure>
+<p>改为指向<code>add distributed</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌────┐</span><br><span class="line">│HEAD│</span><br><span class="line">└────┘</span><br><span class="line">   │</span><br><span class="line">   │    ○ append GPL</span><br><span class="line">   │    │</span><br><span class="line">   └──&gt; ○ add distributed</span><br><span class="line">        │</span><br><span class="line">        ○ wrote a readme file</span><br></pre></td></tr></table></figure>
+<p>然后顺便把工作区的文件更新了。所以你让<code>HEAD</code>指向哪个版本号，你就把当前版本定位在哪。</p>
+<p>现在，你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的<code>commit id</code>怎么办？</p>
+<p>在Git中，总是有后悔药可以吃的。当你用<code>$ git reset --hard HEAD^</code>回退到<code>add distributed</code>版本时，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的commit id。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">e475afc HEAD@&#123;1&#125;: reset: moving to HEAD^</span><br><span class="line">1094adb (HEAD -&gt; master) HEAD@&#123;2&#125;: commit: append GPL</span><br><span class="line">e475afc HEAD@&#123;3&#125;: commit: add distributed</span><br><span class="line">eaadf4e HEAD@&#123;4&#125;: commit (initial): wrote a readme file</span><br></pre></td></tr></table></figure>
+<p>终于舒了口气，从输出可知，<code>append GPL</code>的commit id是<code>1094adb</code>，现在，你又可以乘坐时光机回到未来了。</p>
+<p><strong>小结</strong></p>
+<ul>
+<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+
       
     </div>
     
@@ -418,7 +438,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/05/21/js2/" title="Javascript基础操作">http://yoursite.com/2019/05/21/js2/</a>
+    <a href="http://yoursite.com/2019/05/22/git-2/" title="Git学习笔记-2">http://yoursite.com/2019/05/22/git-2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -433,7 +453,7 @@
       
         <div class="post-tags">
           
-            <a href="/LiYpoi.github.io/tags/Javascript/" rel="tag"><i class="fa fa-tag"></i> Javascript</a>
+            <a href="/LiYpoi.github.io/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
           
         </div>
       
@@ -446,7 +466,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/17/随笔/" rel="next" title="随笔">
+              <a href="/LiYpoi.github.io/2019/05/21/随笔1/" rel="next" title="随笔">
                 <i class="fa fa-chevron-left"></i> 随笔
               </a>
             
@@ -455,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LiYpoi.github.io/2019/05/21/git-1/" rel="prev" title="Git学习笔记-1">
-                Git学习笔记-1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JS的引入"><span class="nav-number">1.</span> <span class="nav-text">JS的引入</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git的版本退回"><span class="nav-number">1.</span> <span class="nav-text">git的版本退回</span></a></li></ol></div>
             
 
           </div>
