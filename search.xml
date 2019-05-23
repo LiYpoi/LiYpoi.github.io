@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>git提交远程报错</title>
+      <link href="/LiYpoi.github.io/2019/05/23/git%E6%8F%90%E4%BA%A4%E8%BF%9C%E7%A8%8B%E6%8A%A5%E9%94%99/"/>
+      <url>/LiYpoi.github.io/2019/05/23/git%E6%8F%90%E4%BA%A4%E8%BF%9C%E7%A8%8B%E6%8A%A5%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<p>在之前用<code>git push -u origin master</code>时，会出现这种错误：</p><p><a href="https://i.loli.net/2019/05/23/5ce671044b66746735.png" target="_blank" rel="noopener">错误1</a></p><p>原因在于第一次在Github中<code>learn-Git</code>仓库里创建的Markdown文件不在本地代码目录中。</p><p>之前在出现此错误时，直接使用了<code>git push -f</code>命令强制推送，但会影响<code>commit</code>历史。</p><p>解决办法：使用<code>git pull --rebase origin master</code>进行合并，合并之后再使用<code>git push origin master</code>推上去</p><p><a href="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png" target="_blank" rel="noopener">解决</a></p><p>对Git的一些命令了解的还不是特别透彻。</p><p>git push origin master ：本地master分支的最新修改推送至GitHub</p><p><code>git push -u origin master</code>：第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git的工作区与暂存区</title>
+      <link href="/LiYpoi.github.io/2019/05/23/git-3/"/>
+      <url>/LiYpoi.github.io/2019/05/23/git-3/</url>
+      
+        <content type="html"><![CDATA[<h4 id="工作区与暂存区"><a href="#工作区与暂存区" class="headerlink" title="工作区与暂存区"></a>工作区与暂存区</h4><p>Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念。</p><p><strong>工作区</strong></p><p>在电脑中能看到的目录，比如我在电脑中能看到的<code>learn-Git</code>文件夹就是一个工作区.</p><p><strong>版本库</strong></p><p>工作区有一个隐藏目录<code>.git</code>，这个不算工作区，而是Git的版本库。</p><p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p><p>前面说过把文件往Git版本库里添加的时候，是分两步执行的：</p><p>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p><p>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p><p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个<code>master</code>分支，所以，现在，<code>git commit</code>就是往<code>master</code>分支上提交更改。</p><p>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。<code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>随笔2</title>
       <link href="/LiYpoi.github.io/2019/05/23/%E9%9A%8F%E7%AC%942/"/>
       <url>/LiYpoi.github.io/2019/05/23/%E9%9A%8F%E7%AC%942/</url>
