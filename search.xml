@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>撤销修改与删除文件</title>
+      <link href="/LiYpoi.github.io/2019/05/26/%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6/"/>
+      <url>/LiYpoi.github.io/2019/05/26/%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、撤销修改"><a href="#一、撤销修改" class="headerlink" title="一、撤销修改"></a>一、撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p><p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。<code>git reset</code>命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用<code>HEAD</code>时，表示最新的版本。</p><p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本退会一文，不过前提是没有推送到远程库。</p><h3 id="二、删除文件"><a href="#二、删除文件" class="headerlink" title="二、删除文件"></a>二、删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p><p>如果删错了文件，使用<code>$ git checkout -- 目标文件</code>可以将误删的文件恢复到最新的版本，<code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p><p><strong><code>注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！</code></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网页配色方案</title>
+      <link href="/LiYpoi.github.io/2019/05/26/%E7%BD%91%E9%A1%B5%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/"/>
+      <url>/LiYpoi.github.io/2019/05/26/%E7%BD%91%E9%A1%B5%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、Flat-UI色表"><a href="#一、Flat-UI色表" class="headerlink" title="一、Flat UI色表"></a>一、Flat UI色表</h3><p>最常用的方法就是在<a href="http://designmodo.github.io/Flat-UI/" target="_blank" rel="noopener">Flat UI官网</a>找配色。</p><p><img src="https://i.loli.net/2019/05/26/5cea55516f26153359.png" alt="色图"></p><p>对于简单的网页配色已经够用了。</p><p><img src="https://i.loli.net/2019/05/26/5cea55f957e6f59817.png" alt="setu"></p><p>还提供一些网页元素的配色方案。</p><h3 id="二、配色的经典方案"><a href="#二、配色的经典方案" class="headerlink" title="二、配色的经典方案"></a>二、配色的经典方案</h3><p><a href="https://docs.sendwithses.com/random-stuff/easy-to-remember-color-guide-for-non-designers" target="_blank" rel="noopener">原文</a></p><h4 id="1-网页主题色"><a href="#1-网页主题色" class="headerlink" title="1.网页主题色"></a>1.网页主题色</h4><p>深颜色使用<code>c</code>、<code>f</code>、<code>6</code>、<code>9</code>这四个字符，组合成RGB色值</p><p><img src="https://www.wangbase.com/blogimg/asset/201903/bg2019031608.jpg" alt="lizi"></p><p>紫罗兰色，靛蓝色，蓝色，绿色。</p><p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LUFI_-_gHZ4pIVzoRlq%2F-L_bOd9rj2aX7LMVYlPE%2F-L_bfI-npsXbpu-N2oQS%2FYOOR.png?alt=media&amp;token=f00c3544-2239-487f-a67a-0e45c5952691" alt="lizi2"></p><p>黄色，橙色，另一种橙色，红色。</p><p>淡颜色使用<code>a</code>、<code>b</code>、<code>c</code>、<code>d</code>、<code>e</code>、<code>f</code>这六个字符，组合生成 RGB 色值。</p><p><img src="https://www.wangbase.com/blogimg/asset/201903/bg2019031610.jpg" alt="lizi3"></p><h4 id="2-文本颜色"><a href="#2-文本颜色" class="headerlink" title="2.文本颜色"></a>2.文本颜色</h4><p>文字最好不要使用全黑，而是使用深蓝色，可以从下面几种颜色挑。<code>1a2a3a</code>最深，<code>2a3a4a</code>次之，<code>7a8a9a</code>最浅。</p><p><img src="https://www.wangbase.com/blogimg/asset/201903/bg2019031611.jpg" alt="lizi4"></p><h4 id="3-背景色、阴影色、边框色"><a href="#3-背景色、阴影色、边框色" class="headerlink" title="3.背景色、阴影色、边框色"></a>3.背景色、阴影色、边框色</h4><p>背景色、阴影色、边框色都属于衬托，建议使用灰色，可以从<code>aaaaa</code>、<code>bbbbbb</code>、<code>cccccc</code>、<code>dddddd</code>这四个色值挑选。</p><p><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LUFI_-_gHZ4pIVzoRlq%2F-L_bOd9rj2aX7LMVYlPE%2F-L_bngDe3TB8V2KdsQ6L%2FGREYS.png?alt=media&amp;token=b66786d6-d154-4af0-97ff-ba1a0ee449de" alt="lizi5"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网页设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git管理修改</title>
       <link href="/LiYpoi.github.io/2019/05/24/Git%E7%AE%A1%E7%90%86%E4%BF%AE%E6%94%B9/"/>
       <url>/LiYpoi.github.io/2019/05/24/Git%E7%AE%A1%E7%90%86%E4%BF%AE%E6%94%B9/</url>

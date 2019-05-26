@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="建站历史,">
+  <meta name="keywords" content="Git,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="解决了文章无法显示标签和分类，问题出在Markdown文本中tags:，再一次被中英文符号坑了。 解决文章摘要问题。 去除了页面右侧看板娘，去除了页面左侧网易云音乐。 添加了站内到访数和页面访问量。">
-<meta name="keywords" content="建站历史">
+<meta name="description" content="一、撤销修改场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。让这个文件回到最近一次git commit或git add时的状态。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &amp;lt;file&amp;gt;，就回到了场景1，第二步按场景1操作。git rese">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站历史-2">
-<meta property="og:url" content="http://yoursite.com/2019/05/04/建站历史-2/index.html">
+<meta property="og:title" content="撤销修改与删除文件">
+<meta property="og:url" content="http://yoursite.com/2019/05/26/撤销修改与删除文件/index.html">
 <meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="解决了文章无法显示标签和分类，问题出在Markdown文本中tags:，再一次被中英文符号坑了。 解决文章摘要问题。 去除了页面右侧看板娘，去除了页面左侧网易云音乐。 添加了站内到访数和页面访问量。">
+<meta property="og:description" content="一、撤销修改场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。让这个文件回到最近一次git commit或git add时的状态。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &amp;lt;file&amp;gt;，就回到了场景1，第二步按场景1操作。git rese">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-04T10:07:04.152Z">
+<meta property="og:updated_time" content="2019-05-26T09:51:00.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="建站历史-2">
-<meta name="twitter:description" content="解决了文章无法显示标签和分类，问题出在Markdown文本中tags:，再一次被中英文符号坑了。 解决文章摘要问题。 去除了页面右侧看板娘，去除了页面左侧网易云音乐。 添加了站内到访数和页面访问量。">
+<meta name="twitter:title" content="撤销修改与删除文件">
+<meta name="twitter:description" content="一、撤销修改场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。让这个文件回到最近一次git commit或git add时的状态。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD &amp;lt;file&amp;gt;，就回到了场景1，第二步按场景1操作。git rese">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/04/建站历史-2/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/26/撤销修改与删除文件/">
 
 
 
 
 
-  <title>建站历史-2 | Thinking&Coding</title>
+  <title>撤销修改与删除文件 | Thinking&Coding</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/04/建站历史-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/26/撤销修改与删除文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">建站历史-2</h1>
+          <h1 class="post-title" itemprop="name headline">撤销修改与删除文件</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T17:59:12+08:00">
-                2019-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T17:38:37+08:00">
+                2019-05-26
               </time>
             
 
@@ -301,6 +301,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -325,7 +347,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  77
+                  387
                 </span>
               
 
@@ -362,10 +384,12 @@
       
 
       
-        <p>解决了文章无法显示标签和分类，问题出在Markdown文本中<code>tags:</code>，再一次被中英文符号坑了。</p>
-<p>解决文章摘要问题。</p>
-<p>去除了页面右侧看板娘，去除了页面左侧网易云音乐。</p>
-<p>添加了站内到访数和页面访问量。</p>
+        <h3 id="一、撤销修改"><a href="#一、撤销修改" class="headerlink" title="一、撤销修改"></a>一、撤销修改</h3><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。<code>git reset</code>命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用<code>HEAD</code>时，表示最新的版本。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本退会一文，不过前提是没有推送到远程库。</p>
+<h3 id="二、删除文件"><a href="#二、删除文件" class="headerlink" title="二、删除文件"></a>二、删除文件</h3><p>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+<p>如果删错了文件，使用<code>$ git checkout -- 目标文件</code>可以将误删的文件恢复到最新的版本，<code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<p><strong><code>注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！</code></strong></p>
 
       
     </div>
@@ -386,7 +410,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/05/04/建站历史-2/" title="建站历史-2">http://yoursite.com/2019/05/04/建站历史-2/</a>
+    <a href="http://yoursite.com/2019/05/26/撤销修改与删除文件/" title="撤销修改与删除文件">http://yoursite.com/2019/05/26/撤销修改与删除文件/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -401,7 +425,7 @@
       
         <div class="post-tags">
           
-            <a href="/LiYpoi.github.io/tags/建站历史/" rel="tag"><i class="fa fa-tag"></i> 建站历史</a>
+            <a href="/LiYpoi.github.io/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
           
         </div>
       
@@ -414,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/04/读书笔记/" rel="next" title="读书笔记-《黑客与画家》-1">
-                <i class="fa fa-chevron-left"></i> 读书笔记-《黑客与画家》-1
+              <a href="/LiYpoi.github.io/2019/05/26/网页配色方案/" rel="next" title="网页配色方案">
+                <i class="fa fa-chevron-left"></i> 网页配色方案
               </a>
             
           </div>
@@ -423,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LiYpoi.github.io/2019/05/05/Markdown基础语法-1/" rel="prev" title="Markdown基础语法">
-                Markdown基础语法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,8 +498,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -563,6 +592,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、撤销修改"><span class="nav-number">1.</span> <span class="nav-text">一、撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、删除文件"><span class="nav-number">2.</span> <span class="nav-text">二、删除文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
