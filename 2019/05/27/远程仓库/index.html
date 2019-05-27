@@ -86,21 +86,18 @@
 
 
 
-<meta name="description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
+<meta name="description" content="一、添加远程仓库所使用的远程仓库是GitHub，要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git； 关联后，使用命令git push -u origin master第一次推送master分支的所有内容； 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git提交远程报错">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/git提交远程报错/index.html">
+<meta property="og:title" content="远程仓库">
+<meta property="og:url" content="http://yoursite.com/2019/05/27/远程仓库/index.html">
 <meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
+<meta property="og:description" content="一、添加远程仓库所使用的远程仓库是GitHub，要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git； 关联后，使用命令git push -u origin master第一次推送master分支的所有内容； 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png">
-<meta property="og:updated_time" content="2019-05-23T10:46:49.866Z">
+<meta property="og:updated_time" content="2019-05-27T11:45:55.905Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git提交远程报错">
-<meta name="twitter:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
-<meta name="twitter:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
+<meta name="twitter:title" content="远程仓库">
+<meta name="twitter:description" content="一、添加远程仓库所使用的远程仓库是GitHub，要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git； 关联后，使用命令git push -u origin master第一次推送master分支的所有内容； 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改">
 
 
 
@@ -130,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/23/git提交远程报错/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/27/远程仓库/">
 
 
 
 
 
-  <title>Git提交远程报错 | Thinking&Coding</title>
+  <title>远程仓库 | Thinking&Coding</title>
   
 
 
@@ -265,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/23/git提交远程报错/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/27/远程仓库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -282,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git提交远程报错</h1>
+          <h1 class="post-title" itemprop="name headline">远程仓库</h1>
         
 
         <div class="post-meta">
@@ -294,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T18:00:26+08:00">
-                2019-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-27T19:37:11+08:00">
+                2019-05-27
               </time>
             
 
@@ -350,7 +347,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  213
+                  374
                 </span>
               
 
@@ -387,15 +384,15 @@
       
 
       
-        <p>在之前用<code>git push -u origin master</code>时，会出现这种错误：</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce671044b66746735.png" alt="错误1"></p>
-<p>原因在于第一次在Github中<code>learn-Git</code>仓库里创建的Markdown文件不在本地代码目录中。</p>
-<p>之前在出现此错误时，直接使用了<code>git push -f</code>命令强制推送，但会影响<code>commit</code>历史。</p>
-<p>解决办法：使用<code>git pull --rebase origin master</code>进行合并，合并之后再使用<code>git push origin master</code>推上去</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png" alt="解决"></p>
-<p>对Git的一些命令了解的还不是特别透彻。</p>
-<p><code>git push origin master</code> ：本地master分支的最新修改推送至GitHub</p>
-<p><code>git push -u origin master</code>：第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+        <h3 id="一、添加远程仓库"><a href="#一、添加远程仓库" class="headerlink" title="一、添加远程仓库"></a>一、添加远程仓库</h3><p>所使用的远程仓库是<strong>GitHub</strong>，要关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git</code>；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<p>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步。</p>
+<h3 id="二、远程仓库克隆"><a href="#二、远程仓库克隆" class="headerlink" title="二、远程仓库克隆"></a>二、远程仓库克隆</h3><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</p>
+<p>Git支持多种协议，包括<code>https</code>，但通过<code>ssh</code>支持的原生<code>git</code>协议速度最快。</p>
+<p>在多个人协作开发时，每个人各自从远程克隆一份就可以了。</p>
+<p>GitHub给出的地址不止一个，还可以<code>https://github.com/XXXXX/XXXXX.git</code>这样的地址。实际上，Git支持多种协议，默认的<code>git://</code>使用ssh，但也可以使用<code>https</code>等其他协议。</p>
+<p>使用<code>https</code>除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用<code>ssh</code>协议而只能用<code>https</code>。</p>
 
       
     </div>
@@ -416,7 +413,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/05/23/git提交远程报错/" title="Git提交远程报错">http://yoursite.com/2019/05/23/git提交远程报错/</a>
+    <a href="http://yoursite.com/2019/05/27/远程仓库/" title="远程仓库">http://yoursite.com/2019/05/27/远程仓库/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -444,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/23/git-3/" rel="next" title="Git的工作区与暂存区">
-                <i class="fa fa-chevron-left"></i> Git的工作区与暂存区
+              <a href="/LiYpoi.github.io/2019/05/26/撤销修改与删除文件/" rel="next" title="撤销修改与删除文件">
+                <i class="fa fa-chevron-left"></i> 撤销修改与删除文件
               </a>
             
           </div>
@@ -454,8 +451,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/23/随笔-1/" rel="prev" title="随笔">
-                随笔 <i class="fa fa-chevron-right"></i>
+              <a href="/LiYpoi.github.io/2019/05/27/创建分支与合并分支/" rel="prev" title="创建分支与合并分支">
+                创建分支与合并分支 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -508,8 +505,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -593,6 +599,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、添加远程仓库"><span class="nav-number">1.</span> <span class="nav-text">一、添加远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、远程仓库克隆"><span class="nav-number">2.</span> <span class="nav-text">二、远程仓库克隆</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
