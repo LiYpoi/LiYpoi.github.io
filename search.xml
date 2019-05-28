@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>分支管理</title>
+      <link href="/LiYpoi.github.io/2019/05/28/%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/"/>
+      <url>/LiYpoi.github.io/2019/05/28/%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><h4 id="列出分支"><a href="#列出分支" class="headerlink" title="列出分支"></a>列出分支</h4><p>列出分支基本命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure><p>没有参数时，git branch 会列出你在本地的分支。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure><p>此例的意思就是，我们有一个叫做”master”的分支，并且该分支是当前分支。</p><p>当你执行 git init 的时候，缺省情况下 Git 就会为你创建”master”分支。</p><p>如果我们要手动创建一个分支，并切换过去。执行 git branch (branchname) 即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing</span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  testing</span><br></pre></td></tr></table></figure><p>现在我们可以看到，有了一个新分支 testing。</p><h4 id="合并冲突"><a href="#合并冲突" class="headerlink" title="合并冲突"></a>合并冲突</h4><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</p><p>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</p><p>用<code>git log --graph</code>命令可以看到分支合并图。</p><p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p><h4 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h4><p>使用<code>git log</code>查看提交历史</p><p><img src="https://i.loli.net/2019/05/28/5cecfbe67adcd44419.png" alt="tijiao"></p><p>可以用<code>git log --oneline</code>选项来查看历史记录的简洁的版本。</p><p>我们还可以用<code>git log --oneline --graph</code>选项，查看历史中什么时候出现了分支，合并。</p><p>也可以用’–reverse’参数来逆向显示所有日志。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --reverse --oneline</span><br></pre></td></tr></table></figure><p>如果只想查找指定用户的提交日志可以使用命令：git log –author，例如，比方说要找Git源码中Linus提交的部分：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --author = Linus</span><br></pre></td></tr></table></figure><p>如果你要指定日期，可以执行几个选项： - 因为和–before，但是你也可以用–until和–after。</p><p>例如，如果我要看Git项目中三周前且在四月十八日之后的所有提交，我可以执行这个（我还用了–no-merges选项以隐藏合并提交）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --oneline --before = &#123;3.weeks.ago&#125; --after = &#123;2010-04-18&#125; --no-merges</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>创建分支与合并分支</title>
       <link href="/LiYpoi.github.io/2019/05/27/%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/"/>
       <url>/LiYpoi.github.io/2019/05/27/%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF/</url>
@@ -404,11 +429,11 @@
     
     
     <entry>
-      <title>读书笔记-《黑客与画家》-3</title>
-      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/"/>
-      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/</url>
+      <title>读书笔记-《黑客与画家》-2</title>
+      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/"/>
+      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/</url>
       
-        <content type="html"><![CDATA[<h2 id="不能说的话"><a href="#不能说的话" class="headerlink" title="不能说的话"></a>不能说的话</h2><p>所谓“流行”本质上就是自己看不见自己的样子。否则就不会有流行了，对于那些被流行抓住的人，流行就不再是流行，而是应该要做的正确事情。只有保持一定的距离才能观察到人们观念的变化，发现流行（也就是人们自以为正确的事）到底是什么。</p><p>你如果想要清晰地思考，就必须远离人群。但走的越远，你的处境就会越困难，受到的阻力也会越大，应为你没有迎合社会习俗，而是一步步地与它背道而驰。小时候每个人都会鼓励你不断成长，但是很少有人鼓励你继续成长，变成一个怀疑和抵制社会错误潮流的人。如果自己就是潮水的一部分，怎么能看见潮流的方向？</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="黑客与画家"><a href="#黑客与画家" class="headerlink" title="黑客与画家"></a>黑客与画家</h2><p>如何去学习编程?正如画家学习绘画的方法主要是动手去画，黑客学习编程的方法也理应如此。大多数黑客不是通过大学课程学会编程的，他们从实践中学习。黑客通过实践学习编程这是一个标志，说明黑客与科学家的区别在于：科学家不会通过干活来学习科学，而是通过做实验和解题来学习，黑客出发点是原创，最终得到一个优美的</p><a id="more"></a><p>结果；而科学家的出发点是别人的优美的结果，最终得到原创性。</p><p>创作者另一个学习途径是通过范例。对画家来说，博物馆就是美术技巧的图书馆。同样的，黑客可以通过观看优秀的程序学会编程，不是看它们的执行结果，而是看它们的源代码。</p><p>在编程时，你不能盼望先有一个完美的规格设计，然后再动手编程，这样是不现实的。如果你预先承认规格设计是不完美的，在编程的时候，就可以根据需要当场修改规格，最总会有一个更好的结果。</p><p>伟大的画家对待自己每一份作品都一丝不苟，优秀的软件也要求对美的狂热追求，如果你查看优秀软件的内部，就会发现那些预料中没有人会看见的部分也是优美的。</p><p>黑客与画家一样，工作起来是有心理周期的，在工作时要去投入巨大的热情，其他不需要操心的琐碎事在厌倦的时候去做是一个不错的选择。</p><p>普通黑客与优秀黑客的所有区别之中，会不会“换位思考”可能是最总要的单个因素。判断一个人是否具备“换位思考”的能力有一个好方法，那就是看他怎么向没有技术背景的人解释技术问题。软件的部分功能就是解释自身，为了写出优秀的软件你必须假设用户对软件一无所知<del>他们不会看用户手册的</del>。程序是写给人看的，附带能在机器上运行。</p><h3 id="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作"><a href="#现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作" class="headerlink" title="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!"></a>现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!</h3>]]></content>
       
       
       <categories>
@@ -429,11 +454,11 @@
     
     
     <entry>
-      <title>读书笔记-《黑客与画家》-2</title>
-      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/"/>
-      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B01/</url>
+      <title>读书笔记-《黑客与画家》-3</title>
+      <link href="/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/"/>
+      <url>/LiYpoi.github.io/2019/05/07/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B02/</url>
       
-        <content type="html"><![CDATA[<h2 id="黑客与画家"><a href="#黑客与画家" class="headerlink" title="黑客与画家"></a>黑客与画家</h2><p>如何去学习编程?正如画家学习绘画的方法主要是动手去画，黑客学习编程的方法也理应如此。大多数黑客不是通过大学课程学会编程的，他们从实践中学习。黑客通过实践学习编程这是一个标志，说明黑客与科学家的区别在于：科学家不会通过干活来学习科学，而是通过做实验和解题来学习，黑客出发点是原创，最终得到一个优美的</p><a id="more"></a><p>结果；而科学家的出发点是别人的优美的结果，最终得到原创性。</p><p>创作者另一个学习途径是通过范例。对画家来说，博物馆就是美术技巧的图书馆。同样的，黑客可以通过观看优秀的程序学会编程，不是看它们的执行结果，而是看它们的源代码。</p><p>在编程时，你不能盼望先有一个完美的规格设计，然后再动手编程，这样是不现实的。如果你预先承认规格设计是不完美的，在编程的时候，就可以根据需要当场修改规格，最总会有一个更好的结果。</p><p>伟大的画家对待自己每一份作品都一丝不苟，优秀的软件也要求对美的狂热追求，如果你查看优秀软件的内部，就会发现那些预料中没有人会看见的部分也是优美的。</p><p>黑客与画家一样，工作起来是有心理周期的，在工作时要去投入巨大的热情，其他不需要操心的琐碎事在厌倦的时候去做是一个不错的选择。</p><p>普通黑客与优秀黑客的所有区别之中，会不会“换位思考”可能是最总要的单个因素。判断一个人是否具备“换位思考”的能力有一个好方法，那就是看他怎么向没有技术背景的人解释技术问题。软件的部分功能就是解释自身，为了写出优秀的软件你必须假设用户对软件一无所知<del>他们不会看用户手册的</del>。程序是写给人看的，附带能在机器上运行。</p><h3 id="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作"><a href="#现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作" class="headerlink" title="现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!"></a>现在正是编程的黄金年代，编程到底能够有多酷，取决于我们能够用这种媒介做出怎样的工作!</h3>]]></content>
+        <content type="html"><![CDATA[<h2 id="不能说的话"><a href="#不能说的话" class="headerlink" title="不能说的话"></a>不能说的话</h2><p>所谓“流行”本质上就是自己看不见自己的样子。否则就不会有流行了，对于那些被流行抓住的人，流行就不再是流行，而是应该要做的正确事情。只有保持一定的距离才能观察到人们观念的变化，发现流行（也就是人们自以为正确的事）到底是什么。</p><p>你如果想要清晰地思考，就必须远离人群。但走的越远，你的处境就会越困难，受到的阻力也会越大，应为你没有迎合社会习俗，而是一步步地与它背道而驰。小时候每个人都会鼓励你不断成长，但是很少有人鼓励你继续成长，变成一个怀疑和抵制社会错误潮流的人。如果自己就是潮水的一部分，怎么能看见潮流的方向？</p>]]></content>
       
       
       <categories>
