@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Git,">
+  <meta name="keywords" content="Canvas,">
 
 
 
@@ -86,21 +86,22 @@
 
 
 
-<meta name="description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
-<meta name="keywords" content="Git">
+<meta name="description" content="1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    window.onload = function () &amp;#123;        var canvas = document.getElementById(&quot;canvas&quot;);        var context = canvas.getContext(&quot;2d&quot;)">
+<meta name="keywords" content="Canvas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git提交远程报错">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/git提交远程报错/index.html">
+<meta property="og:title" content="Canvas画弧线和圆">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/Canvas画弧线和圆/index.html">
 <meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
+<meta property="og:description" content="1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    window.onload = function () &amp;#123;        var canvas = document.getElementById(&quot;canvas&quot;);        var context = canvas.getContext(&quot;2d&quot;)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png">
-<meta property="og:updated_time" content="2019-05-23T10:46:49.866Z">
+<meta property="og:image" content="https://i.loli.net/2019/05/30/5cef9dd95a86e53188.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/30/5cef9e567e93454885.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/30/5cef9dfc7b1f613603.png">
+<meta property="og:updated_time" content="2019-05-30T09:14:14.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git提交远程报错">
-<meta name="twitter:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
-<meta name="twitter:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
+<meta name="twitter:title" content="Canvas画弧线和圆">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    window.onload = function () &amp;#123;        var canvas = document.getElementById(&quot;canvas&quot;);        var context = canvas.getContext(&quot;2d&quot;)">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/30/5cef9dd95a86e53188.png">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/23/git提交远程报错/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/Canvas画弧线和圆/">
 
 
 
 
 
-  <title>Git提交远程报错 | Thinking&Coding</title>
+  <title>Canvas画弧线和圆 | Thinking&Coding</title>
   
 
 
@@ -265,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/23/git提交远程报错/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/30/Canvas画弧线和圆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -282,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git提交远程报错</h1>
+          <h1 class="post-title" itemprop="name headline">Canvas画弧线和圆</h1>
         
 
         <div class="post-meta">
@@ -294,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T18:00:26+08:00">
-                2019-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T16:46:01+08:00">
+                2019-05-30
               </time>
             
 
@@ -350,7 +351,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  213
+                  178
                 </span>
               
 
@@ -387,15 +388,11 @@
       
 
       
-        <p>在之前用<code>git push -u origin master</code>时，会出现这种错误：</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce671044b66746735.png" alt="错误1"></p>
-<p>原因在于第一次在Github中<code>learn-Git</code>仓库里创建的Markdown文件不在本地代码目录中。</p>
-<p>之前在出现此错误时，直接使用了<code>git push -f</code>命令强制推送，但会影响<code>commit</code>历史。</p>
-<p>解决办法：使用<code>git pull --rebase origin master</code>进行合并，合并之后再使用<code>git push origin master</code>推上去</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png" alt="解决"></p>
-<p>对Git的一些命令了解的还不是特别透彻。</p>
-<p><code>git push origin master</code> ：本地master分支的最新修改推送至GitHub</p>
-<p><code>git push -u origin master</code>：第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</span><br><span class="line">        <span class="keyword">var</span> context = canvas.getContext(<span class="string">"2d"</span>) </span><br><span class="line">        context.lineWidth =<span class="number">5</span></span><br><span class="line">        context.strokeStyle = <span class="string">"#005588"</span></span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; <span class="number">10</span>  ; i ++)&#123;</span><br><span class="line">            </span><br><span class="line">            context.beginPath()</span><br><span class="line">            context.arc(<span class="number">50</span> + i*<span class="number">100</span>,<span class="number">60</span>,<span class="number">40</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">Math</span>.PI*(i+<span class="number">1</span>)/<span class="number">10</span>) </span><br><span class="line">            <span class="comment">//第六个参数描述绘图的顺序，默认false逆时针，true顺时针</span></span><br><span class="line">            context.closePath()</span><br><span class="line">            <span class="comment">// 当绘制的图形不是封闭的时，closePath（）会自动将图形的首位连接起来</span></span><br><span class="line">            context.stroke()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; <span class="number">10</span>  ; i ++)&#123;</span><br><span class="line">            context.beginPath()</span><br><span class="line">            context.arc(<span class="number">50</span> + i*<span class="number">100</span>,<span class="number">180</span>,<span class="number">40</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">Math</span>.PI*(i+<span class="number">1</span>)/<span class="number">10</span>)</span><br><span class="line">            <span class="comment">//context.closePath()/* 当绘制的图形不是封闭的时，closePath（）会自动将图形的首尾连接起来*/</span></span><br><span class="line">            context.stroke()<span class="comment">/* 此时图形的首尾不相连*/</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/05/30/5cef9dd95a86e53188.png" alt="2"></p>
+<p>Canvas画圆的参数</p>
+<p><img src="https://i.loli.net/2019/05/30/5cef9e567e93454885.png" alt="4"></p>
+<p><img src="https://i.loli.net/2019/05/30/5cef9dfc7b1f613603.png" alt="5"></p>
 
       
     </div>
@@ -416,7 +413,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/05/23/git提交远程报错/" title="Git提交远程报错">http://yoursite.com/2019/05/23/git提交远程报错/</a>
+    <a href="http://yoursite.com/2019/05/30/Canvas画弧线和圆/" title="Canvas画弧线和圆">http://yoursite.com/2019/05/30/Canvas画弧线和圆/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -431,7 +428,7 @@
       
         <div class="post-tags">
           
-            <a href="/LiYpoi.github.io/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/LiYpoi.github.io/tags/Canvas/" rel="tag"><i class="fa fa-tag"></i> Canvas</a>
           
         </div>
       
@@ -444,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/23/git-3/" rel="next" title="Git的工作区与暂存区">
-                <i class="fa fa-chevron-left"></i> Git的工作区与暂存区
+              <a href="/LiYpoi.github.io/2019/05/30/创建Canvas以及画条线/" rel="next" title="创建Canvas以及画条线">
+                <i class="fa fa-chevron-left"></i> 创建Canvas以及画条线
               </a>
             
           </div>
@@ -453,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LiYpoi.github.io/2019/05/23/随笔-1/" rel="prev" title="随笔">
-                随笔 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

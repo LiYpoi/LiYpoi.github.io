@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Git,">
+  <meta name="keywords" content="Canvas,">
 
 
 
@@ -86,21 +86,20 @@
 
 
 
-<meta name="description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
-<meta name="keywords" content="Git">
+<meta name="description" content="Canvas的历史这个 HTML 元素是为了客户端矢量图形而设计的。它自己没有行为，但却把一个绘图 API 展现给客户端 JavaScript 以使脚本能够把想绘制的东西都绘制到一块画布上。  标记和 SVG 以及 VML 之间的一个重要的不同是， 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。 这两种方式在功能上是等同的，任何一种都可">
+<meta name="keywords" content="Canvas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git提交远程报错">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/git提交远程报错/index.html">
+<meta property="og:title" content="创建Canvas以及画条线">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/创建Canvas以及画条线/index.html">
 <meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
+<meta property="og:description" content="Canvas的历史这个 HTML 元素是为了客户端矢量图形而设计的。它自己没有行为，但却把一个绘图 API 展现给客户端 JavaScript 以使脚本能够把想绘制的东西都绘制到一块画布上。  标记和 SVG 以及 VML 之间的一个重要的不同是， 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。 这两种方式在功能上是等同的，任何一种都可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
-<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png">
-<meta property="og:updated_time" content="2019-05-23T10:46:49.866Z">
+<meta property="og:image" content="https://i.loli.net/2019/05/30/5cef9b1fb5ebd44215.png">
+<meta property="og:updated_time" content="2019-05-30T09:00:23.729Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git提交远程报错">
-<meta name="twitter:description" content="在之前用git push -u origin master时，会出现这种错误：  原因在于第一次在Github中learn-Git仓库里创建的Markdown文件不在本地代码目录中。 之前在出现此错误时，直接使用了git push -f命令强制推送，但会影响commit历史。 解决办法：使用git pull --rebase origin master进行合并，合并之后再使用git push or">
-<meta name="twitter:image" content="https://i.loli.net/2019/05/23/5ce671044b66746735.png">
+<meta name="twitter:title" content="创建Canvas以及画条线">
+<meta name="twitter:description" content="Canvas的历史这个 HTML 元素是为了客户端矢量图形而设计的。它自己没有行为，但却把一个绘图 API 展现给客户端 JavaScript 以使脚本能够把想绘制的东西都绘制到一块画布上。  标记和 SVG 以及 VML 之间的一个重要的不同是， 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。 这两种方式在功能上是等同的，任何一种都可">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/30/5cef9b1fb5ebd44215.png">
 
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/23/git提交远程报错/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/创建Canvas以及画条线/">
 
 
 
 
 
-  <title>Git提交远程报错 | Thinking&Coding</title>
+  <title>创建Canvas以及画条线 | Thinking&Coding</title>
   
 
 
@@ -265,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/23/git提交远程报错/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/30/创建Canvas以及画条线/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -282,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git提交远程报错</h1>
+          <h1 class="post-title" itemprop="name headline">创建Canvas以及画条线</h1>
         
 
         <div class="post-meta">
@@ -294,8 +293,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-23T18:00:26+08:00">
-                2019-05-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T16:45:07+08:00">
+                2019-05-30
               </time>
             
 
@@ -350,7 +349,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  213
+                  695
                 </span>
               
 
@@ -366,7 +365,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -387,15 +386,22 @@
       
 
       
-        <p>在之前用<code>git push -u origin master</code>时，会出现这种错误：</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce671044b66746735.png" alt="错误1"></p>
-<p>原因在于第一次在Github中<code>learn-Git</code>仓库里创建的Markdown文件不在本地代码目录中。</p>
-<p>之前在出现此错误时，直接使用了<code>git push -f</code>命令强制推送，但会影响<code>commit</code>历史。</p>
-<p>解决办法：使用<code>git pull --rebase origin master</code>进行合并，合并之后再使用<code>git push origin master</code>推上去</p>
-<p><img src="https://i.loli.net/2019/05/23/5ce6732574d6d19488.png" alt="解决"></p>
-<p>对Git的一些命令了解的还不是特别透彻。</p>
-<p><code>git push origin master</code> ：本地master分支的最新修改推送至GitHub</p>
-<p><code>git push -u origin master</code>：第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+        <h2 id="Canvas的历史"><a href="#Canvas的历史" class="headerlink" title="Canvas的历史"></a>Canvas的历史</h2><p>这个 HTML 元素是为了客户端矢量图形而设计的。它自己没有行为，但却把一个绘图 API 展现给客户端 JavaScript 以使脚本能够把想绘制的东西都绘制到一块画布上。</p>
+<p><canvas> 标记和 SVG 以及 VML 之间的一个重要的不同是，<canvas> 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。</canvas></canvas></p>
+<p>这两种方式在功能上是等同的，任何一种都可以用另一种来模拟。从表面上看，它们很不相同，可是，每一种都有强项和弱点。例如，SVG 绘图很容易编辑，只要从其描述中移除元素就行。</p>
+<p>要从同一图形的一个 <canvas> 标记中移除元素，往往需要擦掉绘图重新绘制它，大多数 Canvas 绘图 API 都没有定义在 <canvas> 元素本身上，而是定义在通过画布的 <a href="http://www.w3school.com.cn/jsref/met_canvas_getcontext.asp" target="_blank" rel="noopener">getContext() 方法</a>获得的一个“绘图环境”对象上。</canvas></canvas></p>
+<p>Canvas API 也使用了路径的表示法。但是，路径由一系列的方法调用来定义，而不是描述为字母和数字的字符串，比如调用 beginPath() 和 arc() 方法。</p>
+<p>一旦定义了路径，其他的方法，如 fill()，都是对此路径操作。绘图环境的各种属性，比如 fillStyle，说明了这些操作如何使用。</p>
+<p><strong>注释：</strong>Canvas API 非常紧凑的一个原因上它没有对绘制文本提供任何支持。要把文本加入到一个 <canvas> 图形，必须要么自己绘制它再用位图图像合并它，或者在 <canvas> 上方使用 CSS 定位来覆盖 HTML 文本。</canvas></canvas></p>
+<hr>
+<p><strong>Canvas中的绘图使一种状态绘图，首先要进行状态设置，然后调用函数绘制，画布的设置中，以左上角为圆点，向右为X轴正方向。向下为Y轴正方向，canvas的绘制是基于状态的。</strong></p>
+<hr>
+<h2 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h2><p>Canvas</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTML</span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Javascript</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cnavas=<span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> context=canvas.getContext(<span class="string">'2d'</span>)<span class="comment">//获得绘图环境,context提供了绘图的接口</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用canvas进行绘制</span></span><br></pre></td></tr></table></figure>
+<h2 id="画一条线"><a href="#画一条线" class="headerlink" title="画一条线"></a>画一条线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">context.beginPath()</span><br><span class="line">        context.moveTo(100,100) /*线的起点*/</span><br><span class="line">        context.lineTo(700,700)/*线的终点*/</span><br><span class="line">        context.lineTo(100,700)</span><br><span class="line">        context.lineTo(100,100)</span><br><span class="line">        context.closePath()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        context.lineWidth=5 /*线条宽度*/</span><br><span class="line">        context.strokeStyle="#66ccff"/*线条样式，主要是指线条的颜色*/</span><br><span class="line">        context.stroke()   /*stroke是笔画的意思，在Canvas中用来画线条*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        context.fillStyle="rgb(2,100,30)"/* 对多边形进行颜色填充*/</span><br><span class="line">        context.fill()</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/05/30/5cef9b1fb5ebd44215.png" alt="1"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用context.beginPath()和context.closePath()使两个路径分开,beginPath（）和closePath（）不一定要同时出现，beginPath（）代表规划一个路径，closePath（）表四结束当前的路径，如果当前的路径没有封闭上，就会让当前的路径封闭上。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -416,7 +422,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/05/23/git提交远程报错/" title="Git提交远程报错">http://yoursite.com/2019/05/23/git提交远程报错/</a>
+    <a href="http://yoursite.com/2019/05/30/创建Canvas以及画条线/" title="创建Canvas以及画条线">http://yoursite.com/2019/05/30/创建Canvas以及画条线/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -431,7 +437,7 @@
       
         <div class="post-tags">
           
-            <a href="/LiYpoi.github.io/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/LiYpoi.github.io/tags/Canvas/" rel="tag"><i class="fa fa-tag"></i> Canvas</a>
           
         </div>
       
@@ -444,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/23/git-3/" rel="next" title="Git的工作区与暂存区">
-                <i class="fa fa-chevron-left"></i> Git的工作区与暂存区
+              <a href="/LiYpoi.github.io/2019/05/29/随笔-3/" rel="next" title="随笔">
+                <i class="fa fa-chevron-left"></i> 随笔
               </a>
             
           </div>
@@ -454,8 +460,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/23/随笔-1/" rel="prev" title="随笔">
-                随笔 <i class="fa fa-chevron-right"></i>
+              <a href="/LiYpoi.github.io/2019/05/30/Canvas画弧线和圆/" rel="prev" title="Canvas画弧线和圆">
+                Canvas画弧线和圆 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -508,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -593,6 +608,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Canvas的历史"><span class="nav-number">1.</span> <span class="nav-text">Canvas的历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写法"><span class="nav-number">2.</span> <span class="nav-text">写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画一条线"><span class="nav-number">3.</span> <span class="nav-text">画一条线</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
