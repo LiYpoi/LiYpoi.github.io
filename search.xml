@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用CSS实现图片轮播</title>
+      <link href="/LiYpoi.github.io/2019/06/02/%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/"/>
+      <url>/LiYpoi.github.io/2019/06/02/%E7%94%A8CSS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/</url>
+      
+        <content type="html"><![CDATA[<p>在之前的多媒体作业中为了使banner区的图片不呆板，用CSS实现的对图片的轮播效果，虽然用JS也可以实现，但这对<code>margin</code>的作用也算是一种新的了解。</p><p><strong>效果</strong></p><p><img src="https://i.loli.net/2019/06/02/5cf3c6903235c24426.gif" alt="xiaoguo"></p><p><strong>CSS部分</strong></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">            <span class="attribute">overflow</span>: hidden;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-id">#photo</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">2400px</span>;</span><br><span class="line">            <span class="attribute">animation</span>: switch <span class="number">10s</span> ease-out infinite;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-id">#photo</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @<span class="keyword">keyframes</span> switch &#123;</span><br><span class="line">            0%,25%&#123;</span><br><span class="line">                <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">          35%,60% &#123;</span><br><span class="line">                <span class="attribute">margin-left</span>: -<span class="number">800px</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            70%,100%&#123;</span><br><span class="line">                <span class="attribute">margin-left</span>: -<span class="number">1600px</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p><strong>HTML部分</strong></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"photo"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imageli/banner1.png"</span> <span class="attr">alt</span>=<span class="string">"樱花节"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imageli/banner2.png"</span> <span class="attr">alt</span>=<span class="string">"樱花节"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imageli/banner3.png"</span> <span class="attr">alt</span>=<span class="string">"樱花节"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>实现的关键在于<code>@keyframes</code>定义关键帧中<code>margin-left</code>,可以看出来，第二个和第三个<code>margin-left</code>的值为负，在网页的世界中，默认的文档流是水平方向的，当<code>margin-left</code>的值为负时，会使对应的标签向左缩进，从代码中可以看出，图片从0px开始变换了三次到1600px,每一次减少800px，而所加的三张图片的<code>width</code>都为800px,所以图片向左缩进，最终实现了轮播的效果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML5之Canvas动画制作架构</title>
       <link href="/LiYpoi.github.io/2019/06/01/HTML5%E4%B9%8BCanvas%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E6%9E%B6%E6%9E%84/"/>
       <url>/LiYpoi.github.io/2019/06/01/HTML5%E4%B9%8BCanvas%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E6%9E%B6%E6%9E%84/</url>
