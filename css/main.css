@@ -1843,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfda3e;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3186,13 +3186,6 @@ pre {
 }
 :active {
   cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
-}
-.main-inner {
-  margin-top: 60px;
-  padding: 60px 60px 60px 60px;
-  background: #fff;
-  opacity: 0.8;
-  min-height: 500px;
 }
 body {
   background: url("https://source.unsplash.com/random/1600x900");
