@@ -1843,7 +1843,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #0bb1cd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3148,16 +3148,6 @@ pre .javascript .function {
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
-.backstretch {
-  opacity: 0.75;
-}
-.content-wrap,
-.sidebar {
-  opacity: 0.9 !important;
-}
-.header-inner {
-  background: rgba(255,255,255,0.9) !important;
-}
 .posts-expand .post-body img {
   border: none;
   padding: 0px;
@@ -3186,10 +3176,4 @@ pre {
 }
 :active {
   cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
-}
-body {
-  background: url("https://source.unsplash.com/random/1600x900");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
 }
