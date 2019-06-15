@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #818bb5;
+  background: #b947da;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3213,7 +3213,4 @@ pre {
 }
 :active {
   cursor: url("http://pt2i2n6wl.bkt.clouddn.com/bitbug_favicon%20%281%29.ico"), auto !important;
-}
-.site-meta {
-  background: #6cf;
 }
