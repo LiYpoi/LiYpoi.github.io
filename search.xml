@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何理解Web语义化？</title>
+      <link href="/LiYpoi.github.io/2019/06/26/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3Web%E8%AF%AD%E4%B9%89%E5%8C%96%EF%BC%9F/"/>
+      <url>/LiYpoi.github.io/2019/06/26/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3Web%E8%AF%AD%E4%B9%89%E5%8C%96%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<p>第二天百度前端学院的任务里有推荐读<a href="https://www.zhihu.com/question/20455165" target="_blank" rel="noopener">顾轶灵的如何理解Web语义化?</a>,这里先贴一下链接。文中所说，目前Web上的内容越来越多，只能通过机器对其处理，为了使机器对内容的精确可读，有两个发展方向。一是大力发展人工智能，朝着人类水平的方向发展；二是语义网，这也是万维网的创始人Tim Berners-Lee提出的美好想法。</p><p>两条路的目标都很难实现，第一条路技术上难，第二条路实施起来障碍多。为什么说第二条路障碍多？这要说到语义网了。语义网简单来说就是能够根据语义进行判断的智能网络，可以实现人与电脑之间的无障碍沟通，它的智能化程度极高，协调能力也非常强大。它将一切信息和信息之间的逻辑关系包含在一起，一个个的信息孤岛整合成一个巨大的数据库。同时，语义化也是Web3.0的特征之一。</p><p>现在的HTML规范、HTML5一直在往语义化的方向努力，许多属性、元素在设计的时候就是为了让用户代理更好理解HTML文档，Ｈ5更是在之前的规范基础上，对所有表现层的语义描述都进行了修改或删除，增加了表达更丰富语义的元素，它使对应的信息认可程度提高。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>随笔</title>
       <link href="/LiYpoi.github.io/2019/06/24/%E9%9A%8F%E7%AC%94-7/"/>
       <url>/LiYpoi.github.io/2019/06/24/%E9%9A%8F%E7%AC%94-7/</url>
