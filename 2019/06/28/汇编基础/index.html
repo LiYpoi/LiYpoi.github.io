@@ -94,10 +94,12 @@
 <meta property="og:site_name" content="Thinking&amp;Coding">
 <meta property="og:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-28T14:47:47.178Z">
+<meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
+<meta property="og:updated_time" content="2019-06-29T12:55:22.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
+<meta name="twitter:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 
 
 
@@ -359,7 +361,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  826
+                  1.1k
                 </span>
               
 
@@ -375,7 +377,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  4
                 </span>
               
             </div>
@@ -399,17 +401,67 @@
         <p><strong>前言：</strong></p>
 <p>汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏<code>SHENZHENI/O</code>,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了<a href="https://www.bilibili.com/video/av28132657?zw" target="_blank" rel="noopener">小甲鱼零基础学汇编</a>和<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="noopener">阮一峰的汇编语言入门教程</a>。将学习的笔记整理于此。</p>
 <h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><p><strong>汇编语言是二进制指令的文本形式</strong>，与指令是一一对应的关系。CPU只负责运算，本身不具备只能，当CPU接受到一条输入的指令后，它就运行一次，然后等待下一条指令。这些指令都是二进制的(是机器的语言)，但对于人类来说，二进制的指令过于难读，所以就诞生了与二进制指令一一对应的汇编语言。由于汇编语言最接近机器语言，所以汇编语言的执行效率是所有语言中最快的，但其所写代码量也是最大的。每一种CPU的机器指令都是不一样的，因此对应的汇编语言也不一样，笔记中所写的是目前最常见的x86汇编语言，即Intel公司的CPU使用的那一种。</p>
-<h3 id="1-汇编语言的组成"><a href="#1-汇编语言的组成" class="headerlink" title="1.汇编语言的组成"></a>1.汇编语言的组成</h3><p>汇编语言由以下3类组成：</p>
+<h3 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h3><p>汇编语言由以下3类组成：</p>
 <p>1.汇编指令（机器码的助记符）</p>
 <p>2.伪指令（由编译器执行）</p>
 <p>3.其他符号（由编译器识别） </p>
 <p>汇编语言的核心是汇编指令</p>
-<h3 id="2-CPU的三种总线"><a href="#2-CPU的三种总线" class="headerlink" title="2.CPU的三种总线"></a>2.CPU的三种总线</h3><p>1.地址总线：决定CPU的寻址能力</p>
+<h3 id="CPU的三种总线"><a href="#CPU的三种总线" class="headerlink" title="CPU的三种总线"></a>CPU的三种总线</h3><p>1.地址总线：决定CPU的寻址能力</p>
 <p>２.数据总线：决定CPU与其它器件进行数据传送时的一次数据传送量</p>
 <p>３.控制总线：决定CPU对系统中其它器件的控制能力</p>
 <hr>
-<h2 id="二、寄存器"><a href="#二、寄存器" class="headerlink" title="二、寄存器"></a>二、寄存器</h2><p>CPU 本身只负责运算，不负责储存数据。数据一般都储存在内存之中，CPU 要用的时候就去内存读写数据。但是，CPU 的运算速度远高于内存的读写速度，为了避免被拖慢，CPU 都自带一级缓存和二级缓存。基本上，CPU 缓存可以看作是读写速度较快的内存。</p>
-<p>但是，CPU 缓存还是不够快，另外数据在缓存里面的地址是不固定的，CPU 每次读写都要寻址也会拖慢速度。因此，除了缓存之外，CPU 还自带了寄存器，用来储存最常用的数据。也就是说，那些最频繁读写的数据（比如循环变量），都会放在寄存器里面，CPU 优先读写寄存器，再由寄存器跟内存交换数据。寄存器不依靠地址区分数据，而依靠名称。每一个寄存器都有自己的名称。早期的 x86 CPU 只有8个寄存器，而且每个都有不同的用途。现在的寄存器已经有100多个了，都变成通用寄存器，不特别指定用途了，但是早期寄存器的名字都被保存了下来。</p>
+<h2 id="二、寄存器-CPU工作原理"><a href="#二、寄存器-CPU工作原理" class="headerlink" title="二、寄存器(CPU工作原理)"></a>二、寄存器(CPU工作原理)</h2><p>CPU 本身只负责运算，不负责储存数据。数据一般都储存在内存之中，所以CPU需要到内存中读取数据，但是，CPU的运算速度比内存的读写速度快，为了保持一致，CPU中自带了一级缓存和二级缓存，CPU缓存用于减少处理器访问内存所需平均时间的部件。其容量远小于内存，但速度却接近CPU的频率。</p>
+<p>但是，数据在缓存里面的地址是不固定的，CPU 每次读写都要寻址会拖慢速度。因此，除了缓存之外，CPU 还自带了寄存器，用来储存最常用的数据。CPU对存储器中的数据进行处理时，往往先把数据取到内部寄存器中，而后再作处理。寄存器不依靠地址区分数据，而依靠名称。每一个寄存器都有自己的名称。早期的 x86 CPU 只有8个寄存器，而且每个都有不同的用途。现在的寄存器已经有100多个了，都变成通用寄存器，不特别指定用途了，但是早期寄存器的名字都被保存了下来。</p>
+<p>x86CPU所有寄存器都是16位的，可以存放两个字节，AX、BX、CX、DX通常用来存放一般性的数据被称为通用寄存器。</p>
+<p>下面以AX为例解释16位寄存器的逻辑结构</p>
+<ul>
+<li><p>数据：18</p>
+</li>
+<li><p>二进制表示：10010</p>
+</li>
+<li><p>在寄存器AX中的存储：</p>
+<p><img src="https://i.loli.net/2019/06/29/5d174bdb849b325059.png" alt></p>
+</li>
+</ul>
+<p>x86以上的一代CPU寄存器都是8位的，从x86开始寄存器开始了16位的时代，但为了兼容上一代，AX、BX、CX、DX都可以分为两个独立的8位寄存器使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AX可以分为AH和AL    //累加寄存器，常用于运算</span><br><span class="line">BX可以分为BH和BL    //基址寄存器，常用于地址索引</span><br><span class="line">CX可以分为CH和CL    //计数寄存器，常用于计数</span><br><span class="line">DX可以分为DH和DL    //数据寄存器，常用于数据传递</span><br></pre></td></tr></table></figure>
+<h3 id="几条汇编指令"><a href="#几条汇编指令" class="headerlink" title="几条汇编指令"></a>几条汇编指令</h3><p><strong>汇编指令不区分大小写</strong></p>
+<table>
+<thead>
+<tr>
+<th>汇编指令</th>
+<th>控制CPU完成的操作</th>
+<th>用高级语言的语法描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mov  ax,18</td>
+<td>将8送入AX</td>
+<td>AX=18</td>
+</tr>
+<tr>
+<td>mov  ah,78</td>
+<td>将78送入AH</td>
+<td>AH=78</td>
+</tr>
+<tr>
+<td>add  ax,8</td>
+<td>将寄存器AX中的数值加上8</td>
+<td>AX=AX+8</td>
+</tr>
+<tr>
+<td>mov  ax,bx</td>
+<td>将寄存器BX中的数值送入寄存器AX</td>
+<td>AX=BX</td>
+</tr>
+<tr>
+<td>add  ax,bx</td>
+<td>将AX，BX中的内容相加，结果存在AX中</td>
+<td>AX=AX+BX</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -638,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">1.汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">2.CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -688,7 +740,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">21.5k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">21.8k</span>
 </span>
 </div>
 
