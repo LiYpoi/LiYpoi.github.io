@@ -94,12 +94,14 @@
 <meta property="og:site_name" content="Thinking&amp;Coding">
 <meta property="og:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
-<meta property="og:updated_time" content="2019-06-29T12:55:22.507Z">
+<meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
+<meta property="og:updated_time" content="2019-06-30T15:32:55.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
-<meta name="twitter:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
+<meta name="twitter:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 
 
 
@@ -361,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  1.8k
                 </span>
               
 
@@ -377,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  6
                 </span>
               
             </div>
@@ -402,10 +404,10 @@
 <p>汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏<code>SHENZHENI/O</code>,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了<a href="https://www.bilibili.com/video/av28132657?zw" target="_blank" rel="noopener">小甲鱼零基础学汇编</a>和<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="noopener">阮一峰的汇编语言入门教程</a>。将学习的笔记整理于此。</p>
 <h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><p><strong>汇编语言是二进制指令的文本形式</strong>，与指令是一一对应的关系。CPU只负责运算，本身不具备只能，当CPU接受到一条输入的指令后，它就运行一次，然后等待下一条指令。这些指令都是二进制的(是机器的语言)，但对于人类来说，二进制的指令过于难读，所以就诞生了与二进制指令一一对应的汇编语言。由于汇编语言最接近机器语言，所以汇编语言的执行效率是所有语言中最快的，但其所写代码量也是最大的。每一种CPU的机器指令都是不一样的，因此对应的汇编语言也不一样，笔记中所写的是目前最常见的x86汇编语言，即Intel公司的CPU使用的那一种。</p>
 <h3 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h3><p>汇编语言由以下3类组成：</p>
-<p>1.汇编指令（机器码的助记符）</p>
+<p>1.汇编指令（机器码的助记符）汇编语言的核心是汇编指令</p>
 <p>2.伪指令（由编译器执行）</p>
 <p>3.其他符号（由编译器识别） </p>
-<p>汇编语言的核心是汇编指令</p>
+<p><img src="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png" alt></p>
 <h3 id="CPU的三种总线"><a href="#CPU的三种总线" class="headerlink" title="CPU的三种总线"></a>CPU的三种总线</h3><p>1.地址总线：决定CPU的寻址能力</p>
 <p>２.数据总线：决定CPU与其它器件进行数据传送时的一次数据传送量</p>
 <p>３.控制总线：决定CPU对系统中其它器件的控制能力</p>
@@ -462,6 +464,73 @@
 </tr>
 </tbody>
 </table>
+<h3 id="物理地址"><a href="#物理地址" class="headerlink" title="物理地址"></a>物理地址</h3><p>CPU访问内存单元时要给出内存单元的地址，所有的内存单元构成的存储空间是一个<code>一维的线性空间</code>。</p>
+<p><strong>16位结构的CPU</strong></p>
+<p>16位结构描述一个CPU具有以下特征：1.运算器一次最多可以处理16位的数据 2.寄存器的最大宽度为16位 3.寄存器和运算器之间的通路是16位的</p>
+<p><strong>x86给出物理地址的方法</strong></p>
+<p>x86外部有20位地址总线，可以传送20位地址，寻址能力为1M；x86内部为16位结构，它只能传送16位的地址，寻址能力只有64K,x86采用一种在内部用两个16位地址合成的方法来形成一个20位的物理地址。</p>
+<p><img src="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png" alt></p>
+<p>地址加法器合成物理地址的方法：物理地址=段地址x16+偏移地址。</p>
+<p>“段地址x16”有一个更常用的说法是左移4位，其中的“位”，指的是二进制位。</p>
+<p>例如：一个数据为2H，二进制形式为10B，对其进行左移运算</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">左移位数</th>
+<th style="text-align:center">二进制</th>
+<th style="text-align:center">十六进制</th>
+<th style="text-align:center">十进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">10B</td>
+<td style="text-align:center">2H</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">100B</td>
+<td style="text-align:center">4H</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1000B</td>
+<td style="text-align:center">8H</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">10000B</td>
+<td style="text-align:center">10H</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">100000B</td>
+<td style="text-align:center">20H</td>
+<td style="text-align:center">32</td>
+</tr>
+</tbody>
+</table>
+<p>由上表可以得出：</p>
+<ul>
+<li>一个数据的二进制形式左移1位，相当于该数据乘以2；</li>
+<li>一个数据的二进制形式左移N位，相当于该数据乘以2的N次方；</li>
+<li>一个数据的十六进制形式左移1位，相当于乘以16；</li>
+<li>一个数据的十进制形式左移一位，相当于乘以10；</li>
+<li>一个数据的x进制形式左移1位，相当于乘以x;</li>
+</ul>
+<p><strong>段的概念</strong></p>
+<p>内存没有分段，段的划分来自于CPU，在编程时可以根据需要，将若干地址连续的内存单元看作一个段，用段地址x16定位段的起始地址，用偏移地址定位段中的内存单元；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">段地址x16必然是16的倍数，所以一个段的起始地址也是16的倍数；</span><br><span class="line">偏移地址为16位，16位地址的寻址能力为64KB(2的16次方)，所以一个段的长度最大为64KB</span><br></pre></td></tr></table></figure>
+<p>小结：</p>
+<ul>
+<li>CPU访问内存单元时，必须向内存提供内存单元的物理地址</li>
+<li>x86CPU在内部用不同的段地址和偏移地址移位相加的方法形成最终的同一个物理地址</li>
+</ul>
 
       
     </div>
@@ -694,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -744,7 +813,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">22.3k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">22.9k</span>
 </span>
 </div>
 
