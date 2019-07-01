@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
-<meta property="og:updated_time" content="2019-06-30T15:32:55.135Z">
+<meta property="og:updated_time" content="2019-07-01T15:22:11.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k
+                  2.2k
                 </span>
               
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -530,6 +530,39 @@
 <ul>
 <li>CPU访问内存单元时，必须向内存提供内存单元的物理地址</li>
 <li>x86CPU在内部用不同的段地址和偏移地址移位相加的方法形成最终的同一个物理地址</li>
+</ul>
+<p><strong>段寄存器</strong></p>
+<p>段寄存器就是提供段地址的，x86CPU有４个段寄存器：CS、DS、SS、ES。当x86CPU要访问内存时，由这四个段寄存器提供内存单元的段地址。</p>
+<p>CS(代码段寄存器)和IP(指令指针寄存器)时x86CPU中最关键的寄存器，它们指示了CPU当前读取指令的地址。</p>
+<p><code>mov</code>指令不能用于设置CS、IP的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">同时修改CS、IP内容</th>
+<th style="text-align:center">仅修改IP的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">jmp 段地址:偏移地址</td>
+<td style="text-align:center">jmp 某一合法寄存器</td>
+</tr>
+<tr>
+<td style="text-align:center">jmp 2AE3:3</td>
+<td style="text-align:center">jmp ax(类似于mov IP,ax)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>代码段</strong></p>
+<p>可以将长度为N(N$\leq$64KB )的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元，这段内存是用来存放代码的，从而定义了一个代码段。但CPU并不会将定义的代码段中的指令当作指令来执行，<strong>CPU只认被CS:iP指向的内存单元中的内容为指令。</strong></p>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><strong>注意：</strong>Win10没有<code>debug</code>，<code>debug</code>是16位的程序，32位系统可以兼容，64位系统已经不能兼容了。解决办法<a href="https://jingyan.baidu.com/article/9faa7231fd2775473c28cb26.html" target="_blank" rel="noopener">window10如何使用debug</a></p>
+<ul>
+<li>R命令查看、改变CPU寄存器的内容</li>
+<li>D命令查看内存中的内容</li>
+<li>E命令改写内存中的内容</li>
+<li>U命令将内存中的机器指令翻译成汇编指令</li>
+<li>T命令执行一条机器指令</li>
+<li>A命令以汇编指令的格式在内存中写入一条机器指令</li>
 </ul>
 
       
@@ -763,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">2.3.</span> <span class="nav-text">实验</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -813,7 +846,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">22.9k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">23.3k</span>
 </span>
 </div>
 
