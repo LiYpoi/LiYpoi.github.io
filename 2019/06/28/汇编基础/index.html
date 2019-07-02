@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
-<meta property="og:updated_time" content="2019-07-01T15:22:11.618Z">
+<meta property="og:updated_time" content="2019-07-02T14:19:08.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.2k
+                  2.6k
                 </span>
               
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  9
                 </span>
               
             </div>
@@ -534,7 +534,7 @@
 <p><strong>段寄存器</strong></p>
 <p>段寄存器就是提供段地址的，x86CPU有４个段寄存器：CS、DS、SS、ES。当x86CPU要访问内存时，由这四个段寄存器提供内存单元的段地址。</p>
 <p>CS(代码段寄存器)和IP(指令指针寄存器)时x86CPU中最关键的寄存器，它们指示了CPU当前读取指令的地址。</p>
-<p><code>mov</code>指令不能用于设置CS、IP的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP。</p>
+<p><code>mov</code>指令不能用于设置CS、IP的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP，<code>jmp</code>是具有一个操作对象的指令。</p>
 <table>
 <thead>
 <tr>
@@ -564,6 +564,83 @@
 <li>T命令执行一条机器指令</li>
 <li>A命令以汇编指令的格式在内存中写入一条机器指令</li>
 </ul>
+<h2 id="三、寄存器-内存访问"><a href="#三、寄存器-内存访问" class="headerlink" title="三、寄存器(内存访问)"></a>三、寄存器(内存访问)</h2><p>x86CPU中有一个<code>DS</code>寄存器，通常用来存放要访问的数据的段地址。</p>
+<h3 id="DS和-address"><a href="#DS和-address" class="headerlink" title="DS和[address]"></a>DS和[address]</h3><p>已知的<code>mov</code>指令可以完成的两种传送功能：1.将数据直接送入寄存器，例如：<code>mov  ax,2</code>2.将一个寄存器中的内容送入另一个寄存器中，例如：<code>mov bx, ax</code>;除此之外，mov指令还可以将一个内存单元中的内容送入一个寄存器，例如：<code>mov al,[0]</code>。[address]表示一个偏移地址为address的内存单元。</p>
+<p><code>mov</code>指令的格式：</p>
+<table>
+<thead>
+<tr>
+<th><code>mov</code> 寄存器，数据;</th>
+<th>mov  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mov</code>寄存器，寄存器</td>
+<td>mov  bx,ax</td>
+</tr>
+<tr>
+<td><code>mov</code>寄存器，内存单元地址</td>
+<td>mov  ax,[0]</td>
+</tr>
+<tr>
+<td><code>mov</code> 内存单元，寄存器</td>
+<td>mov  [0],ax</td>
+</tr>
+<tr>
+<td><code>mov</code>段寄存器，寄存器</td>
+<td>mov  ds,ax</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mov、add、sub指令"><a href="#mov、add、sub指令" class="headerlink" title="mov、add、sub指令"></a>mov、add、sub指令</h3><p><code>add</code>指令和<code>sub</code>指令同<code>mov</code>一样，都有两个操作对象</p>
+<table>
+<thead>
+<tr>
+<th><code>add</code> 寄存器，数据;</th>
+<th>add  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add</code>寄存器，寄存器</td>
+<td>add  bx,ax</td>
+</tr>
+<tr>
+<td><code>add</code>寄存器，内存单元地址</td>
+<td>add  ax,[0]</td>
+</tr>
+<tr>
+<td><code>add</code> 内存单元，寄存器</td>
+<td>add  [0],ax</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>sub</code> 寄存器，数据;</th>
+<th>sub  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sub</code>寄存器，寄存器</td>
+<td>sub  bx,ax</td>
+</tr>
+<tr>
+<td><code>sub</code>寄存器，内存单元地址</td>
+<td>sub  ax,[0]</td>
+</tr>
+<tr>
+<td><code>sub</code> 内存单元，寄存器</td>
+<td>sub  [0],ax</td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据段</strong></p>
+<p>可以将一组长度为N、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段。</p>
+<p>访问时，用ds存放数据的的段地址，再根据需要，用相关指令访问数据段中的具体单元。</p>
 
       
     </div>
@@ -796,7 +873,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">2.3.</span> <span class="nav-text">实验</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">2.3.</span> <span class="nav-text">实验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、寄存器-内存访问"><span class="nav-number">3.</span> <span class="nav-text">三、寄存器(内存访问)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DS和-address"><span class="nav-number">3.1.</span> <span class="nav-text">DS和[address]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mov、add、sub指令"><span class="nav-number">3.2.</span> <span class="nav-text">mov、add、sub指令</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -846,7 +923,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">23.3k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">23.7k</span>
 </span>
 </div>
 
