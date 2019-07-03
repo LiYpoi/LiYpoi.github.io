@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
-<meta property="og:updated_time" content="2019-07-02T14:19:08.855Z">
+<meta property="og:updated_time" content="2019-07-03T15:05:12.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  3.2k
                 </span>
               
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  11
                 </span>
               
             </div>
@@ -414,7 +414,7 @@
 <hr>
 <h2 id="二、寄存器-CPU工作原理"><a href="#二、寄存器-CPU工作原理" class="headerlink" title="二、寄存器(CPU工作原理)"></a>二、寄存器(CPU工作原理)</h2><p>CPU 本身只负责运算，不负责储存数据。数据一般都储存在内存之中，所以CPU需要到内存中读取数据，但是，CPU的运算速度比内存的读写速度快，为了保持一致，CPU中自带了一级缓存和二级缓存，CPU缓存用于减少处理器访问内存所需平均时间的部件。其容量远小于内存，但速度却接近CPU的频率。</p>
 <p>但是，数据在缓存里面的地址是不固定的，CPU 每次读写都要寻址会拖慢速度。因此，除了缓存之外，CPU 还自带了寄存器，用来储存最常用的数据。CPU对存储器中的数据进行处理时，往往先把数据取到内部寄存器中，而后再作处理。寄存器不依靠地址区分数据，而依靠名称。每一个寄存器都有自己的名称。早期的 x86 CPU 只有8个寄存器，而且每个都有不同的用途。现在的寄存器已经有100多个了，都变成通用寄存器，不特别指定用途了，但是早期寄存器的名字都被保存了下来。</p>
-<p>x86CPU所有寄存器都是16位的，可以存放两个字节，AX、BX、CX、DX通常用来存放一般性的数据被称为通用寄存器。</p>
+<p>x86CPU所有寄存器都是16位的，可以存放两个字节，<code>AX</code>、<code>BX</code>、<code>CX</code>、<code>DX</code>通常用来存放一般性的数据被称为通用寄存器。</p>
 <p>下面以AX为例解释16位寄存器的逻辑结构</p>
 <ul>
 <li><p>数据：18</p>
@@ -532,9 +532,9 @@
 <li>x86CPU在内部用不同的段地址和偏移地址移位相加的方法形成最终的同一个物理地址</li>
 </ul>
 <p><strong>段寄存器</strong></p>
-<p>段寄存器就是提供段地址的，x86CPU有４个段寄存器：CS、DS、SS、ES。当x86CPU要访问内存时，由这四个段寄存器提供内存单元的段地址。</p>
-<p>CS(代码段寄存器)和IP(指令指针寄存器)时x86CPU中最关键的寄存器，它们指示了CPU当前读取指令的地址。</p>
-<p><code>mov</code>指令不能用于设置CS、IP的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP，<code>jmp</code>是具有一个操作对象的指令。</p>
+<p>段寄存器就是提供段地址的，x86CPU有４个段寄存器：<code>CS</code>、<code>DS</code>、<code>SS</code>、<code>ES</code>。当x86CPU要访问内存时，由这四个段寄存器提供内存单元的段地址。</p>
+<p><code>CS</code>(代码段寄存器)和IP(指令指针寄存器)时x86CPU中最关键的寄存器，它们指示了CPU当前读取指令的地址。</p>
+<p><code>mov</code>指令不能用于设置<code>CS</code>、<code>IP</code>的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP，<code>jmp</code>是具有一个操作对象的指令。</p>
 <table>
 <thead>
 <tr>
@@ -554,7 +554,7 @@
 </tbody>
 </table>
 <p><strong>代码段</strong></p>
-<p>可以将长度为N(N$\leq$64KB )的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元，这段内存是用来存放代码的，从而定义了一个代码段。但CPU并不会将定义的代码段中的指令当作指令来执行，<strong>CPU只认被CS:iP指向的内存单元中的内容为指令。</strong></p>
+<p>可以将长度为N(N$\leq$64KB )的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元，这段内存是用来存放代码的，从而定义了一个代码段。但CPU并不会将定义的代码段中的指令当作指令来执行，<strong>CPU只认被CS:IP指向的内存单元中的内容为指令。</strong></p>
 <h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><strong>注意：</strong>Win10没有<code>debug</code>，<code>debug</code>是16位的程序，32位系统可以兼容，64位系统已经不能兼容了。解决办法<a href="https://jingyan.baidu.com/article/9faa7231fd2775473c28cb26.html" target="_blank" rel="noopener">window10如何使用debug</a></p>
 <ul>
 <li>R命令查看、改变CPU寄存器的内容</li>
@@ -565,7 +565,7 @@
 <li>A命令以汇编指令的格式在内存中写入一条机器指令</li>
 </ul>
 <h2 id="三、寄存器-内存访问"><a href="#三、寄存器-内存访问" class="headerlink" title="三、寄存器(内存访问)"></a>三、寄存器(内存访问)</h2><p>x86CPU中有一个<code>DS</code>寄存器，通常用来存放要访问的数据的段地址。</p>
-<h3 id="DS和-address"><a href="#DS和-address" class="headerlink" title="DS和[address]"></a>DS和[address]</h3><p>已知的<code>mov</code>指令可以完成的两种传送功能：1.将数据直接送入寄存器，例如：<code>mov  ax,2</code>2.将一个寄存器中的内容送入另一个寄存器中，例如：<code>mov bx, ax</code>;除此之外，mov指令还可以将一个内存单元中的内容送入一个寄存器，例如：<code>mov al,[0]</code>。[address]表示一个偏移地址为address的内存单元。</p>
+<h3 id="DS和-address"><a href="#DS和-address" class="headerlink" title="DS和[address]"></a>DS和[address]</h3><p>已知的<code>mov</code>指令可以完成的两种传送功能：1.将数据直接送入寄存器，例如：<code>mov  ax,2</code>2.将一个寄存器中的内容送入另一个寄存器中，例如：<code>mov bx, ax</code>;除此之外，<code>mov</code>指令还可以将一个内存单元中的内容送入一个寄存器，例如：<code>mov al,[0]</code>。[address]表示一个偏移地址为address的内存单元。</p>
 <p><code>mov</code>指令的格式：</p>
 <table>
 <thead>
@@ -639,8 +639,17 @@
 </tbody>
 </table>
 <p><strong>数据段</strong></p>
-<p>可以将一组长度为N、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段。</p>
+<p>可以将一组长度为N(N$\leq$64KB )、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段。</p>
 <p>访问时，用ds存放数据的的段地址，再根据需要，用相关指令访问数据段中的具体单元。</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>栈是一种具有特殊的访问方式的存储空间。它的特殊性在于，最后进入栈的，最先出栈，即:LIFO(Last In First Out)。现今的CPU中都有栈的设计，这就意味着，在基于x86CPU编程的时候，可以将一段内存当作栈来使用。</p>
+<p>x86CPU提供入栈和出栈指令：(最基本的)<code>PUSH</code>入栈 、<code>POP</code>出栈，x86CPU的入栈和出栈操作都是以字为单位进行的，字型数据用两个单元存放，高地址单元放高8位，低地址单元放低8位</p>
+<p><code>push ax</code>:将寄存器<code>ax</code>中的数据送入栈中；<code>pop ax</code>:从栈顶取出数据送入<code>ax</code>;除此之外，<code>push</code> <code>pop</code>指令还可以对段寄存器和内存单元执行。</p>
+<p>这就引出两个问题：1.CPU如何指导当前要执行的指令所在的位置？2.执行<code>push</code>和<code>pop</code>的时候，如何知道哪个单元是栈顶单元？</p>
+<p>答:寄存器<code>CS</code>和<code>IP</code>中存放着当前指令的段地址和偏移地址；x86CPU中，有两个寄存器:段寄存器<code>SS</code>存放栈顶的段地址，寄存器<code>SP</code>存放栈顶的偏移地址，任意时刻，<code>SS:SP</code>指向栈顶元素。</p>
+<p>任意时刻，<code>SS:SP</code>指向栈顶元素，当栈为空的时候，栈中没有元素，也就不存在栈顶元素。所以<code>SS:SP</code>只能指向栈的最底部单元下面的单元，该单元的偏移地址为<strong>栈最底部的字单元的偏移地址+2</strong>，即<code>SP=SP-2</code>。</p>
+<h3 id="栈顶越界的问题"><a href="#栈顶越界的问题" class="headerlink" title="栈顶越界的问题"></a>栈顶越界的问题</h3><p><code>SS</code>和<code>SP</code>只记录了栈顶的地址，依靠<code>SS</code>和<code>SP</code>可以保证在入栈和出栈时找到栈顶。但如何能保证在入栈、出栈时，栈顶不会超出栈空间？</p>
+<p>x86CPU不保证对栈的操作不会越界，这就是说，<strong>x86CPU只知道栈顶在何处，而不知道安排的栈空间有多大</strong>，这好比CPU只知道当前要执行的指令在何处，而不知道要执行的指令有多少。</p>
+<p>在编程的时候要自己关注栈顶越界的问题，根据可能用到的最大栈空间，来安排栈的大小，防止入栈的数据太多而导致的越界；执行出栈操作的时候也要注意，以防栈空的时候继续出栈而导致的越界。</p>
 
       
     </div>
@@ -873,7 +882,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">2.3.</span> <span class="nav-text">实验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、寄存器-内存访问"><span class="nav-number">3.</span> <span class="nav-text">三、寄存器(内存访问)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DS和-address"><span class="nav-number">3.1.</span> <span class="nav-text">DS和[address]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mov、add、sub指令"><span class="nav-number">3.2.</span> <span class="nav-text">mov、add、sub指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、基础知识"><span class="nav-number">1.</span> <span class="nav-text">一、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#汇编语言的组成"><span class="nav-number">1.1.</span> <span class="nav-text">汇编语言的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的三种总线"><span class="nav-number">1.2.</span> <span class="nav-text">CPU的三种总线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、寄存器-CPU工作原理"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器(CPU工作原理)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几条汇编指令"><span class="nav-number">2.1.</span> <span class="nav-text">几条汇编指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理地址"><span class="nav-number">2.2.</span> <span class="nav-text">物理地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">2.3.</span> <span class="nav-text">实验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、寄存器-内存访问"><span class="nav-number">3.</span> <span class="nav-text">三、寄存器(内存访问)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DS和-address"><span class="nav-number">3.1.</span> <span class="nav-text">DS和[address]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mov、add、sub指令"><span class="nav-number">3.2.</span> <span class="nav-text">mov、add、sub指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈"><span class="nav-number">3.3.</span> <span class="nav-text">栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈顶越界的问题"><span class="nav-number">3.4.</span> <span class="nav-text">栈顶越界的问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -923,7 +932,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">23.9k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">24.5k</span>
 </span>
 </div>
 
