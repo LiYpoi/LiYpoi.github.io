@@ -153,7 +153,51 @@
 
 
 </head>
-
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.fn.snow = function(options){
+	var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+	documentHeight 	= $(document).height(),
+	documentWidth	= $(document).width(),
+	defaults = {
+		minSize		: 10,
+		maxSize		: 20,
+		newOn		: 1000,
+		flakeColor	: "#AFDAEF" /* �˴����Զ���ѩ����ɫ����Ҫ��ɫ���Ը�Ϊ#FFFFFF */
+	},
+	options	= $.extend({}, defaults, options);
+	var interval= setInterval( function(){
+	var startPositionLeft = Math.random() * documentWidth - 100,
+	startOpacity = 0.5 + Math.random(),
+	sizeFlake = options.minSize + Math.random() * options.maxSize,
+	endPositionTop = documentHeight - 200,
+	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+	durationFall = documentHeight * 10 + Math.random() * 5000;
+	$flake.clone().appendTo('body').css({
+		left: startPositionLeft,
+		opacity: startOpacity,
+		'font-size': sizeFlake,
+		color: options.flakeColor
+	}).animate({
+		top: endPositionTop,
+		left: endPositionLeft,
+		opacity: 0.2
+	},durationFall,'linear',function(){
+		$(this).remove()
+	});
+	}, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+	    minSize: 5, /* ����ѩ����С�ߴ� */
+	    maxSize: 50,/* ����ѩ�����ߴ� */
+	    newOn: 300  /* �����ܼ��̶ȣ�����ԽСԽ�ܼ� */
+    });
+});
+</script>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
 
@@ -264,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/07/读书笔记1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/05/07/读书笔记2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -283,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/05/07/读书笔记1/" itemprop="url">读书笔记-《黑客与画家》-2</a></h1>
+                <a class="post-title-link" href="/LiYpoi.github.io/2019/05/07/读书笔记2/" itemprop="url">读书笔记-《黑客与画家》-3</a></h1>
         
 
         <div class="post-meta">
@@ -336,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/LiYpoi.github.io/2019/05/07/读书笔记1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/05/07/读书笔记1/" itemprop="commentCount"></span>
+                <a href="/LiYpoi.github.io/2019/05/07/读书笔记2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/05/07/读书笔记2/" itemprop="commentCount"></span>
                 </a>
              </span>
             
@@ -361,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  628
+                  235
                 </span>
               
 
@@ -377,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -399,10 +443,13 @@
 
       
         
-          <h2 id="黑客与画家"><a href="#黑客与画家" class="headerlink" title="黑客与画家"></a>黑客与画家</h2><p>如何去学习编程?正如画家学习绘画的方法主要是动手去画，黑客学习编程的方法也理应如此。大多数黑客不是通过大学课程学会编程的，他们从实践中学习。黑客通过实践学习编程这是一个标志，说明黑客与科学家的区别在于：科学家不会通过干活来学习科学，而是通过做实验和解题来学习，黑客出发点是原创，最终得到一个优美的</p>
+          
+          不能说的话所谓“流行”本质上就是自己看不见自己的样子。否则就不会有流行了，对于那些被流行抓住的人，流行就不再是流行，而是应该要做的正确事情。只有保持一定的距离才能观察到人们观念的变化，发现流行（也就是人们自以为正确的事）到底是什么。
+你如果想要清晰地思考，就必须远离人群。但走的越远，你的处境就会越困
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/05/07/读书笔记1/#more" rel="contents">
+            <a class="btn" href="/LiYpoi.github.io/2019/05/07/读书笔记2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

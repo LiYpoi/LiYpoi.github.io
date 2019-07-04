@@ -156,7 +156,51 @@
 
 
 </head>
-
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.fn.snow = function(options){
+	var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+	documentHeight 	= $(document).height(),
+	documentWidth	= $(document).width(),
+	defaults = {
+		minSize		: 10,
+		maxSize		: 20,
+		newOn		: 1000,
+		flakeColor	: "#AFDAEF" /* �˴����Զ���ѩ����ɫ����Ҫ��ɫ���Ը�Ϊ#FFFFFF */
+	},
+	options	= $.extend({}, defaults, options);
+	var interval= setInterval( function(){
+	var startPositionLeft = Math.random() * documentWidth - 100,
+	startOpacity = 0.5 + Math.random(),
+	sizeFlake = options.minSize + Math.random() * options.maxSize,
+	endPositionTop = documentHeight - 200,
+	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+	durationFall = documentHeight * 10 + Math.random() * 5000;
+	$flake.clone().appendTo('body').css({
+		left: startPositionLeft,
+		opacity: startOpacity,
+		'font-size': sizeFlake,
+		color: options.flakeColor
+	}).animate({
+		top: endPositionTop,
+		left: endPositionLeft,
+		opacity: 0.2
+	},durationFall,'linear',function(){
+		$(this).remove()
+	});
+	}, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({ 
+	    minSize: 5, /* ����ѩ����С�ߴ� */
+	    maxSize: 50,/* ����ѩ�����ߴ� */
+	    newOn: 300  /* �����ܼ��̶ȣ�����ԽСԽ�ܼ� */
+    });
+});
+</script>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
 
@@ -570,8 +614,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/LiYpoi.github.io/2019/05/07/读书笔记1/" rel="prev" title="读书笔记-《黑客与画家》-2">
-                读书笔记-《黑客与画家》-2 <i class="fa fa-chevron-right"></i>
+              <a href="/LiYpoi.github.io/2019/05/07/读书笔记2/" rel="prev" title="读书笔记-《黑客与画家》-3">
+                读书笔记-《黑客与画家》-3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
