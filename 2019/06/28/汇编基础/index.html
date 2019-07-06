@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
-<meta property="og:updated_time" content="2019-07-03T15:05:12.929Z">
+<meta property="og:updated_time" content="2019-07-06T15:54:25.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
 <meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
@@ -407,7 +407,7 @@ $(function(){
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.2k
+                  3.3k
                 </span>
               
 
@@ -694,6 +694,7 @@ $(function(){
 <h3 id="栈顶越界的问题"><a href="#栈顶越界的问题" class="headerlink" title="栈顶越界的问题"></a>栈顶越界的问题</h3><p><code>SS</code>和<code>SP</code>只记录了栈顶的地址，依靠<code>SS</code>和<code>SP</code>可以保证在入栈和出栈时找到栈顶。但如何能保证在入栈、出栈时，栈顶不会超出栈空间？</p>
 <p>x86CPU不保证对栈的操作不会越界，这就是说，<strong>x86CPU只知道栈顶在何处，而不知道安排的栈空间有多大</strong>，这好比CPU只知道当前要执行的指令在何处，而不知道要执行的指令有多少。</p>
 <p>在编程的时候要自己关注栈顶越界的问题，根据可能用到的最大栈空间，来安排栈的大小，防止入栈的数据太多而导致的越界；执行出栈操作的时候也要注意，以防栈空的时候继续出栈而导致的越界。</p>
+<p>push和pop实质上就是一种内存传送指令，可以在寄存器和内存之间传送数据，与mov指令不同的是，push和pop指令访问的内存单元的地址不是在指令中给出的，而是由SS:SP指出的。</p>
 
       
     </div>
@@ -976,7 +977,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">24.5k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">24.6k</span>
 </span>
 </div>
 
