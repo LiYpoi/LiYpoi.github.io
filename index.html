@@ -1,1874 +1,1687 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Liy&#39;s Blog</title>
+  
+  <meta name="keywords" content="个人博客">
   
   
-    
-    
-  <script src="/LiYpoi.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/LiYpoi.github.io/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="description" content="普通大学生desu~">
+  
 
   
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
   
-  <link href="/LiYpoi.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
 
+  
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
+  
 
-
-
-
-<link href="/LiYpoi.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/LiYpoi.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/LiYpoi.github.io/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/LiYpoi.github.io/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/LiYpoi.github.io/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/LiYpoi.github.io/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="斜杠青年">
-<meta name="keywords" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Thinking&amp;Coding">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Thinking&amp;Coding">
-<meta property="og:description" content="斜杠青年">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thinking&amp;Coding">
-<meta name="twitter:description" content="斜杠青年">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/LiYpoi.github.io/',
-    scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
     }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/">
-
-
-
-
-
-  <title>Thinking&Coding</title>
-  
-
-
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?62cc1a0ccd4107241d8373ed779a2458";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
   </script>
 
-
-
-
+  
+  
 </head>
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-(function($){
-	$.fn.snow = function(options){
-	var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
-	documentHeight 	= $(document).height(),
-	documentWidth	= $(document).width(),
-	defaults = {
-		minSize		: 10,
-		maxSize		: 20,
-		newOn		: 1000,
-		flakeColor	: "#AFDAEF" /* �˴����Զ���ѩ����ɫ����Ҫ��ɫ���Ը�Ϊ#FFFFFF */
-	},
-	options	= $.extend({}, defaults, options);
-	var interval= setInterval( function(){
-	var startPositionLeft = Math.random() * documentWidth - 100,
-	startOpacity = 0.5 + Math.random(),
-	sizeFlake = options.minSize + Math.random() * options.maxSize,
-	endPositionTop = documentHeight - 200,
-	endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
-	durationFall = documentHeight * 10 + Math.random() * 5000;
-	$flake.clone().appendTo('body').css({
-		left: startPositionLeft,
-		opacity: startOpacity,
-		'font-size': sizeFlake,
-		color: options.flakeColor
-	}).animate({
-		top: endPositionTop,
-		left: endPositionLeft,
-		opacity: 0.2
-	},durationFall,'linear',function(){
-		$(this).remove()
-	});
-	}, options.newOn);
-    };
-})(jQuery);
-$(function(){
-    $.fn.snow({ 
-	    minSize: 5, /* ����ѩ����С�ߴ� */
-	    maxSize: 50,/* ����ѩ�����ߴ� */
-	    newOn: 300  /* �����ܼ��̶ȣ�����ԽСԽ�ܼ� */
-    });
-});
-</script>
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-
-
+<body>
   
   
+  <div class="cover-wrapper">
+    <cover class="cover  ">
+      
+        
+  <h1 class="title">Liy's Blog</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder>
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class="menu navgation">
+  <ul class="h-list">
     
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-  <a href="https://github.com/LiYpoi" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta custom-logo">
+      
+        <li>
+          <a class="nav home" href="/LiYpoi.github.io/" id="LiYpoi.github.io">
+            <i class="fas fa-rss fa-fw"></i>&nbsp;博文
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/LiYpoi.github.io/projects/" id="LiYpoi.github.ioprojects">
+            <i class="fas fa-code-branch fa-fw"></i>&nbsp;项目
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/LiYpoi.github.io/friends/" rel="nofollow" id="LiYpoi.github.iofriends">
+            <i class="fas fa-link fa-fw"></i>&nbsp;友链
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/LiYpoi.github.io/about/" rel="nofollow" id="LiYpoi.github.ioabout">
+            <i class="fas fa-info-circle fa-fw"></i>&nbsp;关于
+          </a>
+        </li>
+      
     
+  </ul>
+</div>
 
-    <div class="custom-logo-site-title">
-      <a href="/LiYpoi.github.io/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Thinking&Coding</span>
-        <span class="logo-line-after"><i></i></span>
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/LiYpoi.github.io/">
+        
+          Liy's Blog
+        
       </a>
-    </div>
-      
-        <p class="site-subtitle">我们有很多的声音而没有真理，我们来自一个良心却各自藏起。</p>
-      
-  </div>
+			<div class="menu navgation">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/LiYpoi.github.io/" id="LiYpoi.github.io">
+									<i class="fas fa-grin fa-fw"></i>&nbsp;示例
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/LiYpoi.github.io/blog/categories/" rel="nofollow" id="LiYpoi.github.ioblogcategories">
+									<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/LiYpoi.github.io/blog/tags/" rel="nofollow" id="LiYpoi.github.ioblogtags">
+									<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/LiYpoi.github.io/blog/archives/" rel="nofollow" id="LiYpoi.github.ioblogarchives">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
         
-        <li class="menu-item menu-item-home">
-          <a href="/LiYpoi.github.io/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
+          <li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/LiYpoi.github.io/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/LiYpoi.github.io/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
+          
+            <li>
+							<a class="nav flat-box" href="/LiYpoi.github.io/" id="LiYpoi.github.io">
+								<i class="fas fa-clock fa-fw"></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/LiYpoi.github.io/blog/archives/" rel="nofollow" id="LiYpoi.github.ioblogarchives">
+								<i class="fas fa-archive fa-fw"></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/LiYpoi.github.io/projects/" id="LiYpoi.github.ioprojects">
+								<i class="fas fa-code-branch fa-fw"></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/LiYpoi.github.io/friends/" rel="nofollow" id="LiYpoi.github.iofriends">
+								<i class="fas fa-link fa-fw"></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+								<i class="fas fa-book fa-fw"></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/LiYpoi.github.io/about/" rel="nofollow" id="LiYpoi.github.ioabout">
+								<i class="fas fa-info-circle fa-fw"></i>&nbsp;关于本站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
     </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class="l_main">
+  
+  <section class="post-list">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/07/11/大一总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/07/11/大一总结/" itemprop="url">大一总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T22:55:29+08:00">
-                2019-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/07/11/大一总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/07/11/大一总结/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  191
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
       
         
           
-          今天算是大一生活的结束吧，回顾这一年，似乎没做什么事，只是看了写书，算是学了些额外的知识，还有建立这个博客，开始习惯每天记录些东西。如果说最大的收获的话，应该是锻炼的自己的自学能力了，毕竟大学大学，不就是大量的自学吗。不过我现在自学的东西还不算多，前端方面只比班中的同学多一些，C++这门语言，在我看
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/07/11/大一总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
       
-    </div>
     
     
-    
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
 
 
-<div>
+  <section class="meta">
     
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/07/11/大一总结/">
+      大一总结
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-11</p>
+  </a>
 </div>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Study/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Study</p>
+    </a>
   </div>
-  
-  
-  
-  </article>
 
 
-    
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/07/03/立Flag/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/07/03/立Flag/" itemprop="url">立Flag</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T21:08:38+08:00">
-                2019-07-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/07/03/立Flag/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/07/03/立Flag/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  170
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          最近总在想着暑假做些什么事，大致安排了这些：
-
- 将驾照考下来
- 把汇编系列的视频看完
- 将家里的台式机重新装一下系统(以前Win7升Win10，升完C盘只剩4G的空间了😭)
- 自学Java
- 自学离散数学
- 自学Python(去年买了Python的书，一直没怎么看，只在电脑里安装了开发环境)
- 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/07/03/立Flag/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <hr>
       
     </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/06/30/前端之N个问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/06/30/前端之N个问题/" itemprop="url">前端之N个问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-30T11:06:54+08:00">
-                2019-06-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/06/30/前端之N个问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/06/30/前端之N个问题/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  500
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前言这篇文章会汇总在学习前端过程中一些基础的问题，目前学了一些东西，但是，单拿出来确很难说清楚，究其原因还是基础知识掌握不好，只记住了一些操作，理论上的知识理解不到位，以下问题的答案都是以我的个人理解所写，其作用是帮助我对基础的知识进行复盘。
-Web语义化是什么，是为了解决什么问题？如何理解Web语
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/06/30/前端之N个问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/06/28/汇编基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/06/28/汇编基础/" itemprop="url">汇编基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-28T21:00:19+08:00">
-                2019-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/06/28/汇编基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/06/28/汇编基础/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.4k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  12
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前言：
-汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/06/28/汇编基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/" itemprop="url">如何理解Web语义化？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-26T22:46:53+08:00">
-                2019-06-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  394
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          第二天百度前端学院的任务里有推荐读顾轶灵的如何理解Web语义化?,这里先贴一下链接。文中所说，目前Web上的内容越来越多，只能通过机器对其处理，为了使机器对内容的精确可读，有两个发展方向。一是大力发展人工智能，朝着人类水平的方向发展；二是语义网，这也是万维网的创始人Tim Berners-Lee提出
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LiYpoi.github.io/2019/06/24/随笔-7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thinking&Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/2019/06/24/随笔-7/" itemprop="url">随笔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-24T21:20:48+08:00">
-                2019-06-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/2019/06/24/随笔-7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/2019/06/24/随笔-7/" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  68
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          今天在百度前端技术学院报了名，开始系统学习一下前端的东西，这学期的课程只是HTML+CSS+JS的基础，顺便贴一篇文章Web 建站技术中，HTML、HTML5、XHTML、CSS、SQL、JavaScript、PHP、ASP.NET、Web Services 是什么？
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/2019/06/24/随笔-7/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/LiYpoi.github.io/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/LiYpoi.github.io/page/9/">9</a><a class="extend next" rel="next" href="/LiYpoi.github.io/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>今天算是大一生活的结束吧，回顾这一年，似乎没做什么事，只是看了写书，算是学了些额外的知识，还有建立这个博客，开始习惯每天记录些东西。如果说最大的收获的话，应该是锻炼的自己的自学能力了，毕竟大学大学，不就是大量的自学吗。不过我现在自学的东西还不算多，前端方面只比班中的同学多一些，C++这门语言，在我看来，是一把高级厨具，以我目前的能力，还不能用它做出好菜来，将来还需要继续打磨。</p>
+<p>大二希望自己能坚持自我，爱自己做的事，做自己爱的事。</p>
+<p><img src="https://i.loli.net/2019/07/11/5d275110e5b8725255.jpg" alt></p>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/随笔/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+        
+      </div>
+    
+  </section>
+</article>
 
           </div>
-          
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
 
 
-          
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/07/03/立Flag/">
+      立Flag
+    </a>
+  </h2>
 
-        </div>
+
+      
+      <div class="new-meta-box">
         
           
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-03</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Life/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Life</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>最近总在想着暑假做些什么事，大致安排了这些：</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 将驾照考下来</li>
+<li style="list-style: none"><input type="checkbox"> 把汇编系列的视频看完</li>
+<li style="list-style: none"><input type="checkbox"> 将家里的台式机重新装一下系统(以前Win7升Win10，升完C盘只剩4G的空间了😭)</li>
+<li style="list-style: none"><input type="checkbox"> 自学Java</li>
+<li style="list-style: none"><input type="checkbox"> 自学离散数学</li>
+<li style="list-style: none"><input type="checkbox"> 自学Python(去年买了Python的书，一直没怎么看，只在电脑里安装了开发环境)</li>
+<li style="list-style: none"><input type="checkbox"> 练练自己的PPT技术，加了知识星球后，只做了两次作业，还拿了两次抽奖的奖品😂</li>
+<li style="list-style: none"><input type="checkbox"> 多看看书吧，上了大学后，感觉读的书比中学的时候还多，我阅读的巅峰时期停留在小学了 (ˉ▽ˉ；)…</li>
+</ul>
+
+      
+    </div>
     
-    <div class="sidebar-inner">
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/随笔/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+        
+      </div>
+    
+  </section>
+</article>
 
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/LiYpoi.github.io/images/avatar.png" alt="LiY">
-            
-              <p class="site-author-name" itemprop="name">LiY</p>
-              <p class="site-description motion-element" itemprop="description">斜杠青年</p>
           </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/LiYpoi.github.io/archives/">
-              
-                  <span class="site-state-item-count">49</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/LiYpoi.github.io/categories/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/LiYpoi.github.io/tags/index.html">
-                  <span class="site-state-item-count">13</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/LiYpoi" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://weibo.com/u/3720054103" target="_blank" title="weibo">
-                      
-                        <i class="fa fa-fw fa-globe"></i>weibo</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.douban.com/" target="_blank" title="豆瓣">
-                      
-                        <i class="fa fa-fw fa-globe"></i>豆瓣</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.zhihu.com/" target="_blank" title="知乎">
-                      
-                        <i class="fa fa-fw fa-globe"></i>知乎</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
         
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        ﻿<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love"><i class="fa fa-star"></i></span>
-  <span class="author" itemprop="copyrightHolder">LiY</span>
-
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
   
-</div>
-
-             <div class="footer-right">
-            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-            <script>
-                var now = new Date();
-                function createtime() {
-                    var grt= new Date("04/28/2019 15:49:35");//此处修改你的建站时间或者网站上线时间
-                    now.setTime(now.getTime()+250);
-                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-                    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-                }
-            setInterval("createtime()",250);
-            </script>
-            </div>
-
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">24.9k</span>
-</span>
-</div>
 
 
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+  <section class="meta">
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/06/30/前端之N个问题/">
+      前端之N个问题
+    </a>
+  </h2>
 
-    
 
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
   </div>
 
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-06-30</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Study/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Study</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>这篇文章会汇总在学习前端过程中一些基础的问题，目前学了一些东西，但是，单拿出来确很难说清楚，究其原因还是基础知识掌握不好，只记住了一些操作，理论上的知识理解不到位，以下问题的答案都是以我的个人理解所写，其作用是帮助我对基础的知识进行复盘。</p>
+<h4 id="Web语义化是什么，是为了解决什么问题？"><a href="#Web语义化是什么，是为了解决什么问题？" class="headerlink" title="Web语义化是什么，是为了解决什么问题？"></a>Web语义化是什么，是为了解决什么问题？</h4><p><a href="[https://liypoi.github.io/LiYpoi.github.io/2019/06/26/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3Web%E8%AF%AD%E4%B9%89%E5%8C%96%EF%BC%9F/#more](https://liypoi.github.io/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/#more">如何理解Web语义化?</a>)</p>
+<h4 id="HTML是什么，HTML5是什么"><a href="#HTML是什么，HTML5是什么" class="headerlink" title="HTML是什么，HTML5是什么?"></a>HTML是什么，HTML5是什么?</h4><p>HTML(超文本标记语言)是一种用于创建网页的标准标记语言。</p>
+<p>HTML5是HTML最新的修订版，由W3C制定。</p>
+<h4 id="HTML元素标签、属性都是什么概念？"><a href="#HTML元素标签、属性都是什么概念？" class="headerlink" title="HTML元素标签、属性都是什么概念？"></a>HTML元素标签、属性都是什么概念？</h4><p>一个HTML元素是HTML文件的一个基本组成单元。</p>
+<p>属性为HTML元素提供附加信息，可以是列表、标题、段落等匹配DTD要求的格式。</p>
+<h4 id="DTD是什么？"><a href="#DTD是什么？" class="headerlink" title="DTD是什么？"></a>DTD是什么？</h4><p>DTD(文档类型定义)是一套为了进行程序间数据交换而建立的关于标记符的语法规则，可定义合法的XML文档构建模块。但对XML文件而言，DTD并非必需，DTD有四个组成：元素、属性、实体、注释。</p>
+<h4 id="什么是CSS，CSS是如何工作的"><a href="#什么是CSS，CSS是如何工作的" class="headerlink" title="什么是CSS，CSS是如何工作的?"></a>什么是CSS，CSS是如何工作的?</h4><p>CSS(层叠样式表)是一种用来结构化文档添加样式的计算机语言，由W3C制定。</p>
+<p>CSS不能单独使用，必须与HTML或XML一起协同工作，它将文件的内容和显示分离。CSS的使用灵活，但会频繁出现规则冲突，CSS的规则冲突可以分为不同来源之间的规则冲突和同一来源内部的规则冲突，CSS分层次、立体化的比较不同规则的优先级的方式，这就是所谓层叠性的体现。</p>
+<h4 id="CSS选择器是什么概念"><a href="#CSS选择器是什么概念" class="headerlink" title="CSS选择器是什么概念?"></a>CSS选择器是什么概念?</h4><p>选择器是针对没有标签定义范围进行样式设定的。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/N个问题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>N个问题</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/06/28/汇编基础/">
+      汇编基础
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-06-28</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Study/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Study</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><strong>前言：</strong></p>
+<p>汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏<code>SHENZHENI/O</code>,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了<a href="https://www.bilibili.com/video/av28132657?zw" target="_blank" rel="noopener">小甲鱼零基础学汇编</a>和<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="noopener">阮一峰的汇编语言入门教程</a>。将学习的笔记整理于此。</p>
+<h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><p><strong>汇编语言是二进制指令的文本形式</strong>，与指令是一一对应的关系。CPU只负责运算，本身不具备只能，当CPU接受到一条输入的指令后，它就运行一次，然后等待下一条指令。这些指令都是二进制的(是机器的语言)，但对于人类来说，二进制的指令过于难读，所以就诞生了与二进制指令一一对应的汇编语言。由于汇编语言最接近机器语言，所以汇编语言的执行效率是所有语言中最快的，但其所写代码量也是最大的。每一种CPU的机器指令都是不一样的，因此对应的汇编语言也不一样，笔记中所写的是目前最常见的x86汇编语言，即Intel公司的CPU使用的那一种。</p>
+<h3 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h3><p>汇编语言由以下3类组成：</p>
+<p>1.汇编指令（机器码的助记符）汇编语言的核心是汇编指令</p>
+<p>2.伪指令（由编译器执行）</p>
+<p>3.其他符号（由编译器识别） </p>
+<p><img src="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png" alt></p>
+<h3 id="CPU的三种总线"><a href="#CPU的三种总线" class="headerlink" title="CPU的三种总线"></a>CPU的三种总线</h3><p>1.地址总线：决定CPU的寻址能力</p>
+<p>２.数据总线：决定CPU与其它器件进行数据传送时的一次数据传送量</p>
+<p>３.控制总线：决定CPU对系统中其它器件的控制能力</p>
+<hr>
+<h2 id="二、寄存器-CPU工作原理"><a href="#二、寄存器-CPU工作原理" class="headerlink" title="二、寄存器(CPU工作原理)"></a>二、寄存器(CPU工作原理)</h2><p>CPU 本身只负责运算，不负责储存数据。数据一般都储存在内存之中，所以CPU需要到内存中读取数据，但是，CPU的运算速度比内存的读写速度快，为了保持一致，CPU中自带了一级缓存和二级缓存，CPU缓存用于减少处理器访问内存所需平均时间的部件。其容量远小于内存，但速度却接近CPU的频率。</p>
+<p>但是，数据在缓存里面的地址是不固定的，CPU 每次读写都要寻址会拖慢速度。因此，除了缓存之外，CPU 还自带了寄存器，用来储存最常用的数据。CPU对存储器中的数据进行处理时，往往先把数据取到内部寄存器中，而后再作处理。寄存器不依靠地址区分数据，而依靠名称。每一个寄存器都有自己的名称。早期的 x86 CPU 只有8个寄存器，而且每个都有不同的用途。现在的寄存器已经有100多个了，都变成通用寄存器，不特别指定用途了，但是早期寄存器的名字都被保存了下来。</p>
+<p>x86CPU所有寄存器都是16位的，可以存放两个字节，<code>AX</code>、<code>BX</code>、<code>CX</code>、<code>DX</code>通常用来存放一般性的数据被称为通用寄存器。</p>
+<p>下面以AX为例解释16位寄存器的逻辑结构</p>
+<ul>
+<li><p>数据：18</p>
+</li>
+<li><p>二进制表示：10010</p>
+</li>
+<li><p>在寄存器AX中的存储：</p>
+<p><img src="https://i.loli.net/2019/06/29/5d174bdb849b325059.png" alt></p>
+</li>
+</ul>
+<p>x86以上的一代CPU寄存器都是8位的，从x86开始寄存器开始了16位的时代，但为了兼容上一代，AX、BX、CX、DX都可以分为两个独立的8位寄存器使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AX可以分为AH和AL    //累加寄存器，常用于运算</span><br><span class="line">BX可以分为BH和BL    //基址寄存器，常用于地址索引</span><br><span class="line">CX可以分为CH和CL    //计数寄存器，常用于计数</span><br><span class="line">DX可以分为DH和DL    //数据寄存器，常用于数据传递</span><br></pre></td></tr></table></figure>
+<h3 id="几条汇编指令"><a href="#几条汇编指令" class="headerlink" title="几条汇编指令"></a>几条汇编指令</h3><p><strong>汇编指令不区分大小写</strong></p>
+<table>
+<thead>
+<tr>
+<th>汇编指令</th>
+<th>控制CPU完成的操作</th>
+<th>用高级语言的语法描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mov  ax,18</td>
+<td>将8送入AX</td>
+<td>AX=18</td>
+</tr>
+<tr>
+<td>mov  ah,78</td>
+<td>将78送入AH</td>
+<td>AH=78</td>
+</tr>
+<tr>
+<td>add  ax,8</td>
+<td>将寄存器AX中的数值加上8</td>
+<td>AX=AX+8</td>
+</tr>
+<tr>
+<td>mov  ax,bx</td>
+<td>将寄存器BX中的数值送入寄存器AX</td>
+<td>AX=BX</td>
+</tr>
+<tr>
+<td>add  ax,bx</td>
+<td>将AX，BX中的内容相加，结果存在AX中</td>
+<td>AX=AX+BX</td>
+</tr>
+</tbody>
+</table>
+<h3 id="物理地址"><a href="#物理地址" class="headerlink" title="物理地址"></a>物理地址</h3><p>CPU访问内存单元时要给出内存单元的地址，所有的内存单元构成的存储空间是一个<code>一维的线性空间</code>。</p>
+<p><strong>16位结构的CPU</strong></p>
+<p>16位结构描述一个CPU具有以下特征：1.运算器一次最多可以处理16位的数据 2.寄存器的最大宽度为16位 3.寄存器和运算器之间的通路是16位的</p>
+<p><strong>x86给出物理地址的方法</strong></p>
+<p>x86外部有20位地址总线，可以传送20位地址，寻址能力为1M；x86内部为16位结构，它只能传送16位的地址，寻址能力只有64K,x86采用一种在内部用两个16位地址合成的方法来形成一个20位的物理地址。</p>
+<p><img src="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png" alt></p>
+<p>地址加法器合成物理地址的方法：物理地址=段地址x16+偏移地址。</p>
+<p>“段地址x16”有一个更常用的说法是左移4位，其中的“位”，指的是二进制位。</p>
+<p>例如：一个数据为2H，二进制形式为10B，对其进行左移运算</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">左移位数</th>
+<th style="text-align:center">二进制</th>
+<th style="text-align:center">十六进制</th>
+<th style="text-align:center">十进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">10B</td>
+<td style="text-align:center">2H</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">100B</td>
+<td style="text-align:center">4H</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1000B</td>
+<td style="text-align:center">8H</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">10000B</td>
+<td style="text-align:center">10H</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">100000B</td>
+<td style="text-align:center">20H</td>
+<td style="text-align:center">32</td>
+</tr>
+</tbody>
+</table>
+<p>由上表可以得出：</p>
+<ul>
+<li>一个数据的二进制形式左移1位，相当于该数据乘以2；</li>
+<li>一个数据的二进制形式左移N位，相当于该数据乘以2的N次方；</li>
+<li>一个数据的十六进制形式左移1位，相当于乘以16；</li>
+<li>一个数据的十进制形式左移一位，相当于乘以10；</li>
+<li>一个数据的x进制形式左移1位，相当于乘以x;</li>
+</ul>
+<p><strong>段的概念</strong></p>
+<p>内存没有分段，段的划分来自于CPU，在编程时可以根据需要，将若干地址连续的内存单元看作一个段，用段地址x16定位段的起始地址，用偏移地址定位段中的内存单元；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">段地址x16必然是16的倍数，所以一个段的起始地址也是16的倍数；</span><br><span class="line">偏移地址为16位，16位地址的寻址能力为64KB(2的16次方)，所以一个段的长度最大为64KB</span><br></pre></td></tr></table></figure>
+<p>小结：</p>
+<ul>
+<li>CPU访问内存单元时，必须向内存提供内存单元的物理地址</li>
+<li>x86CPU在内部用不同的段地址和偏移地址移位相加的方法形成最终的同一个物理地址</li>
+</ul>
+<p><strong>段寄存器</strong></p>
+<p>段寄存器就是提供段地址的，x86CPU有４个段寄存器：<code>CS</code>、<code>DS</code>、<code>SS</code>、<code>ES</code>。当x86CPU要访问内存时，由这四个段寄存器提供内存单元的段地址。</p>
+<p><code>CS</code>(代码段寄存器)和IP(指令指针寄存器)时x86CPU中最关键的寄存器，它们指示了CPU当前读取指令的地址。</p>
+<p><code>mov</code>指令不能用于设置<code>CS</code>、<code>IP</code>的值，而使用转移指令<code>jmp</code>，<code>jmp</code>用指令中给出的段地址修改CS，偏移地址修改IP，<code>jmp</code>是具有一个操作对象的指令。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">同时修改CS、IP内容</th>
+<th style="text-align:center">仅修改IP的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">jmp 段地址:偏移地址</td>
+<td style="text-align:center">jmp 某一合法寄存器</td>
+</tr>
+<tr>
+<td style="text-align:center">jmp 2AE3:3</td>
+<td style="text-align:center">jmp ax(类似于mov IP,ax)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>代码段</strong></p>
+<p>可以将长度为N(N$\leq$64KB )的一组代码，存在一组地址连续、起始地址为16的倍数的内存单元，这段内存是用来存放代码的，从而定义了一个代码段。但CPU并不会将定义的代码段中的指令当作指令来执行，<strong>CPU只认被CS:IP指向的内存单元中的内容为指令。</strong></p>
+<h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p><strong>注意：</strong>Win10没有<code>debug</code>，<code>debug</code>是16位的程序，32位系统可以兼容，64位系统已经不能兼容了。解决办法<a href="https://jingyan.baidu.com/article/9faa7231fd2775473c28cb26.html" target="_blank" rel="noopener">window10如何使用debug</a></p>
+<ul>
+<li>R命令查看、改变CPU寄存器的内容</li>
+<li>D命令查看内存中的内容</li>
+<li>E命令改写内存中的内容</li>
+<li>U命令将内存中的机器指令翻译成汇编指令</li>
+<li>T命令执行一条机器指令</li>
+<li>A命令以汇编指令的格式在内存中写入一条机器指令</li>
+</ul>
+<h2 id="三、寄存器-内存访问"><a href="#三、寄存器-内存访问" class="headerlink" title="三、寄存器(内存访问)"></a>三、寄存器(内存访问)</h2><p>x86CPU中有一个<code>DS</code>寄存器，通常用来存放要访问的数据的段地址。</p>
+<h3 id="DS和-address"><a href="#DS和-address" class="headerlink" title="DS和[address]"></a>DS和[address]</h3><p>已知的<code>mov</code>指令可以完成的两种传送功能：1.将数据直接送入寄存器，例如：<code>mov  ax,2</code>2.将一个寄存器中的内容送入另一个寄存器中，例如：<code>mov bx, ax</code>;除此之外，<code>mov</code>指令还可以将一个内存单元中的内容送入一个寄存器，例如：<code>mov al,[0]</code>。[address]表示一个偏移地址为address的内存单元。</p>
+<p><code>mov</code>指令的格式：</p>
+<table>
+<thead>
+<tr>
+<th><code>mov</code> 寄存器，数据;</th>
+<th>mov  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mov</code>寄存器，寄存器</td>
+<td>mov  bx,ax</td>
+</tr>
+<tr>
+<td><code>mov</code>寄存器，内存单元地址</td>
+<td>mov  ax,[0]</td>
+</tr>
+<tr>
+<td><code>mov</code> 内存单元，寄存器</td>
+<td>mov  [0],ax</td>
+</tr>
+<tr>
+<td><code>mov</code>段寄存器，寄存器</td>
+<td>mov  ds,ax</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mov、add、sub指令"><a href="#mov、add、sub指令" class="headerlink" title="mov、add、sub指令"></a>mov、add、sub指令</h3><p><code>add</code>指令和<code>sub</code>指令同<code>mov</code>一样，都有两个操作对象</p>
+<table>
+<thead>
+<tr>
+<th><code>add</code> 寄存器，数据;</th>
+<th>add  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>add</code>寄存器，寄存器</td>
+<td>add  bx,ax</td>
+</tr>
+<tr>
+<td><code>add</code>寄存器，内存单元地址</td>
+<td>add  ax,[0]</td>
+</tr>
+<tr>
+<td><code>add</code> 内存单元，寄存器</td>
+<td>add  [0],ax</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>sub</code> 寄存器，数据;</th>
+<th>sub  ax,6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sub</code>寄存器，寄存器</td>
+<td>sub  bx,ax</td>
+</tr>
+<tr>
+<td><code>sub</code>寄存器，内存单元地址</td>
+<td>sub  ax,[0]</td>
+</tr>
+<tr>
+<td><code>sub</code> 内存单元，寄存器</td>
+<td>sub  [0],ax</td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据段</strong></p>
+<p>可以将一组长度为N(N$\leq$64KB )、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段。</p>
+<p>访问时，用ds存放数据的的段地址，再根据需要，用相关指令访问数据段中的具体单元。</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>栈是一种具有特殊的访问方式的存储空间。它的特殊性在于，最后进入栈的，最先出栈，即:LIFO(Last In First Out)。现今的CPU中都有栈的设计，这就意味着，在基于x86CPU编程的时候，可以将一段内存当作栈来使用。</p>
+<p>x86CPU提供入栈和出栈指令：(最基本的)<code>PUSH</code>入栈 、<code>POP</code>出栈，x86CPU的入栈和出栈操作都是以字为单位进行的，字型数据用两个单元存放，高地址单元放高8位，低地址单元放低8位</p>
+<p><code>push ax</code>:将寄存器<code>ax</code>中的数据送入栈中；<code>pop ax</code>:从栈顶取出数据送入<code>ax</code>;除此之外，<code>push</code> <code>pop</code>指令还可以对段寄存器和内存单元执行。</p>
+<p>这就引出两个问题：1.CPU如何指导当前要执行的指令所在的位置？2.执行<code>push</code>和<code>pop</code>的时候，如何知道哪个单元是栈顶单元？</p>
+<p>答:寄存器<code>CS</code>和<code>IP</code>中存放着当前指令的段地址和偏移地址；x86CPU中，有两个寄存器:段寄存器<code>SS</code>存放栈顶的段地址，寄存器<code>SP</code>存放栈顶的偏移地址，任意时刻，<code>SS:SP</code>指向栈顶元素。</p>
+<p>任意时刻，<code>SS:SP</code>指向栈顶元素，当栈为空的时候，栈中没有元素，也就不存在栈顶元素。所以<code>SS:SP</code>只能指向栈的最底部单元下面的单元，该单元的偏移地址为<strong>栈最底部的字单元的偏移地址+2</strong>，即<code>SP=SP-2</code>。</p>
+<h3 id="栈顶越界的问题"><a href="#栈顶越界的问题" class="headerlink" title="栈顶越界的问题"></a>栈顶越界的问题</h3><p><code>SS</code>和<code>SP</code>只记录了栈顶的地址，依靠<code>SS</code>和<code>SP</code>可以保证在入栈和出栈时找到栈顶。但如何能保证在入栈、出栈时，栈顶不会超出栈空间？</p>
+<p>x86CPU不保证对栈的操作不会越界，这就是说，<strong>x86CPU只知道栈顶在何处，而不知道安排的栈空间有多大</strong>，这好比CPU只知道当前要执行的指令在何处，而不知道要执行的指令有多少。</p>
+<p>在编程的时候要自己关注栈顶越界的问题，根据可能用到的最大栈空间，来安排栈的大小，防止入栈的数据太多而导致的越界；执行出栈操作的时候也要注意，以防栈空的时候继续出栈而导致的越界。</p>
+<p>push和pop实质上就是一种内存传送指令，可以在寄存器和内存之间传送数据，与mov指令不同的是，push和pop指令访问的内存单元的地址不是在指令中给出的，而是由SS:SP指出的。</p>
+<h3 id="栈段"><a href="#栈段" class="headerlink" title="栈段"></a>栈段</h3><p>可以将一组长度为N(N$\leq$64KB )、地址连续、起始地址为16的倍数的内存单元，当作栈来使用，从而定义了一个栈段。</p>
+<p>任意时刻，<code>SS:SP</code>指向栈顶元素，当栈为空的时候，栈中没有元素，也就不存在栈顶元素，所以<code>SS:SP</code>只能指向栈的最底部单元下面的单元，该单元的偏移地址为栈最底部的字单元的偏移地址+2</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/汇编/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>汇编</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/06/26/如何理解Web语义化？/">
+      如何理解Web语义化？
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-06-26</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Life/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Life</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>第二天百度前端学院的任务里有推荐读<a href="https://www.zhihu.com/question/20455165" target="_blank" rel="noopener">顾轶灵的如何理解Web语义化?</a>,这里先贴一下链接。文中所说，目前Web上的内容越来越多，只能通过机器对其处理，为了使机器对内容的精确可读，有两个发展方向。一是大力发展人工智能，朝着人类水平的方向发展；二是语义网，这也是万维网的创始人Tim Berners-Lee提出的美好想法。</p>
+<p>两条路的目标都很难实现，第一条路技术上难，第二条路实施起来障碍多。为什么说第二条路障碍多？这要说到语义网了。语义网简单来说就是能够根据语义进行判断的智能网络，可以实现人与电脑之间的无障碍沟通，它的智能化程度极高，协调能力也非常强大。它将一切信息和信息之间的逻辑关系包含在一起，一个个的信息孤岛整合成一个巨大的数据库。同时，语义化也是Web3.0的特征之一。</p>
+<p>现在的HTML规范、HTML5一直在往语义化的方向努力，许多属性、元素在设计的时候就是为了让用户代理更好理解HTML文档，Ｈ5更是在之前的规范基础上，对所有表现层的语义描述都进行了修改或删除，增加了表达更丰富语义的元素，它使对应的信息认可程度提高。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/随笔/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/LiYpoi.github.io/2019/06/24/随笔-7/">
+      随笔
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.liypoi.top" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>LiY</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-06-24</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/LiYpoi.github.io/categories/Life/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Life</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>今天在百度前端技术学院报了名，开始系统学习一下前端的东西，这学期的课程只是HTML+CSS+JS的基础，顺便贴一篇文章<a href="https://www.zhihu.com/question/22689579" target="_blank" rel="noopener">Web 建站技术中，HTML、HTML5、XHTML、CSS、SQL、JavaScript、PHP、ASP.NET、Web Services 是什么？</a></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/LiYpoi.github.io/tags/随笔/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        <div class="prev-next">
+          
+          <p class="current">
+            1 / 9
+          </p>
+          
+            <a class="next" rel="next" href="/LiYpoi.github.io/page/2/">
+              <section class="post next">
+                &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </section>
+            </a>
+          
+        </div>
+      </div>
+
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+
+  
+
+
+</div>
+<aside class="l_side">
+  
+    
+    
+      
+        
+          
+          
+            <section class="widget author">
+  <div class="content pure">
+    
+      <div class="avatar">
+        <img class="avatar" src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png">
+      </div>
+    
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/LiYpoi.github.io/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:me@xaoxuu.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/LiYpoi" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=122050412" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            <section class="widget grid">
+  
+<header class="pure">
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/LiYpoi.github.io/" href="/LiYpoi.github.io/" id="LiYpoi.github.io">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/LiYpoi.github.io/blog/archives/" href="/LiYpoi.github.io/blog/archives/" rel="nofollow" id="LiYpoi.github.ioblogarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/LiYpoi.github.io/projects/" href="/LiYpoi.github.io/projects/" id="LiYpoi.github.ioprojects">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          开源项目
+        </a></li>
+      
+        <li><a class="flat-box" title="/LiYpoi.github.io/friends/" href="/LiYpoi.github.io/friends/" rel="nofollow" id="LiYpoi.github.iofriends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/LiYpoi.github.io/about/" href="/LiYpoi.github.io/about/" rel="nofollow" id="LiYpoi.github.ioabout">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于本站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class="widget category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/LiYpoi.github.io/blog/categories/" title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/LiYpoi.github.io/categories/Life/" href="/LiYpoi.github.io/categories/Life/"><div class="name">Life</div><div class="badge">(18)</div></a></li>
+        
+          <li><a class="flat-box" title="/LiYpoi.github.io/categories/Study/" href="/LiYpoi.github.io/categories/Study/"><div class="name">Study</div><div class="badge">(27)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class="widget tagcloud">
+    
+<header class="pure">
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/LiYpoi.github.io/blog/tags/" title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      <a href="/LiYpoi.github.io/tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="/LiYpoi.github.io/tags/Canvas/" style="font-size: 18px; color: #7e7e7e">Canvas</a> <a href="/LiYpoi.github.io/tags/Git/" style="font-size: 22px; color: #636363">Git</a> <a href="/LiYpoi.github.io/tags/HTML/" style="font-size: 14px; color: #999">HTML</a> <a href="/LiYpoi.github.io/tags/Javascript/" style="font-size: 16px; color: #8b8b8b">Javascript</a> <a href="/LiYpoi.github.io/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/LiYpoi.github.io/tags/N个问题/" style="font-size: 14px; color: #999">N个问题</a> <a href="/LiYpoi.github.io/tags/jQuery/" style="font-size: 18px; color: #7e7e7e">jQuery</a> <a href="/LiYpoi.github.io/tags/建站历史/" style="font-size: 20px; color: #707070">建站历史</a> <a href="/LiYpoi.github.io/tags/汇编/" style="font-size: 14px; color: #999">汇编</a> <a href="/LiYpoi.github.io/tags/网页设计/" style="font-size: 14px; color: #999">网页设计</a> <a href="/LiYpoi.github.io/tags/读书笔记/" style="font-size: 18px; color: #7e7e7e">读书笔记</a> <a href="/LiYpoi.github.io/tags/随笔/" style="font-size: 24px; color: #555">随笔</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class="widget music">
+    
+<header class="pure">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" rel="external nofollow noopener noreferrer" target="_blank" href="https://music.163.com/#/user/home?id=122050412" title="https://music.163.com/#/user/home?id=122050412">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="2615636388" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/LiYpoi.github.io/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:me@xaoxuu.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/LiYpoi" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=122050412" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/LiYpoi.github.io/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
 </script>
 
 
 
 
 
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/LiYpoi.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/LiYpoi.github.io/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/LiYpoi.github.io/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/LiYpoi.github.io/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/LiYpoi.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/LiYpoi.github.io/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'BqLjNCUReFt7GsRVWgw4WXzH-gzGzoHsz',
-        appKey: '2Tlfq0UiLicFC3tPkN26xNlj',
-        placeholder: '你有什么想对我说的(*/ω＼*)？',
-        avatar:'mp',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-  
-
-<!-- ҳ����С���� -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
+  <script>setLoadingBarProgress(100);</script>
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
 <script src="/LiYpoi.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/LiYpoi.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"defaultOpacity":0.7,"hoverOpacity":1},"log":false});</script></body>
 </html>
