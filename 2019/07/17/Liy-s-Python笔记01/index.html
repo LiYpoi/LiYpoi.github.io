@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Liy&#39;s Blog">
 <meta property="og:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T14:58:43.070Z">
+<meta property="og:updated_time" content="2019-07-18T12:41:49.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -413,7 +413,7 @@ $(function(){
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  223
+                  1.1k
                 </span>
               
 
@@ -429,7 +429,7 @@ $(function(){
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -457,6 +457,45 @@ $(function(){
 <h4 id="Python开发环境配置"><a href="#Python开发环境配置" class="headerlink" title="Python开发环境配置"></a>Python开发环境配置</h4><p><strong>Python的两种编程方式</strong>：交互式和文件式</p>
 <p>交互式：对每个输入语句及时运行结果，适合语法练习。</p>
 <p>文件式：批量执行一组语句并运行结果，是编程的主要方式。</p>
+<h4 id="实例1：温度转换"><a href="#实例1：温度转换" class="headerlink" title="实例1：温度转换"></a>实例1：温度转换</h4><p>我们知道温度刻画分为两种不同的体系：华氏度(F)和摄氏度(C)，华氏度(英国、美国等国家使用)以一个标准大气压下水的结冰点为32度，沸点为212度，将温度进行等分刻画；摄氏度(中国等世界大多数国家使用)以一个标准大气压下水的结冰点为0度，沸点为100度，将温度进行等分刻画。</p>
+<p>关键算法:</p>
+<center>C = (F - 32) / 1.8</center>
+
+<center>           F = (C * 1.8 + 32)</center>
+
+<p>代码实现:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TempStr = input(<span class="string">"请输入带有符号的温度值:"</span>)</span><br><span class="line"><span class="keyword">if</span> TempStr[<span class="number">-1</span>] <span class="keyword">in</span> [<span class="string">'F'</span>,<span class="string">'f'</span>]:</span><br><span class="line">    c = (eval(TempStr[<span class="number">0</span>:<span class="number">-1</span>]) - <span class="number">32</span>)/<span class="number">1.8</span></span><br><span class="line">    print(<span class="string">"转换后的温度是&#123;:.2f&#125;C"</span>.format(c))</span><br><span class="line"><span class="keyword">elif</span> TempStr[<span class="number">-1</span>] <span class="keyword">in</span> [<span class="string">'C'</span>,<span class="string">'c'</span>]:</span><br><span class="line">    F = <span class="number">1.8</span>*eval(TempStr[<span class="number">0</span>:<span class="number">-1</span>]) + <span class="number">32</span></span><br><span class="line">    print(<span class="string">"转换后的温度是&#123;:.2f&#125;F"</span>.format(F))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"输入格式错误!"</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Python程序语法元素分析"><a href="#Python程序语法元素分析" class="headerlink" title="Python程序语法元素分析"></a>Python程序语法元素分析</h4><p><strong>程序的格式框架</strong></p>
+<font color="red">注释: </font>
+
+<ul>
+<li>单行注释 以<code>#</code>开头，后面跟注释内容</li>
+<li>多行注释 以<code>&#39;&#39;&#39;</code>开头和结尾</li>
+</ul>
+<p><strong>命名与保留字</strong></p>
+<p>上面程序中的<code>TempStr</code>、<code>C</code>、<code>F</code>是<font color="red">变量</font>,变量采用标识符来表示，关联标识符的过程叫命名，可以使用等号(=)向变量赋值或修改值，=是赋值符号。</p>
+<p>命名规则：数字、大小写字母、下划线和汉字等字符及组合，Python中命名对大小写敏感，且首字符不能是数字、不与保留字相同。</p>
+<p><strong>数据类型</strong></p>
+<p>上面温度转换的代码中，包含了字符串、整数、浮点数、列表共四种数据类型，这里说一下列表，这在C++中是没有的，列表类型用方括号和逗号表示，它是由0个或多个数据组成的有序序列，如<code>[10,110,111]</code>，使用保留字<code>in</code>判断一个元素是否在列表中。</p>
+<p>在字符串中有两种序号体系，正向递增序号和反向递减序号，正向递增序号从左至右，给字符串由0开始编号，反响递减序号则是从右至左，给字符串由-1开始编号。</p>
+<p>这两种字符串体系是为了使用字符串中的<strong>索引</strong>和<strong>切片</strong>功能。</p>
+<p>使用[]获取字符串中一个或多个字符</p>
+<ul>
+<li>索引:返回字符串中单个字符   &lt;字符串&gt;[M]</li>
+</ul>
+<p>例如：“请输入带有符号的温度值:”[0],将获得第0个字符</p>
+<ul>
+<li>切片:返回字符串中一段字符子串   &lt;字符串&gt;[M:N]</li>
+</ul>
+<p>例如：“请输入带有符号的温度值:”[1:3],表示取出其中第一个、第二个字符</p>
+<p><strong>语句与函数</strong></p>
+<p>Python中使用保留字<code>if、elif、else</code>构成条件判断的分支语句，<code>if TempStr[-1] in [&#39;F&#39;,&#39;f&#39;]:</code>如果条件为真则执行冒号后语句，分支语句中，每句话的后面有一个<code>:</code>不能省略。</p>
+<p>Python中函数采用&lt;函数名&gt;(&lt;参数&gt;)方式使用，<code>eval(TempStr[0:-1])</code>中<code>TempStr[0:-1]</code>是参数。</p>
+<p>使用<code>eval()</code>函数(评估函数)可以去掉参数最外侧引号并执行余下语句，基本使用格式：eval(&lt;字符串或字符串变量&gt;)</p>
+<p>例如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>eval(<span class="string">"1"</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>eval(<span class="string">"1+2"</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>eval(<span class="string">'print("Hello")'</span>)</span><br><span class="line">Hello</span><br></pre></td></tr></table></figure>
+<p><strong>输入与输出</strong></p>
+<p>Python中输出函数print()有一种格式化方法：print(“转换后的温度是<u>{:.2f}</u>F”.format(F)),<code>{}</code>表示槽，后续变量填充到槽中，<code>{:.2f}</code>表示将函数format中的变量C填充到这个位置时取小数点后2位。</p>
 
       
     </div>
@@ -702,7 +741,7 @@ $(function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -759,7 +798,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">26k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">26.9k</span>
 </span>
 </div>
 
