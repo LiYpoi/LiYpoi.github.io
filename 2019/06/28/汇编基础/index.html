@@ -86,21 +86,21 @@
 
 
 
-<meta name="description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
+<meta name="description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 推荐阅读：CPU如何工作？ 一、基础知识">
 <meta name="keywords" content="汇编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编基础">
 <meta property="og:url" content="https://www.liypoi.top/2019/06/28/汇编基础/index.html">
 <meta property="og:site_name" content="Liy&#39;s Blog">
-<meta property="og:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
+<meta property="og:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 推荐阅读：CPU如何工作？ 一、基础知识">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/29/5d174bdb849b325059.png">
 <meta property="og:image" content="https://i.loli.net/2019/06/30/5d18cb4e0831f64751.png">
-<meta property="og:updated_time" content="2019-07-08T13:18:01.212Z">
+<meta property="og:updated_time" content="2019-07-19T11:44:15.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
-<meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 一、基础知识汇编语言是二进制指令的文本形">
+<meta name="twitter:description" content="前言： 汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了小甲鱼零基础学汇编和阮一峰的汇编语言入门教程。将学习的笔记整理于此。 推荐阅读：CPU如何工作？ 一、基础知识">
 <meta name="twitter:image" content="https://i.loli.net/2019/06/30/5d18c9fcaed2073958.png">
 
 
@@ -456,6 +456,7 @@ $(function(){
       
         <p><strong>前言：</strong></p>
 <p>汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏<code>SHENZHENI/O</code>,看着游戏自带的近50的PDF手册以及汇编的说明，我就知道这游戏并不简单，只过了第一关，一些关于汇编的指令完全不懂，全网关于汇编的教程又比较少，多方搜索后找到了<a href="https://www.bilibili.com/video/av28132657?zw" target="_blank" rel="noopener">小甲鱼零基础学汇编</a>和<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="noopener">阮一峰的汇编语言入门教程</a>。将学习的笔记整理于此。</p>
+<p>推荐阅读：<a href="https://milapneupane.com.np/2019/07/06/how-does-a-cpu-work/" target="_blank" rel="noopener">CPU如何工作？</a></p>
 <h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><p><strong>汇编语言是二进制指令的文本形式</strong>，与指令是一一对应的关系。CPU只负责运算，本身不具备只能，当CPU接受到一条输入的指令后，它就运行一次，然后等待下一条指令。这些指令都是二进制的(是机器的语言)，但对于人类来说，二进制的指令过于难读，所以就诞生了与二进制指令一一对应的汇编语言。由于汇编语言最接近机器语言，所以汇编语言的执行效率是所有语言中最快的，但其所写代码量也是最大的。每一种CPU的机器指令都是不一样的，因此对应的汇编语言也不一样，笔记中所写的是目前最常见的x86汇编语言，即Intel公司的CPU使用的那一种。</p>
 <h3 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h3><p>汇编语言由以下3类组成：</p>
 <p>1.汇编指令（机器码的助记符）汇编语言的核心是汇编指令</p>
@@ -1009,7 +1010,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">27.3k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">27.4k</span>
 </span>
 </div>
 
