@@ -94,10 +94,13 @@
 <meta property="og:site_name" content="Liy&#39;s Blog">
 <meta property="og:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-19T10:22:29.452Z">
+<meta property="og:image" content="https://i.loli.net/2019/07/20/5d32cab42c5e643107.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/20/5d32d476557d717276.png">
+<meta property="og:updated_time" content="2019-07-20T10:01:56.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/20/5d32cab42c5e643107.png">
 
 
 
@@ -413,7 +416,7 @@ $(function(){
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  2.6k
                 </span>
               
 
@@ -429,7 +432,7 @@ $(function(){
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  10
                 </span>
               
             </div>
@@ -586,7 +589,71 @@ $(function(){
 <li>支持中文字符</li>
 <li>跨操作系统平台</li>
 </ul>
-<h4 id="实例2：Python蟒蛇绘制"><a href="#实例2：Python蟒蛇绘制" class="headerlink" title="实例2：Python蟒蛇绘制"></a>实例2：Python蟒蛇绘制</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#PythonDraw.py</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.setup(<span class="number">650</span>,<span class="number">350</span>,<span class="number">200</span>,<span class="number">200</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.fd(<span class="number">-250</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">turtle.pensize(<span class="number">25</span>)</span><br><span class="line">turtle.pencolor(<span class="string">"purple"</span>)</span><br><span class="line">turtle.seth(<span class="number">-40</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    turtle.circle(<span class="number">40</span>,<span class="number">80</span>)</span><br><span class="line">    turtle.circle(<span class="number">-40</span>,<span class="number">80</span>)</span><br><span class="line">turtle.circle(<span class="number">40</span>,<span class="number">80</span>/<span class="number">2</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span>)</span><br><span class="line">turtle.circle(<span class="number">16</span>,<span class="number">180</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span> * <span class="number">2</span>/<span class="number">3</span>)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
+<h4 id="实例2：Python蟒蛇绘制"><a href="#实例2：Python蟒蛇绘制" class="headerlink" title="实例2：Python蟒蛇绘制"></a>实例2：Python蟒蛇绘制</h4><p>代码实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#PythonDraw.py</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.setup(<span class="number">650</span>,<span class="number">350</span>,<span class="number">200</span>,<span class="number">200</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.fd(<span class="number">-250</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">turtle.pensize(<span class="number">25</span>)</span><br><span class="line">turtle.pencolor(<span class="string">"purple"</span>)</span><br><span class="line">turtle.seth(<span class="number">-40</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    turtle.circle(<span class="number">40</span>,<span class="number">80</span>)</span><br><span class="line">    turtle.circle(<span class="number">-40</span>,<span class="number">80</span>)</span><br><span class="line">turtle.circle(<span class="number">40</span>,<span class="number">80</span>/<span class="number">2</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span>)</span><br><span class="line">turtle.circle(<span class="number">16</span>,<span class="number">180</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span> * <span class="number">2</span>/<span class="number">3</span>)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
+<h4 id="turtle库的使用"><a href="#turtle库的使用" class="headerlink" title="turtle库的使用"></a>turtle库的使用</h4><p><strong>turtle库基本介绍</strong></p>
+<p>turtle库，即turtle(海龟)绘图体系，是Python的标准库之一。</p>
+<center>Python计算生态 = 标准库 + 第三方库</center>
+
+<ul>
+<li><p>标准库：随解释器直接安装到操作系统中的功能模块</p>
+</li>
+<li><p>第三方库：需要经过安装才能使用的功能模块</p>
+</li>
+<li>库Library、包Package、模块Module，统称模块</li>
+</ul>
+<p><strong>turtle库绘图窗体布局</strong></p>
+<p>turtle的画布空间中使用的最小单位是像素。</p>
+<p><code>turtle.setup(width,height,startx,starty)</code>中，<code>setup()</code>设置窗体大小及位置，这个位置是以电脑显示器左上角为原点(0,0)为参考，4个参数中后两个可选，<code>setup()</code>函数不是必须的。</p>
+<p><img src="https://i.loli.net/2019/07/20/5d32cab42c5e643107.png" alt></p>
+<p><strong>turtle空间和角度坐标体系</strong></p>
+<p><code>turtle.goto(x,y)</code>使用goto函数，可以绘出一段直线或图形，正如平面直角坐标系一样。</p>
+<p>类似的函数分为两类：运动命令、画笔控制命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运动命令</span><br></pre></td></tr></table></figure>
+<p><code>fd(d)</code>:海龟向前移动的距离，d代表距离</p>
+<p><code>bk(d)</code>:海龟向后移动的距离，d代表距离</p>
+<p><code>right/left(degree)</code>:以海龟的视角，向右/左转动多少度</p>
+<p><code>speed(speed)</code> :画笔绘制的速度,范围[0,10]的整数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">画笔控制命令</span><br></pre></td></tr></table></figure>
+<p><code>penup()/pu()/up()</code>:抬起画笔</p>
+<p><code>pendown()/pd()</code>:落下画笔,并不绘制任何内容</p>
+<p><code>pensize(width)/width(width)</code>:画笔的宽度</p>
+<p><code>pencolor(colorstring)</code>: 画笔的颜色</p>
+<p><code>fillcolor(colorstring)</code>:绘制图形的填充颜色</p>
+<p><code>circle(r, extent)</code>: 绘制一个圆形,r为半径,extent为度数,当r为正数，所绘圆的的圆心在左侧正方向，为负时在右侧正方向，如要画一个圆形,可不必写第二个参数</p>
+<p><code>seth(angle)</code>:海龟行进方向，angle为绝对度数</p>
+<p><strong>RGB色彩体系</strong></p>
+<p><img src="https://i.loli.net/2019/07/20/5d32d476557d717276.png" alt></p>
+<p>turtle的RGB色彩模式，默认采用小数值，可切换为整数值</p>
+<p>使用<code>turtle.colormode(mode)</code>,当mode是1.0时，RGB小数值模式，为255时，RGB整数值模式。</p>
+<h4 id="turtle程序语法元素"><a href="#turtle程序语法元素" class="headerlink" title="turtle程序语法元素"></a>turtle程序语法元素</h4><p><strong>库引用与import</strong></p>
+<p>库引用：扩充Python程序功能的方式</p>
+<p>使用<code>import</code>保留字完成，采用<a>.<b>编码风格</b></a></p>
+<pre><code>import&lt;库名&gt;
+&lt;库名&gt;.&lt;函数名&gt;(&lt;函数参数&gt;)
+</code></pre><p>但是。。。。。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.setup(<span class="number">650</span>,<span class="number">350</span>,<span class="number">200</span>,<span class="number">200</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.fd(<span class="number">-250</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">turtle.pensize(<span class="number">25</span>)</span><br><span class="line">turtle.pencolor(<span class="string">"purple"</span>)</span><br><span class="line">turtle.seth(<span class="number">-40</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    turtle.circle(<span class="number">40</span>,<span class="number">80</span>)</span><br><span class="line">    turtle.circle(<span class="number">-40</span>,<span class="number">80</span>)</span><br><span class="line">turtle.circle(<span class="number">40</span>,<span class="number">80</span>/<span class="number">2</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span>)</span><br><span class="line">turtle.circle(<span class="number">16</span>,<span class="number">180</span>)</span><br><span class="line">turtle.fd(<span class="number">40</span> * <span class="number">2</span>/<span class="number">3</span>)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
+<p>这么多turtle,写起来很麻烦，所以可以使用<code>from</code>和<code>import</code>保留字共同完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">form&lt;库名&gt;import&lt;函数名&gt;</span><br><span class="line">form&lt;库名&gt;import*</span><br><span class="line">&lt;函数名&gt;(&lt;函数参数&gt;)</span><br></pre></td></tr></table></figure>
+<p>变形一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from turtle import*</span><br><span class="line">setup(650,350,200,200)</span><br><span class="line">penup()</span><br><span class="line">fd(-250)</span><br><span class="line">pendown()</span><br><span class="line">pensize(25)</span><br><span class="line">pencolor(&quot;purple&quot;)</span><br><span class="line">seth(-40)</span><br><span class="line">for i in range(5):</span><br><span class="line">    circle(40,80)</span><br><span class="line">    circle(-40,80)</span><br><span class="line">circle(40,80/2)</span><br><span class="line">fd(40)</span><br><span class="line">circle(16,180)</span><br><span class="line">fd(40 * 2/3)</span><br><span class="line">done()</span><br></pre></td></tr></table></figure>
+<p>不过这两种方法各有优缺点，第一种方法不会出现函数重名的问题，它使用turtle调用函数，每一次都是调用新程序中的函数；第二种会出现，库中的函数名称可能会与用户自定义的某个函数名称一致，导致二义性。</p>
+<p>所以引出了第三种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle <span class="keyword">as</span> t</span><br><span class="line">t.setup(<span class="number">650</span>,<span class="number">350</span>,<span class="number">200</span>,<span class="number">200</span>)</span><br><span class="line">t.penup()</span><br><span class="line">t.fd(<span class="number">-250</span>)</span><br><span class="line">t.pendown()</span><br><span class="line">t.pensize(<span class="number">25</span>)</span><br><span class="line">t.pencolor(<span class="string">"purple"</span>)</span><br><span class="line">t.seth(<span class="number">-40</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    t.circle(<span class="number">40</span>,<span class="number">80</span>)</span><br><span class="line">    t.circle(<span class="number">-40</span>,<span class="number">80</span>)</span><br><span class="line">t.circle(<span class="number">40</span>,<span class="number">80</span>/<span class="number">2</span>)</span><br><span class="line">t.fd(<span class="number">40</span>)</span><br><span class="line">t.circle(<span class="number">16</span>,<span class="number">180</span>)</span><br><span class="line">t.fd(<span class="number">40</span> * <span class="number">2</span>/<span class="number">3</span>)</span><br><span class="line">t.done()</span><br></pre></td></tr></table></figure>
+<p>给调用的外部库关联一个更短、更合适的名字，使用<code>import</code>和<code>as</code>保留字共同完成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import&lt;库名&gt;as&lt;库别名&gt;</span><br><span class="line">&lt;库别名&gt;.&lt;函数名&gt;(&lt;函数参数&gt;)</span><br></pre></td></tr></table></figure>
+<p><strong>循环结构与range()函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for&lt;变量&gt;in range(&lt;参数&gt;)</span><br><span class="line">&lt;被循环的语句&gt;</span><br></pre></td></tr></table></figure>
+<p>&lt;变量&gt;表示每次循环的计数，0到&lt;次数&gt;-1</p>
+<p><code>range()</code>函数是产生循环计数序列的函数</p>
+<ul>
+<li>range(N)</li>
+</ul>
+<p>产生0到N-1的整数序列，共N个，range(5)的结果是0，1，2，3，4</p>
+<ul>
+<li>range(M,N)</li>
+</ul>
+<p>产生M到N-1的整数序列，共N-M个，range(2,5)的结果是2，3，4</p>
 
       
     </div>
@@ -832,7 +899,7 @@ $(function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -889,7 +956,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">27.4k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">28.4k</span>
 </span>
 </div>
 
