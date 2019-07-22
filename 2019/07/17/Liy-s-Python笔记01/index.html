@@ -96,7 +96,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/07/20/5d32cab42c5e643107.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/20/5d32d476557d717276.png">
-<meta property="og:updated_time" content="2019-07-20T10:01:56.484Z">
+<meta property="og:updated_time" content="2019-07-22T12:18:58.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -416,7 +416,7 @@ $(function(){
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  3.6k
                 </span>
               
 
@@ -432,7 +432,7 @@ $(function(){
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  14
                 </span>
               
             </div>
@@ -570,7 +570,7 @@ $(function(){
 <td style="text-align:center">d对象、按钮、文本框</td>
 <td style="text-align:center">理解人机交互</td>
 <td style="text-align:center">桌面应用</td>
-<td style="text-align:center">b不确定</td>
+<td style="text-align:center">不确定</td>
 </tr>
 <tr>
 <td style="text-align:center">Python</td>
@@ -654,7 +654,117 @@ $(function(){
 <li>range(M,N)</li>
 </ul>
 <p>产生M到N-1的整数序列，共N-M个，range(2,5)的结果是2，3，4</p>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="数字类型及操作"><a href="#数字类型及操作" class="headerlink" title="数字类型及操作"></a>数字类型及操作</h4><p><strong>整数类型</strong></p>
+<p>可正可负,提供四种进制表示：</p>
+<ul>
+<li>十进制：1001，99，-111</li>
+<li>二进制：以0b或0B开头，0b010,0B110</li>
+<li>八进制：以0o或0O开头，0o123,0O123</li>
+<li>十六进制：以0x或0X开头，0x9a,0X98</li>
+</ul>
+<p><strong>浮点数类型</strong></p>
+<p>浮点数间运算存在不确定尾数，这是编程语言的通病，例如，0.1+0.2=0.30000000000004，这是因为计算机中，二进制和十进制没有严格的对等关系，0.1用二进制表示是一串无限循环小数，计算机表示为十进制的时候只截取其中的53位，从而无限接近0.1。这一点可以用编程语言验证，输入<code>0.1 + 0.2 == 0.3</code>输出结果<code>False</code>。</p>
+<p>为了解决这个问题，使用<code>round()</code>函数，<code>round()</code>函数是用来保留数字的。<code>round(x,d)</code>即对x四舍五入，d是小数截取位数，<code>round(0.1 + 0.2,1) == 0.3</code>,此时输出结果为<code>True</code></p>
+<p><strong>复数类型(Python特有)</strong></p>
+<p>使用<code>z.real</code>获得复数的实部，<code>z.imag</code>获得虚部</p>
+<p><strong>数值运算操作符</strong></p>
+<p>与其他编程语言的不同：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">x/y</td>
+<td style="text-align:center">除，10/3结果为3.333333333335</td>
+</tr>
+<tr>
+<td style="text-align:center">x//y</td>
+<td style="text-align:center">整数除，10//3结果为3</td>
+</tr>
+<tr>
+<td style="text-align:center">x**y</td>
+<td style="text-align:center">m幂运算，当y为小数时表示开方</td>
+</tr>
+</tbody>
+</table>
+<p>Python中类型间可进行混合运算，生成结果为“最宽”类型，例如：</p>
+<center>整数 -&gt; 浮点数 -&gt; 复数</center>
 
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span> + <span class="number">0.4</span> = <span class="number">123.4</span>          //整数 + 浮点数 = 浮点数</span><br></pre></td></tr></table></figure>
+<p><strong>数值运算函数</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数及使用</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">abs(x)</td>
+<td style="text-align:center">x绝对值，abs(-110)结果为110</td>
+</tr>
+<tr>
+<td style="text-align:center">divmod(x,y)</td>
+<td style="text-align:center">商余,(x//y,x%y),同时输出商和余,divmod(10,3)结果为(3,1)</td>
+</tr>
+<tr>
+<td style="text-align:center">pow(x,y[,z])</td>
+<td style="text-align:center">幂余,(x**y)%z,[..]表示参数z可省略,pow(3,pow(3,99),1000)结果为4587</td>
+</tr>
+<tr>
+<td style="text-align:center">round(x,[,d])</td>
+<td style="text-align:center">四舍五入,d是保留小数位数，默认为0是取整,round(-11.1101,2)结果为-11,11</td>
+</tr>
+<tr>
+<td style="text-align:center">max(x1,x2,..,xn)</td>
+<td style="text-align:center">返回括号中的最大值</td>
+</tr>
+<tr>
+<td style="text-align:center">min(x1,x2,..,xn)</td>
+<td style="text-align:center">返回括号中的最小值</td>
+</tr>
+<tr>
+<td style="text-align:center">int(x)</td>
+<td style="text-align:center">将x转换为整数,舍弃小数部分,int(12.22)结果为12;int(“123”)结果为123</td>
+</tr>
+<tr>
+<td style="text-align:center">float()</td>
+<td style="text-align:center">将x转换为浮点数,增加小数部分,float(12)结果为12.0;float(“123.2”)结果为123.2</td>
+</tr>
+<tr>
+<td style="text-align:center">complex()</td>
+<td style="text-align:center">将x转换为复数,增加虚数部分,complex(4)结果为4 + 0j</td>
+</tr>
+</tbody>
+</table>
+<h4 id="实例3：天天向上"><a href="#实例3：天天向上" class="headerlink" title="实例3：天天向上"></a>实例3：天天向上</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dayup</span><span class="params">(df)</span>:</span></span><br><span class="line">    dayup = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">365</span>):</span><br><span class="line">       <span class="keyword">if</span> i % <span class="number">7</span> <span class="keyword">in</span> [<span class="number">6</span>,<span class="number">0</span>]:</span><br><span class="line">        dayup = dayup*(<span class="number">1</span> - <span class="number">0.01</span>)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           dayup = dayup*(<span class="number">1</span> + df)</span><br><span class="line">    <span class="keyword">return</span> dayup</span><br><span class="line">dayfactor = <span class="number">0.01</span></span><br><span class="line"><span class="keyword">while</span> dayup(dayfactor) &lt; <span class="number">37.78</span>:</span><br><span class="line">        dayfactor += <span class="number">0.001</span></span><br><span class="line">print(<span class="string">"工作日的努力参数是:&#123;:.3f&#125;"</span>.format(dayfactor))</span><br></pre></td></tr></table></figure>
+<p>可以引申到同类型问题：三天打鱼两天晒网</p>
+<h4 id="字符串类型及操作"><a href="#字符串类型及操作" class="headerlink" title="字符串类型及操作"></a>字符串类型及操作</h4><p><strong>字符串类型的表示</strong></p>
+<p>在对字符串进行引用时，如果想字符串中包含单引号，则外围需要用双引号，反之用单引号包含双引号，如果既想包含单引号又想包含双引号，则使用单个单引号在外围进行嵌套。</p>
+<p>字符串切片的高级用法：使用[M:N:K]根据步长对字符串切片</p>
+<ul>
+<li>&lt;字符串&gt;[M:N],M缺失表示至开头，N缺失表示至结尾</li>
+</ul>
+<p>“一二三四五六七八九十”[:3]结果是“一二三”</p>
+<ul>
+<li>&lt;字符串&gt;[M:N:K],j根据步长K对字符串切片</li>
+</ul>
+<p>“一二三四五六七八九十”[1:8:2]结果是“二四六”</p>
+<p>开始的时候下标是1，步长是2 ，则取下标是1的数据二， 还会去 1+步长(2) = 3 那么会取下标是3 的数据四，再往后就是结果3+步长(2) = 5，取下标是5 的数据六。</p>
+<ul>
+<li>“一二三四五六七八九十”[::-1]结果是”十九八七六五四三二一”</li>
+</ul>
+<p>更多关于切片的操作参见：<a href="https://www.jianshu.com/p/15715d6f4dad" target="_blank" rel="noopener">彻底搞懂Python切片操作-简书</a></p>
+<p><strong>字符串操作符</strong></p>
+<p><strong>字符串处理函数</strong></p>
+<p><strong>字符串处理方法</strong></p>
+<p><strong>字符串类型的格式化</strong></p>
+<h4 id="模块2：time库的使用"><a href="#模块2：time库的使用" class="headerlink" title="模块2：time库的使用"></a>模块2：time库的使用</h4><h4 id="实例4：文本进度条"><a href="#实例4：文本进度条" class="headerlink" title="实例4：文本进度条"></a>实例4：文本进度条</h4>
       
     </div>
     
@@ -899,7 +1009,7 @@ $(function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例4：文本进度条"><span class="nav-number">3.5.</span> <span class="nav-text">实例4：文本进度条</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -956,7 +1066,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">28.4k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">29.4k</span>
 </span>
 </div>
 
