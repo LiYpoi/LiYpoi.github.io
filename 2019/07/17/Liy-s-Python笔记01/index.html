@@ -96,7 +96,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/07/20/5d32cab42c5e643107.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/20/5d32d476557d717276.png">
-<meta property="og:updated_time" content="2019-07-22T12:18:58.546Z">
+<meta property="og:image" content="https://i.loli.net/2019/07/24/5d383a7896feb70483.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/24/5d383b14259d264857.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/24/5d383b1570c1e51269.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/24/5d38549c968fc55869.png">
+<meta property="og:image" content="https://i.loli.net/2019/07/24/5d38594caf43f91614.png">
+<meta property="og:updated_time" content="2019-07-24T13:13:08.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -448,7 +453,7 @@ $(function(){
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.6k
+                  4.9k
                 </span>
               
 
@@ -464,7 +469,7 @@ $(function(){
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  14
+                  19
                 </span>
               
             </div>
@@ -793,10 +798,127 @@ $(function(){
 </ul>
 <p>更多关于切片的操作参见：<a href="https://www.jianshu.com/p/15715d6f4dad" target="_blank" rel="noopener">彻底搞懂Python切片操作-简书</a></p>
 <p><strong>字符串操作符</strong></p>
+<p>由0个或多个字符组成的有序字符序列，有三种操作符，前两种是“+”和“*”，第三种是“in”，例如<code>x in s</code>表示：如果x是s的子串，返回True，否则返回False。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#weeknameprintv2.py     //获取星期字符串</span></span><br><span class="line">weekStr = <span class="string">"一二三四五六七"</span></span><br><span class="line">weekId = eval(input(<span class="string">"请输入星期数字（1—7）:"</span>))</span><br><span class="line">print(<span class="string">"星期"</span> + weekStr[weekId<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
 <p><strong>字符串处理函数</strong></p>
+<p>python中提供了一些函数给字符串使用：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">len(x)</td>
+<td style="text-align:center">返回括号中字符串的长度</td>
+</tr>
+<tr>
+<td style="text-align:center">str(x)</td>
+<td style="text-align:center">将括号中任意类型x转换成字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">hex(x)/oct(x)</td>
+<td style="text-align:center">将括号中的整数x转换成十六进制或八进制</td>
+</tr>
+<tr>
+<td style="text-align:center">chr(u)</td>
+<td style="text-align:center">将括号中Unicode编码返回其字符形式</td>
+</tr>
+<tr>
+<td style="text-align:center">ord(x)</td>
+<td style="text-align:center">将括号中的字符返回其Unicode编码</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://baike.baidu.com/item/Unicode/750500?fr=aladdin" target="_blank" rel="noopener">Unicode-百度百科</a></p>
 <p><strong>字符串处理方法</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str.lower()/str.upper()</td>
+<td style="text-align:center">将英文字符串全小写或大写</td>
+</tr>
+<tr>
+<td style="text-align:center">str.split(sep=None)</td>
+<td style="text-align:center">返回一个列表，“A,B,C”.split(“,”)结果[‘A’,’B’,’C’]</td>
+</tr>
+<tr>
+<td style="text-align:center">str.count(sub)</td>
+<td style="text-align:center">返回子串sub在str中出现的次数，”day day up”.count(“d”)结果为2</td>
+</tr>
+<tr>
+<td style="text-align:center">str.replace(old,new)</td>
+<td style="text-align:center">将括号中old子串替换成new,并返回str的副本</td>
+</tr>
+<tr>
+<td style="text-align:center">strcenter(width[,fillchar])</td>
+<td style="text-align:center">字符串居中，width为居中的宽度，fillchar是填充宽度的</td>
+</tr>
+<tr>
+<td style="text-align:center">str.strip(chars)</td>
+<td style="text-align:center">去掉str中左侧和右侧chars中列出的字符，”= python= “.strip(“ =np”)结果“ytho”</td>
+</tr>
+<tr>
+<td style="text-align:center">str.join(iter)</td>
+<td style="text-align:center">在iter变量除了最后一个元素外，给每个元素后面加一个字符,“?”.join(“为什么”)结果“为?什?么”</td>
+</tr>
+</tbody>
+</table>
 <p><strong>字符串类型的格式化</strong></p>
-<h4 id="模块2：time库的使用"><a href="#模块2：time库的使用" class="headerlink" title="模块2：time库的使用"></a>模块2：time库的使用</h4><h4 id="实例4：文本进度条"><a href="#实例4：文本进度条" class="headerlink" title="实例4：文本进度条"></a>实例4：文本进度条</h4>
+<center>字符串格式化=槽机制+format()方法</center>
+
+<p><img src="https://i.loli.net/2019/07/24/5d383a7896feb70483.png" alt></p>
+<p>默认槽中从0开始，可以设置槽中数字对format()中的参数进行选择</p>
+<p>槽内部对格式化的配置方式：</p>
+<p><img src="https://i.loli.net/2019/07/24/5d383b14259d264857.png" alt></p>
+<p><img src="https://i.loli.net/2019/07/24/5d383b1570c1e51269.png" alt></p>
+<p algin="right">图片来自中国大学MOOC《Python语言程序设计》</p>
+
+<h4 id="模块2：time库的使用"><a href="#模块2：time库的使用" class="headerlink" title="模块2：time库的使用"></a>模块2：time库的使用</h4><p><strong>time库基本介绍</strong></p>
+<p>time库是Python中处理时间的标准库，可以用来:</p>
+<ul>
+<li>时间表达</li>
+<li>提供获取系统时间并格式化输出功能</li>
+<li>提供系统级精确计时功能，用于程序性能分析</li>
+</ul>
+<p>time库包括三类函数：</p>
+<ul>
+<li>时间获取：time()  ctime()  gmtime()</li>
+<li>时间格式化：strftime()  strptime()</li>
+<li>程序计时：sleep()  perf_counter()</li>
+</ul>
+<p><strong>时间获取</strong></p>
+<p>使用函数time(),可以获取当前的时间戳，即计算机内部时间值，它是一串浮点数，表示从格林威治时间1970年01月01日00时00分00秒开始到当前的秒数。至于为什么是1970年这个时间点见:[<a href="https://www.cnblogs.com/haitao-fan/archive/2013/01/09/2853740.html" target="_blank" rel="noopener">为什么计算机时间要从1970年1月1日开始算起？</a>]</p>
+<p>但这种方式可读性较差，所以有了函数ctime()，ctime()可以获取当前时间并以易读的方式表示，返回字符串。</p>
+<p>第三种gmtime()函数，获取当前时间，表示为计算机可处理的时间格式。</p>
+<p><strong>时间格式化</strong></p>
+<p>使用strtime()方法将时间以合理的方式展示出来，<code>strtime(tpl,ts)</code>中，tpl是格式化模板字符串，用来定义输出效果，ts是计算机内部时间类型变量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;t = time.gtime()</span><br><span class="line">&gt;&gt;&gt;time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>,t)</span><br><span class="line"><span class="string">'2019-07-24 19:53:56'</span></span><br></pre></td></tr></table></figure>
+<p>月份缩写%b，月份名称%B，星期%A，星期缩写%a，上下午%p，12小时制%I。</p>
+<p>可以构造一个字符串，将它作为时间变量来使用，使用strptime()方法可以逐一解析字符串中的含义，并转换为变量。str是字符串形式的时间，tpl是格式化模板字符串，用来定义输入效果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;time.Str = <span class="string">'2019-07-24 19:53:56'</span></span><br><span class="line">&gt;&gt;&gt;time.strptime(timeStr,<span class="string">"%Y-%m-%d %H:%M:%S"</span>)</span><br><span class="line"><span class="number">2019</span><span class="number">-07</span><span class="number">-24</span> <span class="number">19</span>:<span class="number">53</span>:<span class="number">56</span></span><br></pre></td></tr></table></figure>
+<p><strong>程序计时应用</strong></p>
+<p>程序计时指测量起始动作所经历的过程，使用perf_counter()测量时间，sleep()产生时间。在使用perf_counter()函数时，由于函数计数起点不是0，而是从某个值开始的，所以需要连续调用函数并计算两次的差值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;start = time.perf_counter()</span><br><span class="line"><span class="number">328.73647264478827</span></span><br><span class="line">&gt;&gt;&gt;end = time.perf_counter()</span><br><span class="line"><span class="number">344.16472574489317</span></span><br><span class="line">&gt;&gt;&gt;end - start</span><br><span class="line"><span class="number">15.4282531001049</span>‬</span><br></pre></td></tr></table></figure>
+<p>使用函数sleep(s),s是休眠的时间，单位是秒，可以是浮点数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wait</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">3.3</span>)</span><br><span class="line">&gt;&gt;&gt;wait()        //程序等待<span class="number">3.3</span>秒后退出</span><br></pre></td></tr></table></figure>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>1.0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#TextProBarV1.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">scale = <span class="number">10</span></span><br><span class="line">print(<span class="string">"------进度开始------"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(scale+<span class="number">1</span>):</span><br><span class="line">    a = <span class="string">'*'</span>*i</span><br><span class="line">    b = <span class="string">'.'</span>*(scale - i)</span><br><span class="line">    c = (i/scale)*<span class="number">100</span></span><br><span class="line">    print(<span class="string">"&#123;:^3.0f&#125;%[&#123;&#125;-&gt;&#123;&#125;]"</span>.format(c,a,b))</span><br><span class="line">    time.sleep(<span class="number">0.1</span>)</span><br><span class="line">print(<span class="string">"------进度结束------"</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">------进度开始------</span></span><br><span class="line"><span class="string"> 0 %[-&gt;..........]</span></span><br><span class="line"><span class="string">10 %[*-&gt;.........]</span></span><br><span class="line"><span class="string">20 %[**-&gt;........]</span></span><br><span class="line"><span class="string">30 %[***-&gt;.......]</span></span><br><span class="line"><span class="string">40 %[****-&gt;......]</span></span><br><span class="line"><span class="string">50 %[*****-&gt;.....]</span></span><br><span class="line"><span class="string">60 %[******-&gt;....]</span></span><br><span class="line"><span class="string">70 %[*******-&gt;...]</span></span><br><span class="line"><span class="string">80 %[********-&gt;..]</span></span><br><span class="line"><span class="string">90 %[*********-&gt;.]</span></span><br><span class="line"><span class="string">100%[**********-&gt;]</span></span><br><span class="line"><span class="string">------进度结束------</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>2.0实现单行动态刷新</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#TextProBavV2.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">    print(<span class="string">"\r&#123;:3&#125;%"</span>.format(i),end=<span class="string">""</span>)  //\r作用是本行内容输出后将光标退回行首，end=<span class="string">""</span>输出不换行</span><br><span class="line">    time.sleep(<span class="number">0.1</span>)</span><br><span class="line">    </span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">  0%</span></span><br><span class="line"><span class="string">  1%</span></span><br><span class="line"><span class="string">  2%</span></span><br><span class="line"><span class="string">  3%</span></span><br><span class="line"><span class="string">  4%</span></span><br><span class="line"><span class="string">  5%</span></span><br><span class="line"><span class="string">  6%</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>V2的代码运行结果在IDLE上是所有的信息都展现出来，并没有实现单行刷新，这是因为IDLE是编写程序的开发环境，不是程序运行的主要环境，所以IDLE中屏蔽了“\r”功能，但可以使用cmd运行。<img src="https://i.loli.net/2019/07/24/5d38549c968fc55869.png" alt></p>
+<p>把上面两种版本相结合V3：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#TextProBarV3.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">scale = <span class="number">50</span></span><br><span class="line">print(<span class="string">"执行开始"</span>.center(scale//<span class="number">2</span>, <span class="string">"-"</span>))</span><br><span class="line">start = time.perf_counter()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(scale+<span class="number">1</span>):</span><br><span class="line">    a = <span class="string">'*'</span> * i</span><br><span class="line">    b = <span class="string">'.'</span> * (scale - i)</span><br><span class="line">    c = (i/scale)*<span class="number">100</span></span><br><span class="line">    dur = time.perf_counter() - start</span><br><span class="line">    print(<span class="string">"\r&#123;:^3.0f&#125;%[&#123;&#125;-&gt;&#123;&#125;]&#123;:.2f&#125;s"</span>.format(c,a,b,dur),end=<span class="string">''</span>)</span><br><span class="line">    time.sleep(<span class="number">0.1</span>)</span><br><span class="line">print(<span class="string">"\n"</span>+<span class="string">"执行结束"</span>.center(scale//<span class="number">2</span>,<span class="string">'-'</span>))</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/07/24/5d38594caf43f91614.png" alt></p>
+
       
     </div>
     
@@ -1041,7 +1163,7 @@ $(function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例4：文本进度条"><span class="nav-number">3.5.</span> <span class="nav-text">实例4：文本进度条</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">3.5.</span> <span class="nav-text">实例</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1105,7 +1227,7 @@ $(function(){
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">29.4k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span>总写作字数:<span class="post-count">30.7k</span>
 </span>
 </div>
 
