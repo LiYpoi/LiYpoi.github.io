@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2e7e;
+  background: #cfdb57;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3301,8 +3301,8 @@ pre {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Brands";
 }
-.style {
-  fill: #00c4b6;
+Style Attribute {
+  fill: #2ec4b6;
 }
 .header-inner {
   border-radius: 25px;
