@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="hexo,">
 
 
 
@@ -86,17 +86,21 @@
 
 
 
-<meta name="description" content="普通大学生desu~">
-<meta name="keywords" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liy&#39;s Blog">
-<meta property="og:url" content="https://www.liypoi.top/page/2/index.html">
+<meta name="description" content="在将域名和博客绑定后，发现域名的前面一直显示不安全，虽然证书没问题。  这个问题可能是页面资源中有使用http，我在打开控制台后发现，果然有两张图片资源和两个jQuery用了http引用，解决办法是修改成https，或者使用本地静态文件。  如果修改后没有变化，可以先打开浏览器的高级设置，清除一下缓存后再次刷新进入。 还是没有变化的话，可以上阿里云的控制台更换一下域名的解析。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决https不安全的问题">
+<meta property="og:url" content="https://www.liypoi.top/解决https不安全的问题.html">
 <meta property="og:site_name" content="Liy&#39;s Blog">
-<meta property="og:description" content="普通大学生desu~">
+<meta property="og:description" content="在将域名和博客绑定后，发现域名的前面一直显示不安全，虽然证书没问题。  这个问题可能是页面资源中有使用http，我在打开控制台后发现，果然有两张图片资源和两个jQuery用了http引用，解决办法是修改成https，或者使用本地静态文件。  如果修改后没有变化，可以先打开浏览器的高级设置，清除一下缓存后再次刷新进入。 还是没有变化的话，可以上阿里云的控制台更换一下域名的解析。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/08/01/5d42feda845aa37749.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/08/01/5d42fedf98ba883260.png">
+<meta property="og:updated_time" content="2019-08-01T15:09:38.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liy&#39;s Blog">
-<meta name="twitter:description" content="普通大学生desu~">
+<meta name="twitter:title" content="解决https不安全的问题">
+<meta name="twitter:description" content="在将域名和博客绑定后，发现域名的前面一直显示不安全，虽然证书没问题。  这个问题可能是页面资源中有使用http，我在打开控制台后发现，果然有两张图片资源和两个jQuery用了http引用，解决办法是修改成https，或者使用本地静态文件。  如果修改后没有变化，可以先打开浏览器的高级设置，清除一下缓存后再次刷新进入。 还是没有变化的话，可以上阿里云的控制台更换一下域名的解析。">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/01/5d42feda845aa37749.jpg">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://www.liypoi.top/page/2/">
+  <link rel="canonical" href="https://www.liypoi.top/解决https不安全的问题.html">
 
 
 
 
 
-  <title>Liy's Blog</title>
+  <title>解决https不安全的问题 | Liy's Blog</title>
   
 
 
@@ -164,8 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
   <a href="https://github.com/LiYpoi" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -292,9 +295,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -307,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/IDEA破解汉化指北.html">
+    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/解决https不安全的问题.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiY">
@@ -324,9 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/IDEA破解汉化指北.html" itemprop="url">IDEA破解汉化指北</a></h1>
+          <h1 class="post-title" itemprop="name headline">解决https不安全的问题</h1>
         
 
         <div class="post-meta">
@@ -338,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T20:08:45+08:00">
-                2019-07-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-01T22:00:03+08:00">
+                2019-08-01
               </time>
             
 
@@ -379,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/LiYpoi.github.io/IDEA破解汉化指北.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/IDEA破解汉化指北.html" itemprop="commentCount"></span>
+                <a href="/LiYpoi.github.io/解决https不安全的问题.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/解决https不安全的问题.html" itemprop="commentCount"></span>
                 </a>
              </span>
             
@@ -404,205 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  533
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前言IDEA即IntelliJ IDEA，是java编程语言的集成开发环境，在业界被公认为最好的java开发工具之一。IntelliJ ID
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/IDEA破解汉化指北.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/大一总结.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/大一总结.html" itemprop="url">大一总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T22:55:29+08:00">
-                2019-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/大一总结.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/大一总结.html" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  191
+                  155
                 </span>
               
 
@@ -637,63 +440,91 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+      
+        <p>在将域名和博客绑定后，发现域名的前面一直显示不安全，虽然证书没问题。</p>
+<p><img src="https://i.loli.net/2019/08/01/5d42feda845aa37749.jpg" alt></p>
+<p>这个问题可能是页面资源中有使用http，我在打开控制台后发现，果然有两张图片资源和两个jQuery用了http引用，解决办法是修改成https，或者使用本地静态文件。</p>
+<p><img src="https://i.loli.net/2019/08/01/5d42fedf98ba883260.png" alt></p>
+<p>如果修改后没有变化，可以先打开浏览器的高级设置，清除一下缓存后再次刷新进入。</p>
+<p>还是没有变化的话，可以上阿里云的控制台更换一下域名的解析。</p>
+
+      
+    </div>
+    
+    
+    
+
+
+<div>
+    
+        
+    
+</div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    LiY
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.liypoi.top/解决https不安全的问题.html" title="解决https不安全的问题">https://www.liypoi.top/解决https不安全的问题.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+<div>
+  
+    ﻿
+<div style="text-align:center;color: #ccc;font-size:14px;">
+------ 我是有底线的（〃｀ 3′〃） ------</div>
+
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
           
+            <a href="/LiYpoi.github.io/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
           
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://pv8ddk60u.bkt.clouddn.com/005.jpg" rel="gallery_cjystfkh2001ehktmtr4eacet" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://pv8ddk60u.bkt.clouddn.com/005.jpg" itemprop="contentUrl">
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/LiYpoi.github.io/Python练习题01.html" rel="next" title="Python练习题01">
+                <i class="fa fa-chevron-left"></i> Python练习题01
               </a>
             
-          
+          </div>
 
-          
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
           </div>
         </div>
       
 
       
-        
-          
-          今天算是大一生活的结束吧，回顾这一年，似乎没做什么事，只是看了写书，算是学了些额外的知识，还有建立这个博客，开始习惯每天记录些东西。如果说最
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/大一总结.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -703,845 +534,25 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/立Flag.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/立Flag.html" itemprop="url">立Flag</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T21:08:38+08:00">
-                2019-07-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/立Flag.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/立Flag.html" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  170
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          最近总在想着暑假做些什么事，大致安排了这些：
-
- 将驾照考下来
- 把汇编系列的视频看完
- 将家里的台式机重新装一下系统(以前Win7升Win
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/立Flag.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/前端之N个问题.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/前端之N个问题.html" itemprop="url">前端之N个问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-30T11:06:54+08:00">
-                2019-06-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/前端之N个问题.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/前端之N个问题.html" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  500
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          前言这篇文章会汇总在学习前端过程中一些基础的问题，目前学了一些东西，但是，单拿出来确很难说清楚，究其原因还是基础知识掌握不好，只记住了一些操
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/前端之N个问题.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
     </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
   
 
-  
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/汇编基础.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/汇编基础.html" itemprop="url">汇编基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-28T21:00:19+08:00">
-                2019-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/汇编基础.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/汇编基础.html" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.4k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  12
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://pv8ddk60u.bkt.clouddn.com/009.jpg" rel="gallery_cjystfkxd004yhktmszjzlwvt" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://pv8ddk60u.bkt.clouddn.com/009.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          
-          汇编的学习完全出于偶然，学校好像大三才有嵌入式的课程，但是这几天正值Steam夏季促销，买了一款游戏SHENZHENI/O,看着游戏自带的近
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/汇编基础.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.liypoi.top/LiYpoi.github.io/如何理解Web语义化？.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiY">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/LiYpoi.github.io/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/LiYpoi.github.io/如何理解Web语义化？.html" itemprop="url">如何理解Web语义化？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-26T22:46:53+08:00">
-                2019-06-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/LiYpoi.github.io/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/LiYpoi.github.io/如何理解Web语义化？.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/LiYpoi.github.io/如何理解Web语义化？.html" itemprop="commentCount"></span>
-                </a>
-             </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  394
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://pv8ddk60u.bkt.clouddn.com/010.jpg" rel="gallery_cjystfks7002jhktmzfy1symg" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://pv8ddk60u.bkt.clouddn.com/010.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          
-          第二天百度前端学院的任务里有推荐读顾轶灵的如何理解Web语义化?,这里先贴一下链接。文中所说，目前Web上的内容越来越多，只能通过机器对其处
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/LiYpoi.github.io/如何理解Web语义化？.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-<div>
-    
-</div>
-
-    
-
-    
-
-    
-<div>
-  
-</div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/LiYpoi.github.io/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/LiYpoi.github.io/">1</a><span class="page-number current">2</span><a class="page-number" href="/LiYpoi.github.io/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/LiYpoi.github.io/page/9/">9</a><a class="extend next" rel="next" href="/LiYpoi.github.io/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1798,6 +809,10 @@
 
 
   
+  <script type="text/javascript" src="/LiYpoi.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/LiYpoi.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
