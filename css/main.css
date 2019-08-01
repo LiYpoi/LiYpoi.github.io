@@ -1894,7 +1894,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #40f;
+  background: #3dff2e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3304,9 +3304,10 @@ pre {
   color: #4d90fe;
   right: 15px;
 }
+.style {
+  fill: #49b1f5;
+}
 .header-inner {
-  border-top-left-radius: initial;
-  border-top-right-radius: initial;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
