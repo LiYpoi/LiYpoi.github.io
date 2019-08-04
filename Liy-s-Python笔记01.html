@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d383b1570c1e51269.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38549c968fc55869.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38594caf43f91614.png">
-<meta property="og:updated_time" content="2019-08-03T15:12:08.547Z">
+<meta property="og:updated_time" content="2019-08-04T13:23:00.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.4k
+                  6.1k
                 </span>
               
 
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  21
+                  24
                 </span>
               
             </div>
@@ -863,7 +863,7 @@
 <p>可以构造一个字符串，将它作为时间变量来使用，使用strptime()方法可以逐一解析字符串中的含义，并转换为变量。str是字符串形式的时间，tpl是格式化模板字符串，用来定义输入效果。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;time.Str = <span class="string">'2019-07-24 19:53:56'</span></span><br><span class="line">&gt;&gt;&gt;time.strptime(timeStr,<span class="string">"%Y-%m-%d %H:%M:%S"</span>)</span><br><span class="line"><span class="number">2019</span><span class="number">-07</span><span class="number">-24</span> <span class="number">19</span>:<span class="number">53</span>:<span class="number">56</span></span><br></pre></td></tr></table></figure>
 <p><strong>程序计时应用</strong></p>
-<p>程序计时指测量起始动作所经历的过程，使用perf_counter()测量时间，sleep()产生时间。在使用perf_counter()函数时，由于函数计数起点不是0，而是从某个值开始的，所以需要连续调用函数并计算两次的差值。</p>
+<p>程序计时指测量起始动作所经历的过程，使用perf_counter()测量时间，sleep()产生时间。在使用perf_counter()函数时，由于函数计数起点不是0，而是从某个值开始的，所以需要连续调用函数并计算两次的差值，利用time库的计时方法获取程序的运行时间，对程序的性能进行分析。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;start = time.perf_counter()</span><br><span class="line"><span class="number">328.73647264478827</span></span><br><span class="line">&gt;&gt;&gt;end = time.perf_counter()</span><br><span class="line"><span class="number">344.16472574489317</span></span><br><span class="line">&gt;&gt;&gt;end - start</span><br><span class="line"><span class="number">15.4282531001049</span>‬</span><br></pre></td></tr></table></figure>
 <p>使用函数sleep(s),s是休眠的时间，单位是秒，可以是浮点数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wait</span><span class="params">()</span>:</span></span><br><span class="line">    time.sleep(<span class="number">3.3</span>)</span><br><span class="line">&gt;&gt;&gt;wait()        //程序等待<span class="number">3.3</span>秒后退出</span><br></pre></td></tr></table></figure>
@@ -888,7 +888,74 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> :</span><br><span class="line">    语句<span class="number">1</span></span><br><span class="line"><span class="keyword">except</span>  ：</span><br><span class="line">    语句<span class="number">2</span></span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">    语句<span class="number">3</span></span><br><span class="line"><span class="keyword">finally</span> :</span><br><span class="line">    语句<span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p>上面的执行过程：语句1 -&gt;有异常 -&gt;语句2 -&gt;语句4，无异常 -&gt;语句3 -&gt;语句4，不管是否有异常，语句4都要执行。</p>
 <h4 id="实例5：BMI计算"><a href="#实例5：BMI计算" class="headerlink" title="实例5：BMI计算"></a>实例5：BMI计算</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CalBMI3.py</span></span><br><span class="line">height, weight = eval(input(<span class="string">"请输入身高（m）和体重（kg）[逗号隔开]:"</span>))</span><br><span class="line">bmi = weight / pow(height,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">"BMI数值为:&#123;:.2f&#125;"</span>.format(bmi))</span><br><span class="line">who, nat = <span class="string">""</span>,<span class="string">""</span></span><br><span class="line"><span class="keyword">if</span> bmi &lt; <span class="number">18.5</span>:</span><br><span class="line">    who, nat = <span class="string">"偏瘦"</span>,<span class="string">"偏瘦"</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">18.5</span> &lt;= bmi &lt; <span class="number">24</span>:</span><br><span class="line">    who, nat = <span class="string">"正常"</span>,<span class="string">"正常"</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">24</span> &lt;= bmi &lt;<span class="number">25</span>:</span><br><span class="line">    who, nat = <span class="string">"正常"</span>,<span class="string">"正常"</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">25</span> &lt;= bmi &lt;<span class="number">28</span>:</span><br><span class="line">    who, nat = <span class="string">"偏胖"</span>,<span class="string">"偏胖"</span></span><br><span class="line"><span class="keyword">elif</span> <span class="number">28</span> &lt;= bmi &lt;<span class="number">30</span>:</span><br><span class="line">    who, nat = <span class="string">"偏胖"</span>,<span class="string">"偏胖"</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    who, nat = <span class="string">"肥胖"</span>,<span class="string">"肥胖"</span></span><br><span class="line">print(<span class="string">"BMI指标为：国际'&#123;0&#125;',国内'&#123;1&#125;'"</span>.format(who,nat))</span><br></pre></td></tr></table></figure>
-<h4 id="程序的循环结构"><a href="#程序的循环结构" class="headerlink" title="程序的循环结构"></a>程序的循环结构</h4><h4 id="模块3-randomk库"><a href="#模块3-randomk库" class="headerlink" title="模块3: randomk库"></a>模块3: randomk库</h4><h4 id="实例6：圆周率的计算"><a href="#实例6：圆周率的计算" class="headerlink" title="实例6：圆周率的计算"></a>实例6：圆周率的计算</h4>
+<h4 id="程序的循环结构"><a href="#程序的循环结构" class="headerlink" title="程序的循环结构"></a>程序的循环结构</h4><p><strong>遍历循环</strong></p>
+<p>由保留字<code>for</code>和<code>in</code>组成，完整遍历所有元素后结束，每次循环将获得的元素放入循环变量中，并执行一次语句块。</p>
+<p>几种基本的搭配方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(N) :   //计数循环(N次) </span><br><span class="line">    语句块</span><br><span class="line">//遍历range()函数产生的数字序列</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> s :    //字符串遍历循环</span><br><span class="line">    语句块</span><br><span class="line">//s是字符串，遍历字符串每个字符，产生循环，放入c中</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls :    //列表遍历循环</span><br><span class="line">    语句块</span><br><span class="line">//ls是一个列表，遍历其中每个元素，产生循环</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fi :    //文件遍历循环</span><br><span class="line">    语句块</span><br><span class="line">//fi是个文件标识符，遍历其中每一行，产生循环</span><br></pre></td></tr></table></figure>
+<p><strong>无限循环</strong></p>
+<p>即条件循环，条件为True是执行，为False时停止，见于while循环和for循环，使用控制保留字break和continue，break仅跳出当前最内层循环。</p>
+<p><strong>循环的扩展</strong></p>
+<p>循环和else可以结合使用，当循环没有被break时，执行else语句，作为正常循环的奖励，这里的else用法和异常处理中else用法类似，由此可以用来判断一段循环是否被break。</p>
+<h4 id="模块3-random库"><a href="#模块3-random库" class="headerlink" title="模块3: random库"></a>模块3: random库</h4><p>random库是随机数的Python标准库，但计算机并不能真正产生随机数，而是由<a href="[https://baike.baidu.com/item/%E6%A2%85%E6%A3%AE%E6%97%8B%E8%BD%AC%E7%AE%97%E6%B3%95/22800014?fr=aladdin](https://baike.baidu.com/item/梅森旋转算法/22800014?fr=aladdin">梅森旋转算法</a>)产生的伪随机数。</p>
+<p>random库包括两类函数，基本随机数函数2个：seed()、random(),扩展随机数函数6个：randint()、getrandbits()、uniform()、randrange()、choice()、shuffle()。</p>
+<p><strong>基本随机数函数</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">seed(a=None)</td>
+<td style="text-align:center">c初始化给定的随机数种子，默认为当前的系统时间，random.seed(10),产生种子10对应的序列</td>
+</tr>
+<tr>
+<td style="text-align:center">random()</td>
+<td style="text-align:center">s生成一个[0.0,1.0)之间的随机小数</td>
+</tr>
+</tbody>
+</table>
+<p>使用随机数种子有助于程序结果的再现，种子相同时，多个随机数函数产生的随机数结果相同。</p>
+<p><strong>扩展随机数函数</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">randint(a,b)</td>
+<td style="text-align:center">生成一个[a,b]之间的随机整数</td>
+</tr>
+<tr>
+<td style="text-align:center">randrange(m,n,[,k])</td>
+<td style="text-align:center">生成一个[m,n)之间以k为步长的随机整数</td>
+</tr>
+<tr>
+<td style="text-align:center">getrandbits(k)</td>
+<td style="text-align:center">生成一个k比特长的随机整数</td>
+</tr>
+<tr>
+<td style="text-align:center">uniform(a,b)</td>
+<td style="text-align:center">生成一个[a,b]之间的随机小数，不止限于0-10</td>
+</tr>
+<tr>
+<td style="text-align:center">choice(seq)</td>
+<td style="text-align:center">从序列seq中随机选择一个元素，random.choice([1,2,3,4,5]),结果是任意的</td>
+</tr>
+<tr>
+<td style="text-align:center">shuffle(seq)</td>
+<td style="text-align:center">将序列seq中元素随机排列，返回打乱后的序列，s=[1,2,3];random.shuffle(s);print(s),结果是[2,3,1]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="实例6：圆周率的计算"><a href="#实例6：圆周率的计算" class="headerlink" title="实例6：圆周率的计算"></a>实例6：圆周率的计算</h4><p><a href="[https://baike.baidu.com/item/%E8%92%99%E7%89%B9%C2%B7%E5%8D%A1%E7%BD%97%E6%96%B9%E6%B3%95/8664362?fromtitle=%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E7%AE%97%E6%B3%95&amp;fromid=4992634&amp;fr=aladdin](https://baike.baidu.com/item/蒙特·卡罗方法/8664362?fromtitle=蒙特卡洛算法&amp;fromid=4992634&amp;fr=aladdin">蒙特卡罗方法</a>)计算圆周率</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CalPiV2.py</span></span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> perf_counter</span><br><span class="line">DARTS = <span class="number">1000</span>*<span class="number">1000</span></span><br><span class="line">hits = <span class="number">0.0</span></span><br><span class="line">start = perf_counter()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,DARTS+<span class="number">1</span>):</span><br><span class="line">    x,y = random(),random()</span><br><span class="line">    dist = pow(x ** <span class="number">2</span> + y ** <span class="number">2</span>,<span class="number">0.5</span>)</span><br><span class="line">    <span class="keyword">if</span> dist &lt;= <span class="number">1.0</span>:</span><br><span class="line">        hits = hits + <span class="number">1</span></span><br><span class="line">pi = <span class="number">4</span> * (hits / DARTS)</span><br><span class="line">print(<span class="string">"圆周率值是:&#123;&#125;"</span>.format(pi))</span><br><span class="line">print(<span class="string">"运行时间是:&#123;:.5f&#125;s"</span>.format(perf_counter()-start))</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -1111,7 +1178,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">3.5.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的控制结构"><span class="nav-number">4.</span> <span class="nav-text">程序的控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的分支结构"><span class="nav-number">4.1.</span> <span class="nav-text">程序的分支结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例5：BMI计算"><span class="nav-number">4.2.</span> <span class="nav-text">实例5：BMI计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的循环结构"><span class="nav-number">4.3.</span> <span class="nav-text">程序的循环结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块3-randomk库"><span class="nav-number">4.4.</span> <span class="nav-text">模块3: randomk库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例6：圆周率的计算"><span class="nav-number">4.5.</span> <span class="nav-text">实例6：圆周率的计算</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">3.5.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的控制结构"><span class="nav-number">4.</span> <span class="nav-text">程序的控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的分支结构"><span class="nav-number">4.1.</span> <span class="nav-text">程序的分支结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例5：BMI计算"><span class="nav-number">4.2.</span> <span class="nav-text">实例5：BMI计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的循环结构"><span class="nav-number">4.3.</span> <span class="nav-text">程序的循环结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块3-random库"><span class="nav-number">4.4.</span> <span class="nav-text">模块3: random库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例6：圆周率的计算"><span class="nav-number">4.5.</span> <span class="nav-text">实例6：圆周率的计算</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1175,7 +1242,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">31.7k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">32.5k</span>
 </span>
 </div>
 
