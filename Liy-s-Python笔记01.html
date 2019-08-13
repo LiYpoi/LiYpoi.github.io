@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d383b1570c1e51269.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38549c968fc55869.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38594caf43f91614.png">
-<meta property="og:updated_time" content="2019-08-08T10:36:13.363Z">
+<meta property="og:updated_time" content="2019-08-13T11:36:44.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7.7k
+                  9.7k
                 </span>
               
 
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  31
+                  39
                 </span>
               
             </div>
@@ -549,7 +549,7 @@
 <td style="text-align:center">C++</td>
 <td style="text-align:center">对象、多态、继承</td>
 <td style="text-align:center">理解主客体关系</td>
-<td style="text-align:center">d大规模程序</td>
+<td style="text-align:center">大规模程序</td>
 <td style="text-align:center">计算机类专业</td>
 </tr>
 <tr>
@@ -561,7 +561,7 @@
 </tr>
 <tr>
 <td style="text-align:center">VB</td>
-<td style="text-align:center">d对象、按钮、文本框</td>
+<td style="text-align:center">d对象、按、文本框</td>
 <td style="text-align:center">理解人机交互</td>
 <td style="text-align:center">桌面应用</td>
 <td style="text-align:center">不确定</td>
@@ -569,7 +569,7 @@
 <tr>
 <td style="text-align:center">Python</td>
 <td style="text-align:center">编程逻辑、第三方库</td>
-<td style="text-align:center">l理解问题求解</td>
+<td style="text-align:center">理解问题求解</td>
 <td style="text-align:center">各类问题</td>
 <td style="text-align:center">各种专业</td>
 </tr>
@@ -999,6 +999,206 @@
 <p><code>-h</code>查看帮助，<code>--clean</code>清理打包过程中的临时文件，<code>-F</code>在dist文件夹中只生成独立的打包文件，<code>-i&lt;图标文件名.ico&gt;</code>指定打包程序使用的图标文件。</p>
 <h4 id="实例8：科赫雪花小包裹"><a href="#实例8：科赫雪花小包裹" class="headerlink" title="实例8：科赫雪花小包裹"></a>实例8：科赫雪花小包裹</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#KochDrawV2.py</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span><span class="params">(size, n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, <span class="number">-120</span>, <span class="number">60</span>]:</span><br><span class="line">           turtle.left(angle)</span><br><span class="line">           koch(size/<span class="number">3</span>, n<span class="number">-1</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    turtle.setup(<span class="number">600</span>,<span class="number">600</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(<span class="number">-200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    level = <span class="number">3</span>      <span class="comment"># 3阶科赫雪花，阶数</span></span><br><span class="line">    koch(<span class="number">400</span>,level)     </span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>,level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>,level)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong>如果在引用turtle库运行程序报错”AttributeError: ‘Turtle’ object has no attribute ‘xxx’”，这是因为与Python的系统文件和保留字冲突了，检查是否有.py文件命名为turtle或Python的保留字，最好将.py文件单独放在一个文件夹中，不要放在根目录里。</p>
+<h3 id="组合数据类型"><a href="#组合数据类型" class="headerlink" title="组合数据类型"></a>组合数据类型</h3><h4 id="集合类型及操作"><a href="#集合类型及操作" class="headerlink" title="集合类型及操作"></a>集合类型及操作</h4><p>集合是多个元素的无序组合，集合类型是不可变的。集合用{}表示，元素之间用逗号分隔；建立集合类型用{}或set()函数，建立空集合类型，必须用set()函数。</p>
+<p>这里的集合与数学中的集合类似，集合有着6个操作符，基本的4个是并、差、交、补。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作符</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">S｜T</td>
+<td style="text-align:center">返回一个新的集合，包括S和T中的所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">S－T</td>
+<td style="text-align:center">返回一个新的集合，包括S但不在T中的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">S＆T</td>
+<td style="text-align:center">返回一个新的集合，包括同时在S和T中的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">S^T</td>
+<td style="text-align:center">返回一个新的集合，包括S和T中的非相同元素</td>
+</tr>
+<tr>
+<td style="text-align:center">S&lt;=T或S&lt;T</td>
+<td style="text-align:center">返回Ture/False，判断S和T的子集关系</td>
+</tr>
+<tr>
+<td style="text-align:center">S&gt;=T或S&gt;T</td>
+<td style="text-align:center">返回Ture/False，判断S和T的包含关系</td>
+</tr>
+</tbody>
+</table>
+<p>集合处理方法</p>
+<table>
+<thead>
+<tr>
+<th>操作函数</th>
+<th>描述</th>
+<th>操作函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S.add(x)</td>
+<td>如果x不在集合S中，将x增加到S</td>
+<td>S.discard(x)</td>
+<td>移除S中元素x,如果x不在集合S中，不报错</td>
+</tr>
+<tr>
+<td>S.remove(x)</td>
+<td>移除S中元素x，如果x不在集合S中，产生KeyError异常</td>
+<td>S.clear()</td>
+<td>移除S中所有元素</td>
+</tr>
+<tr>
+<td>S.pop()</td>
+<td>随机返回S的一个元素，更新S，若S为空产生KeyError异常</td>
+<td>S.copy()</td>
+<td>返回S的一个副本</td>
+</tr>
+<tr>
+<td>len(S)</td>
+<td>返回S的元素个数</td>
+<td>x in S</td>
+<td>判断S中元素x，x在集合S中，返回Ture，反之False</td>
+</tr>
+<tr>
+<td>x not in S</td>
+<td>判断S中元素x，x不在集合S中，返回Ture，反之False</td>
+<td>set(x)</td>
+<td>将其他类型变量x转变为集合类型</td>
+</tr>
+</tbody>
+</table>
+<h4 id="序列类型及操作"><a href="#序列类型及操作" class="headerlink" title="序列类型及操作"></a>序列类型及操作</h4><p>序列是具有先后关系的一组元素，序列是一维元素向量，元素类型可以不同。这里的序列类似数学中的元素序列，元素间由序号引导，通过下标访问序列的特定元素。序列是一个基类类型，它衍生出了字符串类型、元组类型、列表类型，它的序号定义分为正向递增序号和反向递减序号。</p>
+<p>序列通用的函数</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">len(s)</td>
+<td style="text-align:center">返回序列s的长度</td>
+</tr>
+<tr>
+<td style="text-align:center">min(s)</td>
+<td style="text-align:center">返回序列s的最小元素，s中元素需要可比较</td>
+</tr>
+<tr>
+<td style="text-align:center">max(s)</td>
+<td style="text-align:center">返回序列s的最大元素，s中的元素需要可比较</td>
+</tr>
+<tr>
+<td style="text-align:center">s.index(x)</td>
+<td style="text-align:center">返回序列s中第一次出现x的位置</td>
+</tr>
+<tr>
+<td style="text-align:center">s.count(x)</td>
+<td style="text-align:center">f返回序列s总出现x的次数</td>
+</tr>
+</tbody>
+</table>
+<p>元组类型</p>
+<p>元组类型是序列类型的一种扩展，一旦创建就不能被修改，使用小括号或tuple()创建，元素间用逗号分隔，可以使用或不使用小括号；元组类型继承了序列类型中的所用操作。</p>
+<p>列表类型</p>
+<p>列表类型是序列类型的一种扩展，创建后可以随意修改，使用方括号或list()创建，元素间用逗号分隔，列表各元素类型可以不同，无长度限制。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数或方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ls[i]=x</td>
+<td style="text-align:center">替换列表ls第i元素为x</td>
+</tr>
+<tr>
+<td style="text-align:center">ls[i:j:k]=lt</td>
+<td style="text-align:center">用列表lt替换ls切片后所对应元素子列表</td>
+</tr>
+<tr>
+<td style="text-align:center">del ls[i]</td>
+<td style="text-align:center">删除列表ls中第i元素</td>
+</tr>
+<tr>
+<td style="text-align:center">del ls[i:j:k]</td>
+<td style="text-align:center">删除列表ls中第i到第j以k为步长的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">ls+=lt</td>
+<td style="text-align:center">更新列表ls,将列表lt元素增加到列表ls中</td>
+</tr>
+<tr>
+<td style="text-align:center">ls*=n</td>
+<td style="text-align:center">更新列表ls,其元素重复n次</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数或方法</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">函数或方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ls.append(x)</td>
+<td style="text-align:center">在列表ls最后增加一个x元素</td>
+<td style="text-align:center">ls.pop(i)</td>
+<td style="text-align:center">将列表ls中的第i位置元素取出并删除该元素</td>
+</tr>
+<tr>
+<td style="text-align:center">ls.clear()</td>
+<td style="text-align:center">删除列表ls中所有元素</td>
+<td style="text-align:center">ls.remove(x)</td>
+<td style="text-align:center">将列表ls中出现的第一个元素x删除</td>
+</tr>
+<tr>
+<td style="text-align:center">ls.copy()</td>
+<td style="text-align:center">生成一个新列表，赋值ls中所有元素</td>
+<td style="text-align:center">ls.reverse()</td>
+<td style="text-align:center">将列表ls中的元素反转</td>
+</tr>
+<tr>
+<td style="text-align:center">ls.insert(i,x)</td>
+<td style="text-align:center">在列表ls的第i位置增加元素x</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="实例9：基本统计值计算"><a href="#实例9：基本统计值计算" class="headerlink" title="实例9：基本统计值计算"></a>实例9：基本统计值计算</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CalStatisticsV1.py    代码来自中国大学MOOC《Python语言程序设计》</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getNum</span><span class="params">()</span>:</span>       <span class="comment">#获取用户不定长度的输入</span></span><br><span class="line">    nums = []</span><br><span class="line">    iNumStr = input(<span class="string">"请输入数字(回车退出): "</span>)</span><br><span class="line">    <span class="keyword">while</span> iNumStr != <span class="string">""</span>:</span><br><span class="line">        nums.append(eval(iNumStr))</span><br><span class="line">        iNumStr = input(<span class="string">"请输入数字(回车退出): "</span>)</span><br><span class="line">    <span class="keyword">return</span> nums</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mean</span><span class="params">(numbers)</span>:</span>  <span class="comment">#计算平均值</span></span><br><span class="line">    s = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">        s = s + num</span><br><span class="line">    <span class="keyword">return</span> s / len(numbers)</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dev</span><span class="params">(numbers, mean)</span>:</span> <span class="comment">#计算方差</span></span><br><span class="line">    sdev = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> numbers:</span><br><span class="line">        sdev = sdev + (num - mean)**<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> pow(sdev / (len(numbers)<span class="number">-1</span>), <span class="number">0.5</span>)</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">median</span><span class="params">(numbers)</span>:</span>    <span class="comment">#计算中位数</span></span><br><span class="line">    sorted(numbers)</span><br><span class="line">    size = len(numbers)</span><br><span class="line">    <span class="keyword">if</span> size % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        med = (numbers[size//<span class="number">2</span><span class="number">-1</span>] + numbers[size//<span class="number">2</span>])/<span class="number">2</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        med = numbers[size//<span class="number">2</span>]</span><br><span class="line">    <span class="keyword">return</span> med</span><br><span class="line"> </span><br><span class="line">n =  getNum() <span class="comment">#主体函数</span></span><br><span class="line">m =  mean(n)</span><br><span class="line">print(<span class="string">"平均值:&#123;&#125;,方差:&#123;:.2&#125;,中位数:&#123;&#125;."</span>.format(m, dev(n,m),median(n)))</span><br></pre></td></tr></table></figure>
+<h4 id="字典类型及操作"><a href="#字典类型及操作" class="headerlink" title="字典类型及操作"></a>字典类型及操作</h4><p>字典”是许多值的集合。但不像列表的下标，字典的索引可以<br>使用许多不同数据类型， 不只是整数。 字典的索引被称为“键”，键及其关联的值称为“键-值”对 ；字典输入时带花括号{} 。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;myCat = &#123;<span class="string">'size'</span>: <span class="string">'fat'</span>, <span class="string">'color'</span>: <span class="string">'gray'</span>, <span class="string">'disposition'</span>: <span class="string">'loud'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>字典的键是’size’、 ‘color’和’disposition’。这些键相应的值是’fat’、 ‘gray’和’loud’，通过键可以访问相应的值。字典不同于列表，是不排序的，所以不能像列表那样切片。</p>
+<p>有 3 个字典方法，它们将返回类似列表的值，分别对应于字典的键、值和键-值对：keys()、 values()和 items()。 </p>
+<h4 id="模块5：jieba库的使用"><a href="#模块5：jieba库的使用" class="headerlink" title="模块5：jieba库的使用"></a>模块5：jieba库的使用</h4><p>jieba是一个中文分词第三方库，使用pip安装，它提供三种分词模式。jieba库依靠一个中文词库，确定汉字之间的关联概率，汉字之间关联概率大的组成词组，形成分词的结果，用户也可以添加自定义的词组。</p>
+<p>分词模式：精确模式<code>jieba.lcut(s)</code>，把文本精确切分，无冗余单词；全模式<code>jieba.luct(s,cut_all=Ture)</code>，把文本中所有可能的词语都扫描出来，有冗余；搜索引擎模式<code>jieba.lcut_for_search(s)</code>，在精确模式基础上，对长词再次切分;<code>jieba.add_word(w)</code>向分词字典增加新词w。</p>
+<h4 id="实例10：文本词频统计"><a href="#实例10：文本词频统计" class="headerlink" title="实例10：文本词频统计"></a>实例10：文本词频统计</h4><p>英文书籍用的是《老人与海》，源代码文件要和txt文件放在一起。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CalThe Old Man and the SeaV1.py   源代码来自中国大学MOOC《Python语言程序设计》</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getText</span><span class="params">()</span>:</span></span><br><span class="line">    txt = open(<span class="string">"The Old Man and the Sea.txt"</span>, <span class="string">"r"</span>,encoding=<span class="string">'utf-8'</span>).read()</span><br><span class="line">    txt = txt.lower()</span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> <span class="string">'!"#$%&amp;()*+,-./:;&lt;=&gt;?@[\\]^_‘&#123;|&#125;~'</span>:</span><br><span class="line">        txt = txt.replace(ch, <span class="string">" "</span>)   <span class="comment">#将文本中特殊字符替换为空格</span></span><br><span class="line">    <span class="keyword">return</span> txt</span><br><span class="line"> </span><br><span class="line">hamletTxt = getText()</span><br><span class="line">words  = hamletTxt.split()</span><br><span class="line">counts = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:           </span><br><span class="line">    counts[word] = counts.get(word,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">items = list(counts.items())</span><br><span class="line">items.sort(key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>], reverse=<span class="literal">True</span>) </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    word, count = items[i]</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"&#123;0:&lt;10&#125;&#123;1:&gt;5&#125;"</span>.format(word, count))</span><br><span class="line">    </span><br><span class="line"><span class="string">'''   </span></span><br><span class="line"><span class="string"><span class="meta">&gt;&gt;&gt; </span></span></span><br><span class="line"><span class="string"> RESTART: C:\Python\Python37\代码\CalThe Old Man and the SeaV1.py </span></span><br><span class="line"><span class="string">the        2088</span></span><br><span class="line"><span class="string">and        1125</span></span><br><span class="line"><span class="string">he         1008</span></span><br><span class="line"><span class="string">of          480</span></span><br><span class="line"><span class="string">it          412</span></span><br><span class="line"><span class="string">to          402</span></span><br><span class="line"><span class="string">his         391</span></span><br><span class="line"><span class="string">was         388</span></span><br><span class="line"><span class="string">i           380</span></span><br><span class="line"><span class="string">a           356</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>中文书籍用的是《雪中悍刀行》,在运行的时候出现了错误，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UnicodeDecodeError: <span class="string">'utf-8'</span> codec can<span class="string">'t decode byte 0xb8 in position 60: invalid start byte</span></span><br></pre></td></tr></table></figure>
+<p>查询后是txt文件采用的不是UTF-8编码的，修改解码方式即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#CalxuezhongV1.py   源代码来自中国大学MOOC《Python语言程序设计》</span></span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line">txt = open(<span class="string">"《雪中悍刀行》.txt"</span>, <span class="string">"r"</span>, encoding=<span class="string">'utf-8'</span>).read()</span><br><span class="line">words  = jieba.lcut(txt)</span><br><span class="line">counts = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">    <span class="keyword">if</span> len(word) == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        counts[word] = counts.get(word,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">items = list(counts.items())</span><br><span class="line">items.sort(key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>], reverse=<span class="literal">True</span>) </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">15</span>):</span><br><span class="line">    word, count = items[i]</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"&#123;0:&lt;10&#125;&#123;1:&gt;5&#125;"</span>.format(word, count))</span><br></pre></td></tr></table></figure>
+<p>由于是本网文，内容比较多，所以程序处理时间稍长些，最后结果出来了:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">徐凤年       19761</span><br><span class="line">北凉         8196</span><br><span class="line">没有         7670</span><br><span class="line">一个         5922</span><br><span class="line">这个         4353</span><br><span class="line">不是         4209</span><br><span class="line">就是         3982</span><br><span class="line">自己         3972</span><br><span class="line">北莽         3872</span><br><span class="line">女子         3790</span><br><span class="line">只是         3451</span><br><span class="line">什么         3346</span><br><span class="line">那个         3344</span><br><span class="line">江湖         3329</span><br><span class="line">年轻         3276</span><br></pre></td></tr></table></figure>
+<p>果然是网文，除了主人公的名字最多外，其他的就是些“不是”、“就是”、“那个”了🤣🤣🤣。</p>
 
       
     </div>
@@ -1222,7 +1422,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例4"><span class="nav-number">3.5.</span> <span class="nav-text">实例4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的控制结构"><span class="nav-number">4.</span> <span class="nav-text">程序的控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的分支结构"><span class="nav-number">4.1.</span> <span class="nav-text">程序的分支结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例5：BMI计算"><span class="nav-number">4.2.</span> <span class="nav-text">实例5：BMI计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的循环结构"><span class="nav-number">4.3.</span> <span class="nav-text">程序的循环结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块3-random库"><span class="nav-number">4.4.</span> <span class="nav-text">模块3: random库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例6：圆周率的计算"><span class="nav-number">4.5.</span> <span class="nav-text">实例6：圆周率的计算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数和代码的复用"><span class="nav-number">5.</span> <span class="nav-text">函数和代码的复用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的定义和使用"><span class="nav-number">5.1.</span> <span class="nav-text">函数的定义和使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例7：七段数码管的绘制"><span class="nav-number">5.2.</span> <span class="nav-text">实例7：七段数码管的绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码复用与函数递归"><span class="nav-number">5.3.</span> <span class="nav-text">代码复用与函数递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块4：Pylnstaller库的使用"><span class="nav-number">5.4.</span> <span class="nav-text">模块4：Pylnstaller库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例8：科赫雪花小包裹"><span class="nav-number">5.5.</span> <span class="nav-text">实例8：科赫雪花小包裹</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本语法元素"><span class="nav-number">1.</span> <span class="nav-text">Python基本语法元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计基本方法"><span class="nav-number">1.1.</span> <span class="nav-text">程序设计基本方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python开发环境配置"><span class="nav-number">1.2.</span> <span class="nav-text">Python开发环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例1：温度转换"><span class="nav-number">1.3.</span> <span class="nav-text">实例1：温度转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python程序语法元素分析"><span class="nav-number">1.4.</span> <span class="nav-text">Python程序语法元素分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python基本图形绘制"><span class="nav-number">2.</span> <span class="nav-text">Python基本图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深入理解Python语言"><span class="nav-number">2.1.</span> <span class="nav-text">深入理解Python语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例2：Python蟒蛇绘制"><span class="nav-number">2.2.</span> <span class="nav-text">实例2：Python蟒蛇绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle库的使用"><span class="nav-number">2.3.</span> <span class="nav-text">turtle库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#turtle程序语法元素"><span class="nav-number">2.4.</span> <span class="nav-text">turtle程序语法元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.</span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字类型及操作"><span class="nav-number">3.1.</span> <span class="nav-text">数字类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例3：天天向上"><span class="nav-number">3.2.</span> <span class="nav-text">实例3：天天向上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串类型及操作"><span class="nav-number">3.3.</span> <span class="nav-text">字符串类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块2：time库的使用"><span class="nav-number">3.4.</span> <span class="nav-text">模块2：time库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例4"><span class="nav-number">3.5.</span> <span class="nav-text">实例4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序的控制结构"><span class="nav-number">4.</span> <span class="nav-text">程序的控制结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的分支结构"><span class="nav-number">4.1.</span> <span class="nav-text">程序的分支结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例5：BMI计算"><span class="nav-number">4.2.</span> <span class="nav-text">实例5：BMI计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序的循环结构"><span class="nav-number">4.3.</span> <span class="nav-text">程序的循环结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块3-random库"><span class="nav-number">4.4.</span> <span class="nav-text">模块3: random库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例6：圆周率的计算"><span class="nav-number">4.5.</span> <span class="nav-text">实例6：圆周率的计算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数和代码的复用"><span class="nav-number">5.</span> <span class="nav-text">函数和代码的复用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的定义和使用"><span class="nav-number">5.1.</span> <span class="nav-text">函数的定义和使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例7：七段数码管的绘制"><span class="nav-number">5.2.</span> <span class="nav-text">实例7：七段数码管的绘制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码复用与函数递归"><span class="nav-number">5.3.</span> <span class="nav-text">代码复用与函数递归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块4：Pylnstaller库的使用"><span class="nav-number">5.4.</span> <span class="nav-text">模块4：Pylnstaller库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例8：科赫雪花小包裹"><span class="nav-number">5.5.</span> <span class="nav-text">实例8：科赫雪花小包裹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合数据类型"><span class="nav-number">6.</span> <span class="nav-text">组合数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集合类型及操作"><span class="nav-number">6.1.</span> <span class="nav-text">集合类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#序列类型及操作"><span class="nav-number">6.2.</span> <span class="nav-text">序列类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例9：基本统计值计算"><span class="nav-number">6.3.</span> <span class="nav-text">实例9：基本统计值计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字典类型及操作"><span class="nav-number">6.4.</span> <span class="nav-text">字典类型及操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块5：jieba库的使用"><span class="nav-number">6.5.</span> <span class="nav-text">模块5：jieba库的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例10：文本词频统计"><span class="nav-number">6.6.</span> <span class="nav-text">实例10：文本词频统计</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1286,7 +1486,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">35.3k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">37.3k</span>
 </span>
 </div>
 
