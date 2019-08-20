@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d383b1570c1e51269.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38549c968fc55869.png">
 <meta property="og:image" content="https://i.loli.net/2019/07/24/5d38594caf43f91614.png">
-<meta property="og:updated_time" content="2019-08-19T15:14:47.204Z">
+<meta property="og:updated_time" content="2019-08-20T14:43:35.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liy&#39;s Python笔记01">
 <meta name="twitter:description" content="Python基本语法元素程序设计基本方法程序的基本编写方法即IPO,其中I是指Input输入，程序的输入，P是指Process处理，程序的主要逻辑，O是指Output输出，程序的输出。 程序的输入：文件输入、网络输入、控制台输入、交互界面输入、内部输入等。 程序的输出：控制台输出、图形输出、文件输出、网络输出、操作系统内部变量输出等。 处理：处理是程序对输入数据进行计算产生输出结果的过程，处理的方">
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  12.4k
+                  13.1k
                 </span>
               
 
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  49
+                  53
                 </span>
               
             </div>
@@ -1261,7 +1261,95 @@
 <h4 id="Python第三方库安装"><a href="#Python第三方库安装" class="headerlink" title="Python第三方库安装"></a>Python第三方库安装</h4><p><a href="https://pypi.org/" target="_blank" rel="noopener">pypi</a>全球Python计算生态的主站，提供Python第三方库。</p>
 <p>pip工具是Python自带的安装工具，在命令行下使用<code>pip install 库名称</code>即可安装，卸载使用<code>pip uninstall 库名</code>；<code>pip install -u库名</code>可以更新已安装的第三方库；<code>pip download 库名</code>下载并不安装库；<code>pip show 库名</code>列出该库的详细信息；<code>pip list</code>列出当前系统安装的第三方库。</p>
 <p>集成安装使用anaconda,它适用于数据分析和数据展示。</p>
-<h4 id="模块7：os库的使用"><a href="#模块7：os库的使用" class="headerlink" title="模块7：os库的使用"></a>模块7：os库的使用</h4><h4 id="实例14：第三方库安装脚本"><a href="#实例14：第三方库安装脚本" class="headerlink" title="实例14：第三方库安装脚本"></a>实例14：第三方库安装脚本</h4>
+<h4 id="模块7：os库的使用"><a href="#模块7：os库的使用" class="headerlink" title="模块7：os库的使用"></a>模块7：os库的使用</h4><p>os库是Python标准库，提供通用且基本的操作交互功能，内含几百个函数，常用操作路径、进程管理、环境参数等几类。</p>
+<p>路径操作，使用os.path子库，处理文件路径及信息；使用<code>import</code>调用，常用函数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">os.path.abspath(path)</td>
+<td style="text-align:center">返回path在当前系统中的绝对路径，&gt;&gt;&gt;os.path.abspath(<strong>“file.txt”</strong>)，’C:\Users\Tian Song\Python36-32\file.txt’</td>
+<td style="text-align:center">os.path.dirname(path)</td>
+<td style="text-align:center">返回path中的目录名称<br>&gt;&gt;&gt;os.path.dirname(“D://PYE//file.txt”)<br>‘D://PYE’</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.normpath(path)</td>
+<td style="text-align:center">归一化path的表示形式，统一用\分隔路径<br>&gt;&gt;&gt;os.path.normpath(“D://PYE//file.txt”)<br>‘D:\PYE\file.txt’</td>
+<td style="text-align:center">os.path.basename(path)</td>
+<td style="text-align:center">返回path中最后的文件名称<br>&gt;&gt;&gt;os.path.basename(“D://PYE//file.txt”)<br>‘file.txt’</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.relpath(path)</td>
+<td style="text-align:center">返回当前程序与文件之间的相对路径 (relative path)<br>&gt;&gt;&gt;os.path.relpath(“C://PYE//file.txt”)<br>‘..\..\..\..\..\..\..\PYE\file.txt’</td>
+<td style="text-align:center">os.path.join(path, *paths)</td>
+<td style="text-align:center">组合path与paths，返回一个路径字符串<br>&gt;&gt;&gt;os.path.join(“D:/“, “PYE/file.txt”)<br>‘D:/PYE/file.txt’</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.exists(path)</td>
+<td style="text-align:center">判断path对应文件或目录是否存在，返回True或False<br>&gt;&gt;&gt;os.path.exists(“D://PYE//file.txt”)<br>False</td>
+<td style="text-align:center">os.path.getatime(path)</td>
+<td style="text-align:center">返回path对应文件或目录上一次的访问时间<br>&gt;&gt;&gt;os.path.getatime(“D:/PYE/file.txt”)<br>1518356633.7551725</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.isfile(path)</td>
+<td style="text-align:center">判断path所对应是否为已存在的文件，返回True或False<br>&gt;&gt;&gt;os.path.isfile(“D://PYE//file.txt”)<br>True</td>
+<td style="text-align:center">os.path.getmtime(path)</td>
+<td style="text-align:center">返回path对应文件或目录最近一次的修改时间<br>&gt;&gt;&gt;os.path.getmtime(“D:/PYE/file.txt”)<br>1518356633.7551725</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.isdir(path)</td>
+<td style="text-align:center">判断path所对应是否为已存在的目录，返回True或False<br>&gt;&gt;&gt;os.path.isdir(“D://PYE//file.txt”)<br>False</td>
+<td style="text-align:center">os.path.getctime(path)</td>
+<td style="text-align:center">返回path对应文件或目录的创建时间<br>&gt;&gt;time.ctime(os.path.getctime(“D:/PYE/file.txt”))<br>‘Sun Feb 11 21:43:53 2018’</td>
+</tr>
+<tr>
+<td style="text-align:center">os.path.getsize(path)</td>
+<td style="text-align:center">返回path对应文件的大小，以字节为单位，&gt;&gt;&gt;os.path.getsize(“D:/PYE/file.txt”)，180768</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>进程管理，启动系统中其他程序；使用os.system(command)函数，执行程序或命令command，调用计算机的内部程序。</p>
+<p>环境参数，获得系统软硬件信息参数。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">os.chdir(path)</td>
+<td style="text-align:center">修改当前程序操作的路径<br>&gt;&gt;&gt;os.chdir(“D:”)</td>
+</tr>
+<tr>
+<td style="text-align:center">os.getcwd()</td>
+<td style="text-align:center">返回程序的当前路径<br>&gt;&gt;&gt;os.getcwd()<br>‘D:\‘</td>
+</tr>
+<tr>
+<td style="text-align:center">os.getlogin()</td>
+<td style="text-align:center">获得当前系统登录用户名称<br>&gt;&gt;&gt;os.getlogin()<br>‘Tian Song’</td>
+</tr>
+<tr>
+<td style="text-align:center">os.cpu_count()</td>
+<td style="text-align:center">获得当前系统的CPU数量<br>&gt;&gt;&gt;os.cpu_count()<br>8</td>
+</tr>
+<tr>
+<td style="text-align:center">os.urandom(n)</td>
+<td style="text-align:center">获得n个字节长度的随机字符串，通常用于加解密运算<br>&gt;&gt;&gt;os.urandom(10)<br>b’7\xbe\xf2!\xc1=\x01gL\xb3’</td>
+</tr>
+</tbody>
+</table>
+<h4 id="实例14：第三方库安装脚本"><a href="#实例14：第三方库安装脚本" class="headerlink" title="实例14：第三方库安装脚本"></a>实例14：第三方库安装脚本</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#BatchInstall.py   代码来自中国大学MOOC《Python语言程序设计》</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">libs = &#123;<span class="string">"numpy"</span>,<span class="string">"matplotlib"</span>,<span class="string">"pillow"</span>,<span class="string">"sklearn"</span>,<span class="string">"requests"</span>,\</span><br><span class="line">        <span class="string">"jieba"</span>,<span class="string">"beautifulsoup4"</span>,<span class="string">"wheel"</span>,<span class="string">"networkx"</span>,<span class="string">"sympy"</span>,\</span><br><span class="line">        <span class="string">"pyinstaller"</span>,<span class="string">"django"</span>,<span class="string">"flask"</span>,<span class="string">"werobot"</span>,<span class="string">"pyqt5"</span>,\</span><br><span class="line">        <span class="string">"pandas"</span>,<span class="string">"pyopengl"</span>,<span class="string">"pypdf2"</span>,<span class="string">"docopt"</span>,<span class="string">"pygame"</span>&#125;</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">for</span> lib <span class="keyword">in</span> libs:</span><br><span class="line">        os.system(<span class="string">"pip3 install "</span>+lib)</span><br><span class="line">    print(<span class="string">"Successful"</span>)        </span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"Failed Somehow"</span>)</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -1548,7 +1636,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">40.1k</span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span><span>|</span><i class="fas fa-edit"></i>总写作字数:<span class="post-count">40.8k</span>
 </span>
 </div>
 
