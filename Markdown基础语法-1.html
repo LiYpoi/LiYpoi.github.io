@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Markdown基础语法"><meta name="keywords" content="Markdown"><meta name="author" content="LiY"><meta name="copyright" content="LiY"><title>Markdown基础语法 | Liy's Blog</title><link rel="shortcut icon" href="/LiYpoi.github.io/melody-favicon.ico"><link rel="stylesheet" href="/LiYpoi.github.io/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?75d26b7b5a483d25261ef75070077eaa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/LiYpoi.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、标题"><span class="toc-number">1.</span> <span class="toc-text">一、标题</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#一级标题"><span class="toc-number"></span> <span class="toc-text">一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二级标题"><span class="toc-number">1.</span> <span class="toc-text">二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三级标题"><span class="toc-number">1.1.</span> <span class="toc-text">三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#四级标题"><span class="toc-number">1.1.1.</span> <span class="toc-text">四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#五级标题"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#六级标题"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、字体"><span class="toc-number">2.</span> <span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、引用"><span class="toc-number">3.</span> <span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、插入图片"><span class="toc-number">4.</span> <span class="toc-text">四、插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、分割线"><span class="toc-number">5.</span> <span class="toc-text">五、分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、超链接"><span class="toc-number">6.</span> <span class="toc-text">六、超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、列表"><span class="toc-number">7.</span> <span class="toc-text">七、列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、表格"><span class="toc-number">8.</span> <span class="toc-text">八、表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、代码块"><span class="toc-number">9.</span> <span class="toc-text">九、代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、LaTeX公式"><span class="toc-number">10.</span> <span class="toc-text">十、LaTeX公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十一、图"><span class="toc-number">11.</span> <span class="toc-text">十一、图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#流程图"><span class="toc-number">11.1.</span> <span class="toc-text">流程图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#示例-1"><span class="toc-number">11.1.1.</span> <span class="toc-text">示例 1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#示例-2"><span class="toc-number">11.1.2.</span> <span class="toc-text">示例 2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更多语法参考：序列图语法参考"><span class="toc-number">11.1.3.</span> <span class="toc-text">更多语法参考：序列图语法参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#甘特图"><span class="toc-number">11.2.</span> <span class="toc-text">甘特图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更多语法参考：甘特图语法参考"><span class="toc-number">11.2.1.</span> <span class="toc-text">更多语法参考：甘特图语法参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mermaid-流程图"><span class="toc-number">11.3.</span> <span class="toc-text">Mermaid 流程图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更多语法参考：Mermaid-流程图语法参考"><span class="toc-number">11.3.1.</span> <span class="toc-text">更多语法参考：Mermaid 流程图语法参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mermaid-序列图"><span class="toc-number">11.4.</span> <span class="toc-text">Mermaid 序列图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更多语法参考：Mermaid-序列图语法参考"><span class="toc-number">11.4.1.</span> <span class="toc-text">更多语法参考：Mermaid 序列图语法参考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后序"><span class="toc-number">12.</span> <span class="toc-text">后序</span></a></li></ol></li></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2019/08/24/ulJ6EUX5GmNrIq8.jpg"></div><div class="author-info__name text-center">LiY</div><div class="author-info__description text-center">普通大学生desu~</div><div class="follow-button"><a href="https://github.com/LiYpoi">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/LiYpoi.github.io/archives"><span class="pull-left">文章</span><span class="pull-right">55</span></a><a class="author-info-articles__tags article-meta" href="/LiYpoi.github.io/tags"><span class="pull-left">标签</span><span class="pull-right">17</span></a><a class="author-info-articles__categories article-meta" href="/LiYpoi.github.io/categories"><span class="pull-left">分类</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/LiYpoi.github.io/">Liy's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">Markdown基础语法</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-05-05</time><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，可以使普通文本内容具有一定的格式，应用于文档快速排版，有着简单、轻量的特点。<em>详细介绍见<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin" target="_blank" rel="noopener">Markdown</a></em></p>
+<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>在想要设为标题的文字前加#，#后面添加空格。</p>
+<p>一个#是一级标题，两个#是二级标题，支持1-6级标题（如果你有HTML的基础，相信这些对你来说很好理解）</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.# 一级标题</span><br><span class="line">2.## 二级标题</span><br><span class="line">3.### 三级标题</span><br><span class="line">4.#### 四级标题</span><br><span class="line">5.##### 五级标题</span><br><span class="line">6.###### 六级标题</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><p>加粗</p>
+<p>要加粗的文字前后用两个*包裹</p>
+<p>斜体</p>
+<p>要倾斜的文字前后用一个*包裹</p>
+<p>斜体加粗</p>
+<p>要倾斜加粗的文字前后用三个***包裹</p>
+<p>删除线</p>
+<p>要加删除线的文字前后用两个~~包裹</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文字加粗**</span><br><span class="line">*文字倾斜*</span><br><span class="line">***文字加粗倾斜***</span><br><span class="line">~~文字删除线~~</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><strong>文字加粗</strong><br><em>文字倾斜</em><br><strong><em>文字加粗倾斜</em></strong><br><del>文字删除线</del></p>
+<p>注脚：</p>
+<p>使用 [^keyword] 表示注脚。</p>
+<p>这是一个注脚[^footnote]的样例。</p>
+<p>这是第二个注脚[^footnote2]的样例。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br><span class="line">内容区</span><br></pre></td></tr></table></figure>
+<p>[^footnote]: 这是一个 <em>注脚</em> 的 <strong>文本</strong>。<br>[^footnote2]: 这是另一个 <em>注脚</em> 的 <strong>文本</strong>。</p>
+<h2 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h2><p>在引用的文字前加&gt;,引用可以嵌套。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;引用内容</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<blockquote>
+<p>引用内容</p>
+</blockquote>
+<h2 id="四、插入图片"><a href="#四、插入图片" class="headerlink" title="四、插入图片"></a>四、插入图片</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt是对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容，itle可加可不加。</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1557162167109&amp;di=e218f9947a8606b0890d692bae05b853&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201707%2F23%2F20170723132656_vZMCN.jpeg" alt="樱花"></p>
+<h2 id="五、分割线"><a href="#五、分割线" class="headerlink" title="五、分割线"></a>五、分割线</h2><p>用三个或三个以上的*或-表示</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.---</span><br><span class="line">2.----</span><br><span class="line">3.***</span><br><span class="line">4.****</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址 &quot;超链接title&quot;）title可加可不加</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[百度](http://baidu.com)</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p>
+<h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><p>一、无序列表</p>
+<p>在列表内容前用+或-或 *加空格</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+ 列表内容</span><br><span class="line">2.- 列表内容</span><br><span class="line">3.* 列表内容</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<ul>
+<li><p>列表内容</p>
+<ul>
+<li><p>列表内容</p>
+<ul>
+<li>列表内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>二、有序列表</p>
+<p>在列表内容前数字加点加空格</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<p>三、列表嵌套</p>
+<p>可以有序套有序、有序套无序、无序套无序、无序套有序</p>
+<p>在上一级和下一级之间加三个空格</p>
+<h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 项目        | 价格   |  数量  |</span><br><span class="line">| --------   | -----:  | :----:  |</span><br><span class="line">| 计算机     | \$1600 |   5     |</span><br><span class="line">| 手机        |   \$12   |   12   |</span><br><span class="line">| 管线        |    \$1    |  234  |</span><br></pre></td></tr></table></figure>
+<p>文字默认居左<br>-两边加：表示文字居中<br>-右边加：表示文字居右,第二行分割表头和内容,-有一个就可以。</p>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">\$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">\$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">\$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h2 id="九、代码块"><a href="#九、代码块" class="headerlink" title="九、代码块"></a>九、代码块</h2><p>行内代码块，使用 `代码` 表示行内代码块。</p>
+<p>示例：</p>
+<p>让我们聊聊 <code>html</code>。</p>
+<p>单行代码：代码之间分别用一个反引号包起来</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">`代码内容`</span><br></pre></td></tr></table></figure>
+<p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
+<p>  代码…<br>  代码…<br>  代码…<br>​<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line"></span><br><span class="line">`代码内容`</span><br><span class="line"></span><br><span class="line">```c++</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="十、LaTeX公式"><a href="#十、LaTeX公式" class="headerlink" title="十、LaTeX公式"></a>十、LaTeX公式</h2><p>LaTeX 公式</p>
+<p>$ 表示行内公式： </p>
+<p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
+<p>$$ 表示整行公式：</p>
+<p>$$\sum_{i=1}^n a_i=0$$</p>
+<p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
+<p>$$\sum^{j-1}<em>{k=0}{\widehat{\gamma}</em>{kj} z_k}$$</p>
+<p>访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax</a> 参考更多使用方法。</p>
+<h2 id="十一、图"><a href="#十一、图" class="headerlink" title="十一、图"></a>十一、图</h2><h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
+<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Title: Here is a title</span><br><span class="line">A-&gt;B: Normal line</span><br><span class="line">B--&gt;C: Dashed line</span><br><span class="line">C-&gt;&gt;D: Open arrow</span><br><span class="line">D--&gt;&gt;A: Dashed open arrow</span><br></pre></td></tr></table></figure>
+<h4 id="更多语法参考：序列图语法参考"><a href="#更多语法参考：序列图语法参考" class="headerlink" title="更多语法参考：序列图语法参考"></a>更多语法参考：<a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">序列图语法参考</a></h4><h3 id="甘特图"><a href="#甘特图" class="headerlink" title="甘特图"></a>甘特图</h3><p>甘特图内在思想简单。基本是一条线条图，横轴表示时间，纵轴表示活动（项目），线条表示在整个期间上计划和实际的活动完成情况。它直观地表明任务计划在什么时候进行，及实际进展与计划要求的对比。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title 项目开发流程</span><br><span class="line">section 项目确定</span><br><span class="line">    需求分析       :a1, 2016-06-22, 3d</span><br><span class="line">    可行性报告     :after a1, 5d</span><br><span class="line">    概念验证       : 5d</span><br><span class="line">section 项目实施</span><br><span class="line">    概要设计      :2016-07-05  , 5d</span><br><span class="line">    详细设计      :2016-07-08, 10d</span><br><span class="line">    编码          :2016-07-15, 10d</span><br><span class="line">    测试          :2016-07-22, 5d</span><br><span class="line">section 发布验收</span><br><span class="line">    发布: 2d</span><br><span class="line">    验收: 3d</span><br></pre></td></tr></table></figure>
+<h4 id="更多语法参考：甘特图语法参考"><a href="#更多语法参考：甘特图语法参考" class="headerlink" title="更多语法参考：甘特图语法参考"></a>更多语法参考：<a href="https://knsv.github.io/mermaid/#gant-diagrams" target="_blank" rel="noopener">甘特图语法参考</a></h4><h3 id="Mermaid-流程图"><a href="#Mermaid-流程图" class="headerlink" title="Mermaid 流程图"></a>Mermaid 流程图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A[Hard edge] --&gt;|Link text| B(Round edge)</span><br><span class="line">B --&gt; C&#123;Decision&#125;</span><br><span class="line">C --&gt;|One| D[Result one]</span><br><span class="line">C --&gt;|Two| E[Result two]</span><br></pre></td></tr></table></figure>
+<h4 id="更多语法参考：Mermaid-流程图语法参考"><a href="#更多语法参考：Mermaid-流程图语法参考" class="headerlink" title="更多语法参考：Mermaid 流程图语法参考"></a>更多语法参考：<a href="https://knsv.github.io/mermaid/#flowcharts-basic-syntax" target="_blank" rel="noopener">Mermaid 流程图语法参考</a></h4><h3 id="Mermaid-序列图"><a href="#Mermaid-序列图" class="headerlink" title="Mermaid 序列图"></a>Mermaid 序列图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Alice-&gt;John: Hello John, how are you?</span><br><span class="line">loop every minute</span><br><span class="line">    John--&gt;Alice: Great!</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h4 id="更多语法参考：Mermaid-序列图语法参考"><a href="#更多语法参考：Mermaid-序列图语法参考" class="headerlink" title="更多语法参考：Mermaid 序列图语法参考"></a>更多语法参考：<a href="https://knsv.github.io/mermaid/#sequence-diagrams" target="_blank" rel="noopener">Mermaid 序列图语法参考</a></h4><h2 id="后序"><a href="#后序" class="headerlink" title="后序"></a>后序</h2><p>部分Markdown语法在不同的编译器上显示的效果有小部分不同，有些编译器可以显示出甘特图，有些没有效果的显示，我所用的编译器是Cmd Markdown,功能较为全面而且能同步到云端，后续我会单独写一篇文对当前市面上大部分的Markdown编译器进行一个详细的对比评价。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">LiY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.liypoi.top/Markdown基础语法-1.html">https://www.liypoi.top/Markdown基础语法-1.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.liypoi.top">Liy's Blog</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/LiYpoi.github.io/tags/Markdown/">Markdown</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/LiYpoi.github.io/Javascript1.html"><i class="fa fa-chevron-left">  </i><span>JavaScript简介</span></a></div><div class="next-post pull-right"><a href="/LiYpoi.github.io/建站历史-2.html"><span>建站历史-2</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By LiY</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://molunerfinn.com">blog</a>!</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/LiYpoi.github.io/js/utils.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/fancybox.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/sidebar.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/copy.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/fireworks.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/transition.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/scroll.js?version=1.6.1"></script><script src="/LiYpoi.github.io/js/head.js?version=1.6.1"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/LiYpoi.github.io/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
