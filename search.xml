@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[更换博客主题melody]]></title>
+    <url>%2FLiYpoi.github.io%2F%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98melody.html</url>
+    <content type="text"><![CDATA[之前一直用的next，而且关于next主题的优化教程还不少，我基本都试过，所以到最后，博客好像被我玩坏了，next主题下打开页面常常会出现空白页、响应慢等情况，无法忍受每次打开要刷新一边的情况，换成了melody主题，关于这个主题的作者，那可厉害了。之前在掘金上偶尔看到这位大佬的文章，讲他开发这个主题的经过，也才发现一直用的Picgo也是大佬做的。 大佬的博客：https://molunerfinn.com/]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>建站历史</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python爬虫笔记01]]></title>
     <url>%2FLiYpoi.github.io%2FPython%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B001.html</url>
     <content type="text"><![CDATA[Python爬虫简介什么是爬虫？通俗理解，爬虫是一个模拟人类请求网站行为的程序，可以自动请求网页，并数据抓取下来，然后使用一定的规则提取有价值的数据。 爬虫分为通用爬虫和聚焦爬虫两类，通用爬虫是搜索引擎的重要组成部分，主要是将互联网上的网页下载到本地，形成一个互联网的内容的镜像备份；聚焦爬虫是一种面向定向需求的爬虫，它对爬取的内容会定向的筛选，确保只爬取与需求相关的信息。 虽然Java也可以写爬虫，但是Java输在代码量上，Python的代码简洁、支持的模块多、相关的HTTP请求模块和HTML解析模块非常丰富，所以用Python写爬虫是最好的选择。 http协议HTTP协议，即超文本传输协议，是一种发布和接收HTML页面的方法，服务器端口是80端口；HTTPS协议，是HTTP协议的加密版本，在HTTP下加入了SSL层，服务器端口号是443端口。 访问一个网页的过程： URL组成： scheme://host:post/path/query-string=xxx#anchor scheme:代表访问协议，一般为http或https以及ftp等 host:主机名，域名，比如我的域名liypoi.top port:端口号，浏览器默认使用80端口 query-string:查询字符串，比如www.baidu.com/s?wd=python,后面的wd=python就是查询字符串 anchor:锚点，页面定位 浏览器会对搜索的URL进行编码，除英文字母、数字和部分符合外，其余的使用百分号+十六进制进行编码。 常见请求方法：http协议中定义了八种请求方法，常见的两种是get和post。get请求一般情况下，只从服务器获取数据下来，并不会对服务器资源产生任何影响的时候使用get请求；post请求，向服务器发送数据、上传文件等，会对服务器资源产生影响的时候会使用post请求。 请求头常见的参数： 1.User-Agent:浏览器名称，服务器通过这个参数就可以知道这个请求是由哪种浏览器发送的，所以在使用爬虫的时候要设置这个值，来伪装爬虫。 2.Referer:表明当前这个请求是从哪个url过来的，这个一般是用来做反爬虫技术的。 3.Cookie:http协议是无状态的，也就是同一个人发送了两侧请求，服务器没有能力知道这两个请求是否来自同一个人，这时要用Cookie来做标识。 常见响应状态码： 200：请求正常，服务器正常的返回数据 301：永久重定向，比如在访问www.jingdong.com会重定向到www.jd.com 302：临时重定向，如果访问一个页面的时候没有登陆，会定向到登陆页面 400：请求url在服务器上找不到，即url错误 403：服务器拒绝访问，权限不够 500：服务器内部错误]]></content>
