@@ -27,7 +27,7 @@
     <url>%2FLiYpoi.github.io%2F%E4%BD%BF%E7%94%A8PicGo%E5%92%8Cimagine%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87.html</url>
     <content type="text"><![CDATA[写博客的时候，图片的使用是个问题。有时候添加的图片过大，会拖慢博客的加载速度。之前我把图片放在七牛云上，但是因为我的博客域名没有备案，测试域名收回后就导致一些图片无法正常显示，最后还是用回了SM.MS。 说回正题，PicGo是一个图床管理工具，涵盖多种图床，设置简单，上传后的图片会保存在相册中，方便管理，这个工具也是由melody主题的作者Molunerfinn开发的。 下载地址：https://github.com/Molunerfinn/PicGo/releases imagine是一个 适用于macOS，Windows和Linux的PNG / JPEG优化应用工具。可以对图片进行压缩，而且压缩效果十分好，配合PicGo使用。先将图片文件直接拖到imagine中压缩，覆盖保存后再将文件拖到PicGo里，简直完美✌ 下载地址：https://github.com/meowtec/Imagine/releases]]></content>
       <categories>
-        <category>Sutdy</category>
+        <category>Study</category>
       </categories>
       <tags>
         <tag>hexo</tag>
