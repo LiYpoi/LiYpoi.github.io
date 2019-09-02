@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Java入门笔记]]></title>
     <url>%2FLiYpoi.github.io%2FJava%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[基础知识几个专业词汇 JDK，Java开发工具包，包含所需工具和JRE JRE，Java运行环境，包含运行Java所需的核心类库和JVM JVM，Java虚拟机，保证Java跨平台使用，本身不能跨平台使用 （今天先开个头，因为每天要拿出将近两个小时来准备四级，还要对每天的课程进行预习复习，这个进度应该不会太快）]]></content>
+    <content type="text"><![CDATA[基础知识 JDK，Java开发工具包，包含所需工具和JRE JRE，Java运行环境，包含运行Java所需的核心类库和JVM JVM，Java虚拟机，保证Java跨平台使用，本身不能跨平台使用 （因为每天要拿出将近两个小时来准备四级，还要对每天的课程进行预习复习，这个进度应该不会太快） 注释分类：单行注释，//注释文字；多行注释，/ 注释文字 /；文档注释（用来解释类和方法），/* 注释文字 / 第一个Java程序 public class HelloWorld &#123; public static void main(String[] args)&#123; System.out.println("HelloWorld"); &#125;&#125; 1.Java程序的最小单位是类，一个Java程序至少有一个类。 2.Java程序的入口是main方法，main方法的格式是固定的：System.out.println(“HelloWorld”); 3.在控制台输出内容的语句：System.out.println(“要输出的内容”); 4.IDEA中文件的解释：在IDEA中新建一个项目后有一些文件，.idea目录和.iml文件是IDEA开发工具使用的配置文件，不需要操作，可以隐藏。src文件夹，所编写的源文件存放在这个目录下。out目录，是Java程序的输出目录，Java程序运行的时候，生成后缀名为.class的文件存放在该目录下，点击运行按钮，生成.class文件叫做字节码文件，生成字节码文件的过程叫编译。External Libraries，即扩展类库，是Java程序编写和运行所依赖的JDK中的类。 Java程序开发与运行原理 其中javac.exe(编译)和java.exe(运行)均来自JDK中。 IDEA常用快捷键]]></content>
       <categories>
         <category>Study</category>
       </categories>
