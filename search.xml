@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[博客真正的优化在于速度]]></title>
+    <url>%2FLiYpoi.github.io%2F%E5%8D%9A%E5%AE%A2%E7%9C%9F%E6%AD%A3%E7%9A%84%E4%BC%98%E5%8C%96%E5%9C%A8%E4%BA%8E%E9%80%9F%E5%BA%A6.html</url>
+    <content type="text"><![CDATA[忘记了是在阮一峰还是在caoz大佬的文章中看到的，网站的关键有很多，核心就有一个加载的速度，你网站做的再好，每次打开都要转个八九秒，用户还看什么啊，虽说现在的网速基本不可能让你等八九秒，除非是访问一些外国的网站。上网后人们最大的需求就是速度，手机厂商对自己的手机也是在向着更快、续航更久的方向努力，用户开什么都秒开，用户就爽了，用户爽了，也就喜欢你的app或网站了。同理，对网站加载速度的优化是一个提升你用户体验的关键。 今天用]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java实现简易手机通讯录]]></title>
     <url>%2FLiYpoi.github.io%2FJava%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E6%89%8B%E6%9C%BA%E9%80%9A%E8%AE%AF%E5%BD%95.html</url>
     <content type="text"><![CDATA[这篇文章是记录学校程序设计课程的期中作业完成过程。 需求要求实现一个手机通讯录功能，要求如下： 其中名片中一个用户可以保存多个号码，但不超10个，名片所含信息有：联系人姓名、联系人号码、联系人工作单位、通讯地址、电子邮箱、生日、备注。 构思定义多个类，包含菜单界面展示、添加联系人、查询数据的对比、菜单功能选择以及函数功能函数的 调用。 大致构思就是这些，作业限时60天，以后有的忙了。。。]]></content>
